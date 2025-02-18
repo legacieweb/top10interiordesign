@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eurocon Tile Installation Expert</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Custom Styling */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 800px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+    }
+    .carousel img {
+      max-height: 400px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .carousel-button.left {
+      left: 10px;
+    }
+    .carousel-button.right {
+      right: 10px;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+<!-- Header -->
+<header id="header" class="bg-gradient-to-r text-white sticky top-0 z-50 shadow-lg transition-all duration-300">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center relative">
+    
+    <!-- Logo (Rounded on Small Screens) -->
+    <a href="index.html">
+      <img src="img/logo.jpg" alt="Site Logo" class="h-10 md:h-12 rounded-full sm:rounded-lg">
+    </a>
+
+    <!-- Navigation for Large Screens -->
+    <nav class="hidden md:flex space-x-6 relative">
+      <a href="#categories" class="text-white hover:text-yellow-300">Tile Categories</a>
+      <a href="#features" class="text-white hover:text-yellow-300">Features</a>
+      <a href="#testimonials" class="text-white hover:text-yellow-300">Testimonials</a>
+      <a href="#contact" class="text -white hover:text-yellow-300">Contact Us</a>
+    </nav>
+
+    <!-- Home Button (Visible on Large Screens) -->
+    <a href="index.html" class="hidden md:inline-block bg-yellow-400 text-black px-2 py-1 rounded-full text-lg hover:bg-yellow-500">🏠 Home</a>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-toggle" class="md:hidden text-black bg-yellow-400 px-3 py-2 rounded-md">
+      ☰ Menu
+    </button>
+
+    <!-- Cool Moving Arrow (Large Screens) -->
+    <div id="scroll-arrow" class="hidden md:block absolute top-1/2 left-0 transform -translate-y-1/2 text-xl text-yellow-300 transition-all">
+      ➝
+    </div>
+
+  </div>
+
+  <!-- Dropdown Menu for Small Screens -->
+  <div id="mobile-menu" class="hidden md:hidden p-4 transition-all duration-300">
+    <a href="#categories" class="block text-white hover:text-yellow-300 mb-2">Tile Categories</a>
+    <a href="#features" class="block text-white hover:text-yellow-300 mb-2">Features</a>
+    <a href="#testimonials" class="block text-white hover:text-yellow-300 mb-2">Testimonials</a>
+    <a href="#contact" class="block text-white hover:text-yellow-300 mb-2">Contact Us</a>
+    <a href="index.html" class="block text-black bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded-full mt-4">🏠 Home</a>
+  </div>
+</header>
+
+<!-- JavaScript for Dropdown and Effects -->
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const header = document.getElementById('header');
+  const scrollArrow = document.getElementById('scroll-arrow');
+
+  let lastScroll = 0;
+
+  // Toggle Mobile Menu
+  menuToggle.addEventListener('click', function () {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Close Dropdown & Move Arrow on Scroll
+  window.addEventListener('scroll', function () {
+    mobileMenu.classList.add('hidden'); // Close dropdown on scroll
+
+    let currentScroll = window.scrollY;
+    
+    // Move arrow on large screens
+    if (window.innerWidth >= 768) {
+      let arrowPosition = Math.min(currentScroll / 2, window.innerWidth); // Limits movement
+      scrollArrow.style.left = arrowPosition + 'px';
+      scrollArrow.style.opacity = 1 - currentScroll / 500; // Fade out effect
+    }
+  });
+
+  // Background Animation (CSS Below)
+</script>
+
+<style>
+  /* 🔥 Cool Animated Dark Gradient Background */
+  @keyframes gradientAnimation {
+    0% { background: linear-gradient(to right, black, #1a1a1a, #333); }
+    50% { background: linear-gradient(to right, #111, #222, #444); }
+    100% { background: linear-gradient(to right, black, #1a1a1a, #333); }
+  }
+
+  #header, #mobile-menu {
+    animation: gradientAnimation 6s infinite alternate;
+  }
+
+  /* 🔥 Smooth Transition for Arrow */
+  #scroll-arrow {
+    transition: left 0.3s ease-out, opacity 30s ease-out;
+  }
+</style>
+
+<!-- Hero Section -->
+<section class="relative bg-cover bg-center h-80 text-white flex items-center justify-center" style="background-image: url('img/bukoto 1.jpg');">
+  <div class="absolute inset-0 bg-black opacity-50"></div>
+  <div class="relative container text-center z-10">
+    <h1 class="text-5xl">Eurocone Tile Installation</h1>
+    <p class="text-lg mt-2">Expertly crafted Eurocone tiles for a perfect blend of style and durability</p>
+  </div>
+</section>
+
+  <!-- Tile Categories Section -->
+  <section id="categories" class="py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Eurocone Categories</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Floor Eurocone -->
+        <div class="category-card bg-white p-6 rounded-lg shadow-lg cursor-pointer" onclick="openModal('Floor Eurocone', 'Perfect for residential and commercial spaces. Offers a sleek and durable finish.', ['img/floor 4.jpg', 'img/floor 1.jpg', 'img/floor 2.jpg', 'img/floor 3.jpg'])">
+          <img src="img/floor 4.jpg" alt="Floor Eurocone" class="rounded mb-4 object-cover w-full h-48">
+          <h3 class="text-2xl font-semibold mb-2">Floor Eurocone</h3>
+        </div>
+        <!-- Bukoto Eurocone -->
+        <div class="category-card bg-white p-6 rounded-lg shadow-lg cursor-pointer" onclick="openModal('Bukoto Eurocone', 'A versatile option, ideal for walkways and patios. Durable in all weather conditions.', ['img/bukoto 1.jpg', 'img/bukoto 2.jpg', 'img/bukoto 3.jpg', 'img/bukoto 4.jpg', 'img/bukoto 5.jpg',])">
+          <img src="img/bukoto 1.jpg" alt="Bukoto Eurocone" class="rounded mb-4 object-cover w-full h-48">
+          <h3 class="text-2xl font-semibold mb-2">Bukoto Eurocone<div></div>(wall cladding)</h3>
+        </div>
+        <!-- Monalisa Eurocone -->
+        <div class="category-card bg-white p-6 rounded-lg shadow-lg cursor-pointer" onclick="openModal('Monalisa Eurocone', 'Designed for elegant interiors and outdoor spaces. Adds a touch of sophistication.', ['img/monalisa2.jpg', 'img/mona 1.jpg', 'img/mona 2.jpg', 'img/monalisa1.jpg', 'img/mona 3.jpg', 'img/mona 4.jpg'])">
+          <img src="img/monalisa1.jpg" alt="Monalisa Eurocone" class="rounded mb-4 object-cover w-full h-48">
+          <h3 class="text-2xl font-semibold mb-2">Monalisa Eurocone<div></div>(wall cladding)</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-16 bg-gray-200">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Key Features of Eurocon Tiles</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-bold mb-4">Easy Installation</h3>
+          <p>Easy to install as they require only tile adhesive.</p>
+        </div>
+        <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-bold mb-4">Environment Friendly</h3>
+          <p>Manufactured from natural and recyclable materials.</p>
+        </div>
+        <div class="feature-card bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-bold mb-4">Stylish Designs</h3>
+          <p>Available in a variety of colors and patterns.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- About Section -->
+ <section id="about" class="py-16 bg-white fade-in">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold text-blue-700 mb-6">Meet Your Eurocone Tile Installation Expert</h2>
+    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+      With years of experience in **Eurocone tile installation**,  
+      I bring precision and artistry to **wall cladding, floor tiling, and paving**.  
+      Whether it's an elegant home or a commercial project, I ensure durability and flawless craftsmanship.
+    </p>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-16 bg-gray-200 fade-in">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold text-blue-700 mb-6">Services Offered</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-blue-600">Floor Tiling</h3>
+        <p class="text-gray-700 mt-2">Professional Eurocone tile installation for interior and exterior floors.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-blue-600">Wall Cladding</h3>
+        <p class="text-gray-700 mt-2">Beautiful and durable Eurocone wall cladding for modern spaces.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold text-blue-600">Outdoor Paving</h3>
+        <p class="text-gray-700 mt-2">High-quality, weather-resistant paving solutions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-16 bg-gray-200">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-12 text-blue-700">Client Testimonials</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <p class="text-gray-600 italic">"The Eurocone tiles installation was perfect. Highly recommended!"</p>
+        <h3 class="text-lg font-semibold mt-4 text-blue-700">- Mark R.</h3>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <p class="text-gray-600 italic">"Very professional work. My floor has never looked better!"</p>
+        <h3 class="text-lg font-semibold mt-4 text-blue-700">- Jane M.</h3>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <p class="text-gray-600 italic">"Quality craftsmanship! The wall cladding made my space luxurious."</p>
+        <h3 class="text-lg font-semibold mt-4 text-blue-700">- David L.</h3>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Modal for Tile Images -->
+  <div id="tile-modal" class="modal flex">
+    <div class="modal-content">
+      <button class="close-button absolute top-2 right-2 text-gray-600 hover:text-gray-900" onclick="closeModal()">✖</button>
+      <h3 class="text-3xl font-bold mb-4" id="modal-title">Tile Title</h3>
+      <p id="modal-description" class="text-lg text-gray-600 mb-6">Brief description of the tile.</p>
+      <div class="carousel relative">
+        <button class="carousel-button left" onclick="prevImage()">❮</button>
+        <img id="carousel-image" src="" alt="Tile Image" class="rounded shadow">
+        <button class="carousel-button right" onclick="nextImage()">❯</button>
+      </div>
+      <a href="#contact" onclick="closeModal()" class="bg-blue-500 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-600 mt-6 inline-block">Consult About This Design</a>
+    </div>
+  </div>
+  
+  <style>
+    .close-button {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  </style>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-gradient-to-r from-indigo-700 to-blue-900 text-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-6 text-yellow-400">Get in Touch</h2>
+    <p class="text-center text-lg mb-8">Let’s create something amazing together! Contact us today.</p>
+
+    <!-- Contact Form -->
+<div class="bg-gradient-to-r from-gray-900 to-gray-800 p-6 rounded-lg shadow-lg max-w-lg mx-auto">
+  <h3 class="text-xl font-semibold text-yellow-400 mb-4 text-center">Send a Message</h3>
+  <form id="contact-form">
+    <div class="mb-4">
+      <input type="text" id="name" placeholder="Your Name" required 
+             class="w-full p-3 border rounded-lg text-white bg-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-yellow-400">
+    </div>
+    <div class="mb-4">
+      <input type="email" id="email" placeholder="Your Email" required 
+             class="w-full p-3 border rounded-lg text-white bg-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-yellow-400">
+    </div>
+    <div class="mb-4">
+      <textarea id="message" rows="4" placeholder="Your Message" required 
+                class="w-full p-3 border rounded-lg text-white bg-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-yellow-400"></textarea>
+    </div>
+    <button type="submit" class="bg-yellow-500 text-black px-6 py-3 rounded-full text-lg hover:bg-yellow-600 w-full transition-all shadow-md">
+      Send Message
+    </button>
+    <p id="success-message" class="hidden text-green-400 mt-4">Message sent successfully! ✅</p>
+  </form>
+</div>
+
+
+    <!-- Social Media Links -->
+    <div class="mt-12 text-center">
+      <h3 class="text-xl font-semibold text-yellow-400 mb-4">Connect with Us</h3>
+      <div class="flex flex-wrap justify-center gap-4 mt-6">
+        <a href="https://wa.me/254114522514" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+          <i class="fab fa-whatsapp text-2xl mr-2"></i> WhatsApp
+        </a>
+        <a href="https://www.tiktok.com/@top10interiordesi?_t=ZM-8tgrml8DECk&_r=1" target="_blank" class="bg-black hover:bg-pink-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+          <i class="fab fa-tiktok text-2xl mr-2"></i> Tiktok
+        </a>
+        <a href="https://www.instagram.com/top10interior_design_?igsh=cnFyY2J2aGd1YXN5" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+          <i class="fab fa-instagram text-2xl mr-2"></i> Instagram
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61573039911752" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+          <i class="fab fa-facebook-f text-2xl mr-2"></i> Facebook
+        </a>
+        <a href="https://x.com/TophryT?t=GzNlH1_sVOBW_4pv1RAJ6A&s=09" target="_blank" class="bg-blue-400 hover:bg-blue-500 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+          <i class="fab fa-twitter text-2xl mr-2"></i> Twitter
+        </a>
+        <a href="sms:+254114522514" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+          <i class="fas fa-sms text-2xl mr-2"></i> Send SMS
+        </a>
+        <a href="tel:+254114522514" class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+          <i class="fas fa-phone-alt text-2xl mr-2"></i> Call Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+ <!-- Footer -->
+<footer class="bg-gray-900 text-white text-center py-3 fade-in">
+  <div class="container mx-auto flex flex-col items-center px-6">
+
+      <!-- Copyright -->
+      <p class="text-gray-500 text-sm mt-2">© 2025 Top10 Interior Design. All Rights Reserved.</p>
+
+      <!-- Powered by Legacie with Shaking Logo -->
+      <div class="flex items-center space-x-2 mt-3">
+          <img src="download-removebg-preview.png" alt="Legacie Web Logo" class="h-10 md:h-12 shaking-logo">
+          <a href="https://legacieweb.github.io/legacieweb/" class="text-blue-500 text-sm md:text-base">Powered by Legacie</a>
+      </div>
+
+  </div>
+</footer>
+
+  <script>
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Collect form data
+    const formData = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+    };
+
+    // Send form data using fetch()
+    fetch("http://localhost:5000/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        document.getElementById("success-message").classList.remove("hidden");
+        document.getElementById("contact-form").reset();
+      } else {
+        alert("Error: Unable to send message.");
+      }
+    })
+    .catch(error => console.error("Error:", error));
+  });
+    let currentImages = [];
+    let currentIndex = 0;
+
+    // Ensure the modal starts hidden
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('tile-modal').style.display = 'none';
+    });
+
+    // Open Modal Function
+    function openModal(title, description, images) {
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-description').textContent = description;
+      currentImages = images;
+      currentIndex = 0;
+      updateCarousel();
+      document.getElementById('tile-modal').style.display = 'flex';
+    }
+
+    // Close Modal Function
+    function closeModal() {
+      document.getElementById('tile-modal').style.display = 'none';
+    }
+
+    // Update Carousel Image
+    function updateCarousel() {
+      document.getElementById('carousel-image').src = currentImages[currentIndex];
+    }
+
+    // Navigate to Previous Image
+    function prevImage() {
+      currentIndex = (currentIndex === 0) ? currentImages.length - 1 : currentIndex - 1;
+      updateCarousel();
+    }
+
+    // Navigate to Next Image
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % currentImages.length;
+      updateCarousel();
+    }
+  </script>
+
+</body>
+</html>

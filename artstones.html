@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artstone Installation Expert - Elegant & Durable Designs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    /* Custom Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.6s ease-in, transform 0.6s ease-in;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    /* Shaking Logo Animation */
+.shaking-logo {
+    animation: shake 1s infinite ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    10%, 30%, 50%, 70%, 90% { transform: rotate(-2deg); }
+    20%, 40%, 60%, 80% { transform: rotate(2deg); }
+}
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+<!-- Header -->
+<header id="header" class="bg-gradient-to-r text-white sticky top-0 z-50 shadow-lg transition-all duration-300">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center relative">
+    
+    <!-- Logo (Rounded on Small Screens) -->
+    <a href="index.html">
+      <img src="img/logo.jpg" alt="Site Logo" class="h-10 md:h-12 rounded-full sm:rounded-lg">
+    </a>
+
+    <!-- Navigation for Large Screens -->
+    <nav class="hidden md:flex space-x-6 relative">
+      <a href="#services" class="text-white hover:text-yellow-300">Services</a>
+      <a href="#about" class="text-white hover:text-yellow-300">About</a>
+      <a href="#testimonials" class="text-white hover:text-yellow-300">Testimonials</a>
+      <a href="#contact" class="text -white hover:text-yellow-300">Contact Us</a>
+    </nav>
+
+    <!-- Home Button (Visible on Large Screens) -->
+    <a href="index.html" class="hidden md:inline-block bg-yellow-400 text-black px-2 py-1 rounded-full text-lg hover:bg-yellow-500">🏠 Home</a>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-toggle" class="md:hidden text-black bg-yellow-400 px-3 py-2 rounded-md">
+      ☰ Menu
+    </button>
+
+    <!-- Cool Moving Arrow (Large Screens) -->
+    <div id="scroll-arrow" class="hidden md:block absolute top-1/2 left-0 transform -translate-y-1/2 text-xl text-yellow-300 transition-all">
+      ➝
+    </div>
+
+  </div>
+
+  <!-- Dropdown Menu for Small Screens -->
+  <div id="mobile-menu" class="hidden md:hidden p-4 transition-all duration-300">
+    <a href="#services" class="block text-white hover:text-yellow-300 mb-2">Services</a>
+    <a href="#about" class="block text-white hover:text-yellow-300 mb-2">About</a>
+    <a href="#testimonials" class="block text-white hover:text-yellow-300 mb-2">Testimonials</a>
+    <a href="#contact" class="block text-white hover:text-yellow-300 mb-2">Contact Us</a>
+    <a href="index.html" class="block text-black bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded-full mt-4">🏠 Home</a>
+  </div>
+</header>
+
+<!-- JavaScript for Dropdown and Effects -->
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const header = document.getElementById('header');
+  const scrollArrow = document.getElementById('scroll-arrow');
+
+  let lastScroll = 0;
+
+  // Toggle Mobile Menu
+  menuToggle.addEventListener('click', function () {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Close Dropdown & Move Arrow on Scroll
+  window.addEventListener('scroll', function () {
+    mobileMenu.classList.add('hidden'); // Close dropdown on scroll
+
+    let currentScroll = window.scrollY;
+    
+    // Move arrow on large screens
+    if (window.innerWidth >= 768) {
+      let arrowPosition = Math.min(currentScroll / 2, window.innerWidth); // Limits movement
+      scrollArrow.style.left = arrowPosition + 'px';
+      scrollArrow.style.opacity = 1 - currentScroll / 500; // Fade out effect
+    }
+  });
+
+  // Background Animation (CSS Below)
+</script>
+
+<style>
+  /* 🔥 Cool Animated Dark Gradient Background */
+  @keyframes gradientAnimation {
+    0% { background: linear-gradient(to right, black, #1a1a1a, #333); }
+    50% { background: linear-gradient(to right, #111, #222, #444); }
+    100% { background: linear-gradient(to right, black, #1a1a1a, #333); }
+  }
+
+  #header, #mobile-menu {
+    animation: gradientAnimation 6s infinite alternate;
+  }
+
+  /* 🔥 Smooth Transition for Arrow */
+  #scroll-arrow {
+    transition: left 0.3s ease-out, opacity 30s ease-out;
+  }
+</style>
+
+ <!-- Hero Section -->
+ <section class="relative bg-cover bg-center h-80 text-white flex items-center justify-center" style="background-image: url('hero sections/b07db463-4529-41a0-87aa-a9530f4647bd.jpg');">
+  <div class="absolute inset-0 bg-black opacity-50"></div>
+  <div class="relative container text-center z-10">
+    <h1 class="text-5xl">Luxury Marble Installation</h1>
+    <p class="text-lg mt-2">Timeless elegance & expert craftsmanship for your spaces</p>
+  </div>
+</section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-white fade-in">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-6">Artstone Installations Gallery</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <img src="img/art stone.jpg" alt="Artstone Wall Cladding" class="rounded-lg shadow-lg w-full h-72 object-cover hover:scale-105 transition-transform">
+          <img src="img/artstone2.jpg" alt="Artstone Flooring" class="rounded-lg shadow-lg w-full h-72 object-cover hover:scale-105 transition-transform">
+          <img src="img/artstone3.jpg" alt="Artstone Landscaping" class="rounded-lg shadow-lg w-full h-72 object-cover hover:scale-105 transition-transform">
+        </div>
+      </div>
+    </section>
+  
+
+  <!-- About the Artstone Expert -->
+  <section id="about" class="py-16 bg-white fade-in">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-gray-800 mb-6">Meet Your Artstone Installation Expert</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        With years of experience in **artstone wall cladding, flooring, and landscaping**,  
+        I provide high-quality craftsmanship tailored to modern and classic styles.  
+        My goal is to enhance your spaces with durable and aesthetically pleasing artstone finishes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-gray-200 fade-in">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-gray-800 mb-6">Services Offered</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-bold text-gray-700">Wall Cladding</h3>
+          <p class="text-gray-700 mt-2">Enhance your walls with beautifully crafted artstone designs.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-bold text-gray-700">Artstone Flooring</h3>
+          <p class="text-gray-700 mt-2">Durable and elegant flooring solutions for homes & businesses.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-bold text-gray-700">Outdoor Landscaping</h3>
+          <p class="text-gray-700 mt-2">Artstone paving and decorative features for gardens & patios.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-16 bg-gray-200 fade-in">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold text-gray-800 mb-6">What Our Clients Say</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <p class="text-gray-600 italic">"The best artstone cladding expert! My walls look stunning."</p>
+          <h3 class="text-lg font-semibold mt-4 text-gray-700">- Emma R.</h3>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <p class="text-gray-600 italic">"Professional, efficient, and excellent craftsmanship!"</p>
+          <h3 class="text-lg font-semibold mt-4 text-gray-700">- Daniel M.</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-gradient-to-r from-indigo-700 to-blue-900 text-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-6 text-yellow-400">Get in Touch</h2>
+    <p class="text-center text-lg mb-8">Let’s create something amazing together! Contact us today.</p>
+
+    <!-- Contact Form -->
+<div class="bg-gradient-to-r from-gray-900 to-gray-800 p-6 rounded-lg shadow-lg max-w-lg mx-auto">
+  <h3 class="text-xl font-semibold text-yellow-400 mb-4 text-center">Send a Message</h3>
+  <form id="contact-form">
+    <div class="mb-4">
+      <input type="text" id="name" placeholder="Your Name" required 
+             class="w-full p-3 border rounded-lg text-white bg-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-yellow-400">
+    </div>
+    <div class="mb-4">
+      <input type="email" id="email" placeholder="Your Email" required 
+             class="w-full p-3 border rounded-lg text-white bg-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-yellow-400">
+    </div>
+    <div class="mb-4">
+      <textarea id="message" rows="4" placeholder="Your Message" required 
+                class="w-full p-3 border rounded-lg text-white bg-gray-700 placeholder-gray-400 focus:ring-2 focus:ring-yellow-400"></textarea>
+    </div>
+    <button type="submit" class="bg-yellow-500 text-black px-6 py-3 rounded-full text-lg hover:bg-yellow-600 w-full transition-all shadow-md">
+      Send Message
+    </button>
+    <p id="success-message" class="hidden text-green-400 mt-4">Message sent successfully! ✅</p>
+  </form>
+</div>
+
+
+    <!-- Social Media Links -->
+    <div class="mt-12 text-center">
+      <h3 class="text-xl font-semibold text-yellow-400 mb-4">Connect with Us</h3>
+      <div class="flex flex-wrap justify-center gap-4 mt-6">
+        <a href="https://wa.me/254114522514" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+          <i class="fab fa-whatsapp text-2xl mr-2"></i> WhatsApp
+        </a>
+        <a href="https://www.tiktok.com/@top10interiordesi?_t=ZM-8tgrml8DECk&_r=1" target="_blank" class="bg-black hover:bg-pink-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+          <i class="fab fa-tiktok text-2xl mr-2"></i> Tiktok
+        </a>
+        <a href="https://www.instagram.com/top10interior_design_?igsh=cnFyY2J2aGd1YXN5" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+          <i class="fab fa-instagram text-2xl mr-2"></i> Instagram
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61573039911752" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+          <i class="fab fa-facebook-f text-2xl mr-2"></i> Facebook
+        </a>
+        <a href="https://x.com/TophryT?t=GzNlH1_sVOBW_4pv1RAJ6A&s=09" target="_blank" class="bg-blue-400 hover:bg-blue-500 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+          <i class="fab fa-twitter text-2xl mr-2"></i> Twitter
+        </a>
+        <a href="sms:+254114522514" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+          <i class="fas fa-sms text-2xl mr-2"></i> Send SMS
+        </a>
+        <a href="tel:+254114522514" class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+          <i class="fas fa-phone-alt text-2xl mr-2"></i> Call Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+ <!-- Footer -->
+<footer class="bg-gray-900 text-white text-center py-3 fade-in">
+  <div class="container mx-auto flex flex-col items-center px-6">
+
+      <!-- Copyright -->
+      <p class="text-gray-500 text-sm mt-2">© 2025 Top10 Interior Design. All Rights Reserved.</p>
+
+      <!-- Powered by Legacie with Shaking Logo -->
+      <div class="flex items-center space-x-2 mt-3">
+          <img src="download-removebg-preview.png" alt="Legacie Web Logo" class="h-10 md:h-12 shaking-logo">
+          <a href="https://legacieweb.github.io/legacieweb/" class="text-blue-500 text-sm md:text-base">Powered by Legacie</a>
+      </div>
+
+  </div>
+</footer>
+
+  <script>
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Collect form data
+    const formData = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+    };
+
+    // Send form data using fetch()
+    fetch("http://localhost:5000/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        document.getElementById("success-message").classList.remove("hidden");
+        document.getElementById("contact-form").reset();
+      } else {
+        alert("Error: Unable to send message.");
+      }
+    })
+    .catch(error => console.error("Error:", error));
+  });
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".fade-in").forEach(el => {
+        el.classList.add("visible");
+      });
+    });
+  </script>
+
+</body>
+</html>
