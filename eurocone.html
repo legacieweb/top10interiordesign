@@ -51,6 +51,16 @@
     .carousel-button.right {
       right: 10px;
     }
+    /* Shaking Logo Animation */
+.shaking-logo {
+    animation: shake 1s infinite ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    10%, 30%, 50%, 70%, 90% { transform: rotate(-2deg); }
+    20%, 40%, 60%, 80% { transform: rotate(2deg); }
+}
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
@@ -111,10 +121,8 @@
     mobileMenu.classList.toggle('hidden');
   });
 
-  // Close Dropdown & Move Arrow on Scroll
+  // Move Arrow on Scroll
   window.addEventListener('scroll', function () {
-    mobileMenu.classList.add('hidden'); // Close dropdown on scroll
-
     let currentScroll = window.scrollY;
     
     // Move arrow on large screens
@@ -256,30 +264,30 @@
 </section>
   <!-- Modal for Tile Images -->
   <div id="tile-modal" class="modal flex">
-    <div class="modal-content">
-      <button class="close-button absolute top-2 right-2 text-gray-600 hover:text-gray-900" onclick="closeModal()">✖</button>
-      <h3 class="text-3xl font-bold mb-4" id="modal-title">Tile Title</h3>
-      <p id="modal-description" class="text-lg text-gray-600 mb-6">Brief description of the tile.</p>
-      <div class="carousel relative">
-        <button class="carousel-button left" onclick="prevImage()">❮</button>
-        <img id="carousel-image" src="" alt="Tile Image" class="rounded shadow">
-        <button class="carousel-button right" onclick="nextImage()">❯</button>
-      </div>
-      <a href="#contact" onclick="closeModal()" class="bg-blue-500 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-600 mt-6 inline-block">Consult About This Design</a>
+  <div class="modal-content">
+    <button class="close-button absolute top-2 right-2 text-gray-600 hover:text-gray-900" onclick="closeModal()">✖</button>
+    <h3 class="text-3xl font-bold mb-4" id="modal-title">Tile Title</h3>
+    <p id="modal-description" class="text-lg text-gray-600 mb-6">Brief description of the tile.</p>
+    <div class="carousel relative">
+      <button class="carousel-button left" onclick="prevImage()">❮</button>
+      <img id="carousel-image" src="" alt="Tile Image" class="rounded shadow">
+      <button class="carousel-button right" onclick="nextImage()">❯</button>
     </div>
+    <a href="#contact" onclick="closeModal()" class="bg-blue-500 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-600 mt-6 inline-block">Consult About This Design</a>
   </div>
-  
-  <style>
-    .close-button {
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-  </style>
+</div>
+
+<style>
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+</style>
 
 <!-- Contact Section -->
-<section id="contact" class="py-16 bg-gradient-to-r from-indigo-700 to-blue-900 text-white">
+<section id="contact" class="py-16 text-white fade-in" style="background: linear-gradient(45deg, rgb(189, 192, 11), #d5f32e, #fdf148, rgb(217, 236, 39), rgb(213, 233, 32)); background-size: 400% 400%; animation: gradientAnimation 15s ease infinite;">
   <div class="container mx-auto px-6">
     <h2 class="text-4xl font-bold text-center mb-6 text-yellow-400">Get in Touch</h2>
     <p class="text-center text-lg mb-8">Let’s create something amazing together! Contact us today.</p>
@@ -341,7 +349,7 @@
 
 
  <!-- Footer -->
-<footer class="bg-gray-900 text-white text-center py-3 fade-in">
+ <footer class="bg-gray-900 text-white text-center py-3 fade-in">
   <div class="container mx-auto flex flex-col items-center px-6">
 
       <!-- Copyright -->
@@ -349,8 +357,10 @@
 
       <!-- Powered by Legacie with Shaking Logo -->
       <div class="flex items-center space-x-2 mt-3">
+        <a href="https://legacieweb.github.io/legacieweb/">
           <img src="download-removebg-preview.png" alt="Legacie Web Logo" class="h-10 md:h-12 shaking-logo">
-          <a href="https://legacieweb.github.io/legacieweb/" class="text-blue-500 text-sm md:text-base">Powered by Legacie</a>
+        </a>
+                  <a href="https://legacieweb.github.io/legacieweb/" class="text-blue-500 text-sm md:text-base">Powered by Legacie</a>
       </div>
 
   </div>

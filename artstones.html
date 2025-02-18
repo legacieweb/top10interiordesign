@@ -32,6 +32,23 @@
     10%, 30%, 50%, 70%, 90% { transform: rotate(-2deg); }
     20%, 40%, 60%, 80% { transform: rotate(2deg); }
 }
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    25% {
+      background-position: 100% 50%;
+    }
+    50% {
+      background-position: 0% 100%;
+    }
+    75% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
@@ -92,10 +109,8 @@
     mobileMenu.classList.toggle('hidden');
   });
 
-  // Close Dropdown & Move Arrow on Scroll
+  // Move Arrow on Scroll
   window.addEventListener('scroll', function () {
-    mobileMenu.classList.add('hidden'); // Close dropdown on scroll
-
     let currentScroll = window.scrollY;
     
     // Move arrow on large screens
@@ -200,7 +215,7 @@
   </section>
 
 <!-- Contact Section -->
-<section id="contact" class="py-16 bg-gradient-to-r from-indigo-700 to-blue-900 text-white">
+<section id="contact" class="py-16 text-white fade-in" style="background: linear-gradient(45deg, rgb(189, 192, 11), #d5f32e, #fdf148, rgb(217, 236, 39), rgb(213, 233, 32)); background-size: 400% 400%; animation: gradientAnimation 15s ease infinite;">
   <div class="container mx-auto px-6">
     <h2 class="text-4xl font-bold text-center mb-6 text-yellow-400">Get in Touch</h2>
     <p class="text-center text-lg mb-8">Let’s create something amazing together! Contact us today.</p>
@@ -262,7 +277,7 @@
 
 
  <!-- Footer -->
-<footer class="bg-gray-900 text-white text-center py-3 fade-in">
+ <footer class="bg-gray-900 text-white text-center py-3 fade-in">
   <div class="container mx-auto flex flex-col items-center px-6">
 
       <!-- Copyright -->
@@ -270,8 +285,10 @@
 
       <!-- Powered by Legacie with Shaking Logo -->
       <div class="flex items-center space-x-2 mt-3">
+        <a href="https://legacieweb.github.io/legacieweb/">
           <img src="download-removebg-preview.png" alt="Legacie Web Logo" class="h-10 md:h-12 shaking-logo">
-          <a href="https://legacieweb.github.io/legacieweb/" class="text-blue-500 text-sm md:text-base">Powered by Legacie</a>
+        </a>
+                  <a href="https://legacieweb.github.io/legacieweb/" class="text-blue-500 text-sm md:text-base">Powered by Legacie</a>
       </div>
 
   </div>
