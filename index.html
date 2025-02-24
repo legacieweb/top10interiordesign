@@ -91,6 +91,7 @@
     10%, 30%, 50%, 70%, 90% { transform: rotate(-2deg); }
     20%, 40%, 60%, 80% { transform: rotate(2deg); }
 }
+
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
@@ -204,8 +205,8 @@
       <div class="grid grid-cols-2 md:grid-cols-2 gap-8 mt-8 items-center">
         <img src="img/download.jpeg" alt="Designer" class="rounded-lg shadow-lg w-full"> 
         <div>
-          <h3 class="text-3xl font-semibold mb-4 text-gray-700">Crafting Timeless Spaces</h3>
-          <p class="mb-4 text-gray-600">With 10+ years in the industry, I create stylish, functional interiors. From marble to artstones, every project is a masterpiece.</p>
+          <h3 class="text-3xl font-semibold mb-4 text-black">Crafting Timeless Spaces</h3>
+          <p class="mb-4 text-black">With 10+ years in the industry, I create stylish, functional interiors. From marble to artstones, every project is a masterpiece.</p>
           <a href="#contact" class="bg-blue-500 text-white px-6 py-2 rounded-full text-lg hover:bg-indigo-700 inline-block">Hire Me</a>
         </div>
       </div>
@@ -269,6 +270,80 @@
   </div>
 </section>
 
+<section id="quote" class="py-16 bg-gradient-to-r from-blue-300 to-blue-600">
+    <div class="bg-gradient-to-r from-blue-400 to-blue-700 p-8 rounded-lg shadow-lg max-w-3xl mx-auto">
+      <p class="text-xl italic text-white">
+        "A home should tell the story of who you are and be a collection of what you love."
+      </p>
+      <span class="block mt-4 text-white font-semibold">– Designer</span>
+    </div>
+  </div>
+</section>
+
+<!-- Include Swiper.js -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<section id="testimonials" class="py-16 bg-gradient-to-r from-blue-300 to-blue-600">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold mb-12">What Our Clients Say</h2>
+
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Testimonial 1 -->
+        <div class="swiper-slide bg-gradient-to-r from-blue-400 to-blue-700 p-6 rounded-lg shadow-lg">
+          <p class="text-white italic">"Top Home Designer transformed my space with stunning Eurocone tiles. The craftsmanship was impeccable!"</p>
+          <span class="block mt-4 text-white font-semibold">– Jessica R.</span>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="swiper-slide bg-gradient-to-r from-blue-400 to-blue-700 p-6 rounded-lg shadow-lg">
+          <p class="text-white italic">"Their attention to detail with marble and artstone work was beyond my expectations. Highly recommended!"</p>
+          <span class="block mt-4 text-white font-semibold">– Michael T.</span>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="swiper-slide bg-gradient-to-r from-blue-400 to-blue-700 p-6 rounded-lg shadow-lg">
+          <p class="text-white italic">"From bricks to mazerous installation, their team delivered a perfect blend of durability and beauty."</p>
+          <span class="block mt-4 text-white font-semibold">– Sophia L.</span>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="swiper-slide bg-gradient-to-r from-blue-400 to-blue-700 p-6 rounded-lg shadow-lg">
+          <p class="text-white italic">"Amazing experience! The tiles and bricks they installed gave my home a luxurious touch."</p>
+          <span class="block mt-4 text-white font-semibold">– David W.</span>
+        </div>
+
+        <!-- Testimonial 5 -->
+        <div class="swiper-slide bg-gradient-to-r from-blue-400 to-blue-700 p-6 rounded-lg shadow-lg">
+          <p class="text-white italic">"The artstones and marble designs completely changed the look of my interior. Top-notch service!"</p>
+          <span class="block mt-4 text-white font-semibold">– Emily K.</span>
+        </div>
+
+      </div>
+
+      <!-- Pagination and Navigation Buttons -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Swiper.js Configuration -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true, 
+    autoplay: {
+      delay: 3000, // Slides change every 3 seconds
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
 
 
 <!-- Contact Section -->
@@ -283,15 +358,15 @@
   <form id="contact-form">
     <div class="mb-4">
       <input type="text" id="name" placeholder="Your Name" required 
-             class="w-full p-3 border rounded-lg text-white bg-gray-700 placeholder-white focus:ring-2 focus:ring-yellow-400">
+             class="w-full p-3 border rounded-lg text-black bg-white placeholder-black focus:ring-2 focus:ring-yellow-400">
     </div>
     <div class="mb-4">
       <input type="email" id="email" placeholder="Your Email" required 
-             class="w-full p-3 border rounded-lg text-white bg-gray-700 placeholder-white focus:ring-2 focus:ring-yellow-400">
+             class="w-full p-3 border rounded-lg text-black bg-white placeholder-black focus:ring-2 focus:ring-yellow-400">
     </div>
     <div class="mb-4">
       <textarea id="message" rows="4" placeholder="Your Message" required 
-                class="w-full p-3 border rounded-lg text-white bg-gray-700 placeholder-white focus:ring-2 focus:ring-yellow-400"></textarea>
+                class="w-full p-3 border rounded-lg text-black bg-white placeholder-black focus:ring-2 focus:ring-yellow-400"></textarea>
     </div>
     <button type="submit" class="bg-yellow-500 text-black px-6 py-3 rounded-full text-lg hover:bg-yellow-600 w-full transition-all shadow-md">
       Send Message
