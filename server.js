@@ -39,7 +39,7 @@ app.post("/send-email", async (req, res) => {
     const ownerMailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER, // Admin email
-      subject: "New Contact Form Submission",
+      subject: "New Work request",
       text: `You received a new message:\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`,
     };
 
@@ -47,13 +47,13 @@ app.post("/send-email", async (req, res) => {
     const userMailOptions = {
       from: process.env.EMAIL_USER,
       to: email, // Sends email to the user
-      subject: "Your Contact Request Received",
+      subject: "Your Request Received 🙏",
       html: `
         <p>Hi <strong>${name}</strong>,</p>
-        <p>Thank you for reaching out! We have received your message and will get back to you soon.</p>
+        <p>Thank you for reaching out! We have received your message and will get back to you soon.Kindly call +254114522514</p>
         <p><strong>Your Message:</strong></p>
         <blockquote>${message}</blockquote>
-        <p>Best regards,<br>Interior Design Team</p>
+        <p>Best regards,<br>Top home designer</p>
       `,
     };
 
