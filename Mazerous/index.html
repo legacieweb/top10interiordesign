@@ -33,6 +33,19 @@
     10%, 30%, 50%, 70%, 90% { transform: rotate(-2deg); }
     20%, 40%, 60%, 80% { transform: rotate(2deg); }
 }
+.glitter-text {
+    background: linear-gradient(45deg, #ffcc00, #ff66ff, #00ccff, #ffcc00);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glitter 4s infinite;
+}
+
+@keyframes glitter {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
   </style>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
@@ -269,8 +282,7 @@
             <a href="https://iyonicweb.iyonicorp.com/">
               <img src="download-removebg-preview.png" alt="Legacie Web Logo" class="h-10 md:h-12 shaking-logo">
             </a>
-                      <a href="https://iyonicweb.iyonicorp.com/" class="text-blue-500 text-sm md:text-base">Powered by Iyonic Web</a>
-          </div>
+            <a href="https://iyonicweb.iyonicorp.com/" class="footer-link"> <span class="glitter-text">Designed by iyonic web</span></a>          </div>
 
   </div>
 </footer>
