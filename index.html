@@ -104,6 +104,23 @@
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+
+@keyframes slideWords {
+  0%, 45% {
+    transform: translateY(0%);
+  }
+  50%, 95% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.word-switch {
+  animation: slideWords 6s ease-in-out infinite;
+}
+
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
@@ -200,85 +217,144 @@
   }
 </style>
 
-  <!-- Hero Section -->
-  <section class="relative bg-cover bg-center h-96 text-white flex items-center justify-center" style="background-image: url('img/f1748eb1-6287-47ca-9eee-81d09fc5683b.jpeg');"> <!-- Replace 'hero-bg.jpg' -->
-    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-    <div class="relative container text-center">
-      <h1 class="text-4xl font-bold">Meet Your Interior & Exterior Design Expert</h1>
-      <p class="text-lg mt-2">Transforming spaces with premium Tiles, Bricks, Marble & Artstones, crafted by a seasoned professional with over 10 years of experience.</p>
-      <a href="#contact" class="bg-blue-400 text-black px-6 py-2 rounded-full text-lg hover:bg-red-400 mt-4 inline-block">Get a Quote</a>
-    </div>
-  </section>
+<!-- Hero Section -->
+<section class="relative bg-cover bg-center h-[32rem] text-white flex items-center justify-center" style="background-image: url('img/f1748eb1-6287-47ca-9eee-81d09fc5683b.jpeg');">
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  <div class="relative container text-center px-4">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Interior Finishing & Renovation Experts</h1>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto">From concept to clean-up — we transform your space with skill, detail, and top-quality finishes. Floors, ceilings, lighting, and more.</p>
+    <a href="#contact" class="mt-6 inline-block bg-yellow-400 text-black px-8 py-3 rounded-full text-lg hover:bg-yellow-500 transition-all shadow-md">Request a Free Quote</a>
+  </div>
+</section>
 
-  <!-- About Section -->
-  <section class="py-16 bg-white fade-in">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold text-blue-500">Meet the Expert</h2>
-      <div class="grid grid-cols-2 md:grid-cols-2 gap-8 mt-8 items-center">
-        <img src="img/download.jpeg" alt="Designer" class="rounded-lg shadow-lg w-full"> 
-        <div>
-          <h3 class="text-3xl font-semibold mb-4 text-black">Crafting Timeless Spaces</h3>
-          <p class="mb-4 text-black">With 10+ years in the industry, I create stylish, functional interiors. From marble to artstones, every project is a masterpiece.</p>
-          <a href="#contact" class="bg-blue-500 text-white px-6 py-2 rounded-full text-lg hover:bg-indigo-700 inline-block">Hire Me</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
- <!-- Featured Works -->
-<section class="py-16 bg-gradient-to-r from-blue-300 to-blue-600 text-black">
+<!-- About Section -->
+<section class="py-20 bg-white fade-in">
   <div class="container mx-auto px-6 text-center">
-    <h2 class="text-5xl font-bold mb-12">Our Featured Works</h2>
-    
-    <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols- gap-12">
-      <!-- Tiles -->
-      <div class="flex flex-col items-center transform hover:scale-105 transition-transform duration-300">
-        <a href="tiles/">
-          <img src="img/Porcelanato Marmorizado_ Cores, Preços e Onde Comprar o Melhor Para o Seu Projeto.jpeg" alt="Tiles" class="rounded-xl shadow-2xl w-full h-72 object-cover">
-        </a>
-        <h3 class="text-2xl font-semibold mt-4">Tiles</h3>
-      </div>
-
-      <!-- Eurocone Tiles -->
-      <div class="flex flex-col items-center transform hover:scale-105 transition-transform duration-300">
-        <a href="eurocone/">
-          <img src="img/bukoto 1.jpg" alt="Eurocone Tiles" class="rounded-xl shadow-2xl w-full h-72 object-cover">
-        </a>
-        <h3 class="text-2xl font-semibold mt-4">Eurocone Tiles</h3>
-      </div>
-
-      <!-- Mazerous -->
-      <div class="flex flex-col items-center transform hover:scale-105 transition-transform duration-300">
-        <a href="Mazerous/">
-          <img src="img/mazerous1.jpg" alt="Mazerous" class="rounded-xl shadow-2xl w-full h-72 object-cover">
-        </a>
-        <h3 class="text-2xl font-semibold mt-4">Mazerous</h3>
-      </div>
-
-      <!-- Bricks -->
-      <div class="flex flex-col items-center transform hover:scale-105 transition-transform duration-300">
-        <a href="bricks/">
-          <img src="img/Red Foyer Entryway with Red Brick and Indian Style Inspired Interior (Mangalas Farmhouse).jpeg" alt="Bricks" class="rounded-xl shadow-2xl w-full h-72 object-cover">
-        </a>
-        <h3 class="text-2xl font-semibold mt-4">Bricks</h3>
-      </div>
-
-      <!-- Marble -->
-      <div class="flex flex-col items-center transform hover:scale-105 transition-transform duration-300">
-        <a href="marble/">
-          <img src="img/c3ca195e-e514-416a-b5c9-843b66877eb6.jpg" alt="Marble" class="rounded-xl shadow-2xl w-full h-72 object-cover">
-        </a>
-        <h3 class="text-2xl font-semibold mt-4">Marble</h3>
-      </div>
-
-      <!-- Artstones -->
-      <div class="flex flex-col items-center transform hover:scale-105 transition-transform duration-300">
-        <a href="artstones/">
-          <img src="img/artstone3.jpg" alt="Artstones" class="rounded-xl shadow-2xl w-full h-72 object-cover">
-        </a>
-        <h3 class="text-2xl font-semibold mt-4">Artstones</h3>
+    <h2 class="text-4xl font-extrabold text-blue-600 mb-6">Who We Are</h2>
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <img src="img/download.jpeg" alt="Interior Designer" class="rounded-xl shadow-xl w-full">
+      <div class="text-left">
+        <h3 class="text-3xl font-semibold mb-4">Crafting Interiors That Speak Elegance</h3>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          With over a decade of hands-on experience, we bring life to blank walls and bare rooms. Whether it's laying flawless tiles, installing custom ceilings, or finishing walls with finesse — our interior finishing team blends artistry with precision.
+        </p>
+        <p class="text-lg text-gray-700 mt-4 leading-relaxed">
+          From residential renovations to commercial upgrades, our work turns everyday spaces into stunning showcases.
+        </p>
+        <a href="#contact" class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-800 transition-all shadow-md">Hire Us Today</a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-20 bg-gray-100 fade-in" id="services">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-4xl font-extrabold text-blue-600 mb-8">Interior Finishing Services</h2>
+    <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-12">
+      We offer a full range of finishing and renovation services tailored to residential and commercial spaces — done cleanly, professionally, and with a touch of class.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
+      
+      <!-- Flooring -->
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+        <h3 class="text-2xl font-bold text-blue-500 mb-3">🧱 Floor Tiling & Polishing</h3>
+        <p class="text-gray-700">Flawless tile installation using premium marble, ceramic, porcelain, and Eurocone. Smooth finishes, level surfaces, waterproofed and grout-sealed.</p>
+      </div>
+
+      <!-- Wall Treatments -->
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+        <h3 class="text-2xl font-bold text-blue-500 mb-3">🎨 Wall Cladding & Paint</h3>
+        <p class="text-gray-700">Artstone and brick cladding, designer paint finishes, feature walls and custom color schemes that add style and texture to your space.</p>
+      </div>
+
+      <!-- Kitchen & Bath -->
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+        <h3 class="text-2xl font-bold text-blue-500 mb-3">🛁 Kitchen & Bathroom Finishing</h3>
+        <p class="text-gray-700">We install countertops, backsplashes, modern fixtures, and cabinetry for a clean, luxurious kitchen or bathroom finish.</p>
+      </div>
+
+      <!-- Renovation -->
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
+        <h3 class="text-2xl font-bold text-blue-500 mb-3">🔧 Full Renovation Services</h3>
+        <p class="text-gray-700">From demolitions to detailed finishing, we manage complete home and office renovations — on time and within budget.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Our Craft Section -->
+<section class="py-20 bg-blue-400 text-gray-900">
+  <div class="container mx-auto px-6">
+<h2 class="text-5xl font-extrabold text-center mb-14 text-blue-800">
+  <span id="animated-text" class="text-orange-500"></span>
+</h2>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+
+  <!-- Reusable Tile Template -->
+  <a href="tiles/" class="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 relative">
+    <div class="relative w-full h-64 overflow-hidden">
+      <img src="https://tophomedesigner.com/tiles/img/2.jpg" alt="Tiles" class="w-full h-full object-cover transition-opacity duration-1000 tile-image" data-images='["https://tophomedesigner.com/tiles/img/16.jpg", "https://tophomedesigner.com/tiles/img/5.jpg", "https://tophomedesigner.com/tiles/img/11.jpg"]'>
+    </div>
+    <div class="p-6 text-center">
+      <h3 class="text-2xl font-bold text-blue-700 mb-2">Elegant Tiles</h3>
+      <p class="text-gray-600">Refined floor and wall tiling that brings elegance and shine to your interiors.</p>
+    </div>
+  </a>
+
+  <a href="eurocone/" class="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 relative">
+    <div class="relative w-full h-64 overflow-hidden">
+      <img src="https://tophomedesigner.com/img/bukoto%201.jpg" alt="Eurocone" class="w-full h-full object-cover transition-opacity duration-1000 tile-image" data-images='["https://tophomedesigner.com/eurocone/img/floor%204.jpg", "https://tophomedesigner.com/eurocone/img/bukoto%202.jpg", "https://tophomedesigner.com/eurocone/img/bukoto%203.jpg", "https://tophomedesigner.com/eurocone/img/monalisa1.jpg"]'>
+    </div>
+    <div class="p-6 text-center">
+      <h3 class="text-2xl font-bold text-blue-700 mb-2">Eurocone Surfaces</h3>
+      <p class="text-gray-600">Textured finishes with Eurocone tiles for sophisticated interiors & exteriors.</p>
+    </div>
+  </a>
+
+  <a href="Mazerous/" class="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 relative">
+    <div class="relative w-full h-64 overflow-hidden">
+      <img src="https://tophomedesigner.com/Mazerous/img/mazerous5.jpg" alt="Mazerous" class="w-full h-full object-cover transition-opacity duration-1000 tile-image" data-images='["https://tophomedesigner.com/Mazerous/img/mazerous7.jpg", "https://tophomedesigner.com/Mazerous/img/mazerous6.jpg"]'>
+    </div>
+    <div class="p-6 text-center">
+      <h3 class="text-2xl font-bold text-blue-700 mb-2">Mazerous Luxury</h3>
+      <p class="text-gray-600">Intricate, stylish, and bold finishes using high-end Mazerous panels.</p>
+    </div>
+  </a>
+
+  <a href="bricks/" class="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 relative">
+    <div class="relative w-full h-64 overflow-hidden">
+      <img src="https://tophomedesigner.com/img/Red%20Foyer%20Entryway%20with%20Red%20Brick%20and%20Indian%20Style%20Inspired%20Interior%20(Mangalas%20Farmhouse).jpeg" alt="Bricks" class="w-full h-full object-cover transition-opacity duration-1000 tile-image" data-images='["https://tophomedesigner.com/bricks/img/Brick%20Wall%20House%20boasts%20minimalist%20style%20with%20maximum%20appeal.jpeg", "https://tophomedesigner.com/bricks/img/Good%20wood%20burning%20fireplaces.jpeg"]'>
+    </div>
+    <div class="p-6 text-center">
+      <h3 class="text-2xl font-bold text-blue-700 mb-2">Classic Brickwork</h3>
+      <p class="text-gray-600">Warm, earthy brick finishes that give character and depth to your space.</p>
+    </div>
+  </a>
+
+  <a href="marble/" class="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 relative">
+    <div class="relative w-full h-64 overflow-hidden">
+      <img src="https://tophomedesigner.com/marble/Granite%20Countertops%20_%20Kitchen%20Countertops.jpg" alt="Marble" class="w-full h-full object-cover transition-opacity duration-1000 tile-image" data-images='["https://tophomedesigner.com/marble/29%20Luxurious%20Kitchens%20with%20Innovative%20Design%20Features.jpg", "https://tophomedesigner.com/img/c3ca195e-e514-416a-b5c9-843b66877eb6.jpg"]'>
+    </div>
+    <div class="p-6 text-center">
+      <h3 class="text-2xl font-bold text-blue-700 mb-2">Polished Marble</h3>
+      <p class="text-gray-600">Timeless marble installations for luxury flooring, walls, and countertops.</p>
+    </div>
+  </a>
+
+  <a href="artstones/" class="group block bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition duration-300 relative">
+    <div class="relative w-full h-64 overflow-hidden">
+      <img src="https://tophomedesigner.com/artstones/img/art%20stone.jpg" alt="Artstones" class="w-full h-full object-cover transition-opacity duration-1000 tile-image" data-images='["https://tophomedesigner.com/artstones/img/artstone6.jpg", "https://tophomedesigner.com/artstones/img/artstone5.jpg"]'>
+    </div>
+    <div class="p-6 text-center">
+      <h3 class="text-2xl font-bold text-blue-700 mb-2">Artstone Detailing</h3>
+      <p class="text-gray-600">Chiseled textures, bold statements—artstones for creative wall design.</p>
+    </div>
+  </a>
+
+</div>
+
   </div>
 </section>
 
@@ -485,5 +561,64 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 
   gtag('config', 'AW-17190495730');
 </script>
+
+<script>
+  const phrases = [
+    "Our Interior Craft.",
+    "Our Exterior Craft."
+  ];
+
+  const element = document.getElementById("animated-text");
+  let currentPhraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeWriterEffect() {
+    const currentPhrase = phrases[currentPhraseIndex];
+    const visibleText = currentPhrase.substring(0, charIndex);
+
+    element.textContent = visibleText;
+
+    if (!isDeleting && charIndex < currentPhrase.length) {
+      charIndex++;
+      setTimeout(typeWriterEffect, 80); // typing speed
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(typeWriterEffect, 40); // delete speed
+    } else {
+      isDeleting = !isDeleting;
+      if (!isDeleting) currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+      setTimeout(typeWriterEffect, 1000); // pause before typing again
+    }
+  }
+
+  // Start animation on load
+  document.addEventListener("DOMContentLoaded", typeWriterEffect);
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const imageEls = document.querySelectorAll('.tile-image');
+
+    imageEls.forEach(img => {
+      const additionalImages = JSON.parse(img.getAttribute('data-images'));
+      const originalSrc = img.src;
+
+      // Create a full list including the original image as first item
+      const images = [originalSrc, ...additionalImages];
+      let i = 0;
+
+      setInterval(() => {
+        i = (i + 1) % images.length;
+        img.style.opacity = 0;
+
+        setTimeout(() => {
+          img.src = images[i];
+          img.style.opacity = 1;
+        }, 400); // short delay for fade-out
+      }, 3000);
+    });
+  });
+</script>
+
 </body>
 </html>
