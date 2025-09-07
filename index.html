@@ -464,33 +464,36 @@
 </div>
 
 
-    <!-- Social Media Links -->
-    <div class="mt-12 text-center">
-      <h3 class="text-xl font-semibold text-yellow-400 mb-4">Connect with Us</h3>
-      <div class="flex flex-wrap justify-center gap-4 mt-6">
-        <a href="https://wa.me/254114522514" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
-          <i class="fab fa-whatsapp text-2xl mr-2"></i> WhatsApp
-        </a>
-        <a href="https://www.tiktok.com/@top10interiordesi?_t=ZM-8tgrml8DECk&_r=1" target="_blank" class="bg-black hover:bg-pink-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
-          <i class="fab fa-tiktok text-2xl mr-2"></i> Tiktok
-        </a>
-        <a href="https://www.instagram.com/top10interior_design_?igsh=cnFyY2J2aGd1YXN5" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
-          <i class="fab fa-instagram text-2xl mr-2"></i> Instagram
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61573585947119" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
-          <i class="fab fa-facebook-f text-2xl mr-2"></i> Facebook
-        </a>
-        <a href="https://x.com/TophryT?t=GzNlH1_sVOBW_4pv1RAJ6A&s=09" target="_blank" class="bg-blue-400 hover:bg-blue-500 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
-          <i class="fab fa-twitter text-2xl mr-2"></i> Twitter
-        </a>
-        <a href="sms:+254114522514" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
-          <i class="fas fa-sms text-2xl mr-2"></i> Send SMS
-        </a>
-        <a href="tel:+254114522514" class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
-          <i class="fas fa-phone-alt text-2xl mr-2"></i> Call Now
-        </a>
-      </div>
+  <!-- Social Media Links -->
+  <div class="mt-12 text-center">
+    <h3 class="text-xl font-semibold text-yellow-400 mb-4">Connect with Us</h3>
+    <div class="flex flex-wrap justify-center gap-4 mt-6">
+    <a href="https://wa.me/254114522514" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+      <i class="fab fa-whatsapp text-2xl mr-2"></i> WhatsApp
+    </a>
+    <a href="https://www.tiktok.com/@top10interiordesi?_t=ZM-8tgrml8DECk&_r=1" target="_blank" class="bg-black hover:bg-pink-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+      <i class="fab fa-tiktok text-2xl mr-2"></i> Tiktok
+    </a>
+    <a href="https://www.instagram.com/top10interior_design_?igsh=cnFyY2J2aGd1YXN5" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+      <i class="fab fa-instagram text-2xl mr-2"></i> Instagram
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61573585947119" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+      <i class="fab fa-facebook-f text-2xl mr-2"></i> Facebook
+    </a>
+    <a href="https://x.com/TophryT?t=GzNlH1_sVOBW_4pv1RAJ6A&s=09" target="_blank" class="bg-blue-400 hover:bg-blue-500 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+      <i class="fab fa-twitter text-2xl mr-2"></i> Twitter
+    </a>
+    <a href="https://youtube.com/@topohomedesigner?si=O-z8t2C4fQ6pfcPL" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+      <i class="fab fa-youtube text-2xl mr-2"></i> YouTube
+    </a>
+    <a href="sms:+254114522514" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+      <i class="fas fa-sms text-2xl mr-2"></i> Send SMS
+    </a>
+    <a href="tel:+254114522514" class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
+      <i class="fas fa-phone-alt text-2xl mr-2"></i> Call Now
+    </a>
     </div>
+  </div>
   </div>
 </section>
 
@@ -617,6 +620,256 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     });
   });
 </script>
+
+  
+  <!-- Floating Inquiry Button -->
+  <button id="inquiry-btn" class="inquiry-btn" aria-label="Inquiry" title="Inquiry">
+    <span class="inquiry-label">Inquire</span>
+  </button>
+
+  <style>
+    /* Floating Inquiry Button Styles */
+    .inquiry-btn {
+      position: fixed;
+      right: 16px; /* final settle position (will switch to left/top on drag) */
+      bottom: 16px;
+      width: 60px;
+      height: 60px;
+      border: none;
+      border-radius: 50%;
+      background: radial-gradient(120% 120% at 30% 30%, #ffd166 0%, #ef476f 45%, #118ab2 100%);
+      color: #fff;
+      box-shadow: 0 10px 20px rgba(0,0,0,.25), inset 0 0 18px rgba(255,255,255,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: grab;
+      z-index: 9999;
+      transition: transform .25s ease, box-shadow .2s ease, left .35s ease, top .35s ease, right .35s ease, bottom .35s ease, opacity .4s ease, width .35s ease, border-radius .35s ease, padding .35s ease;
+      animation: inquiry-float 4s ease-in-out infinite;
+      padding: 0 0; /* will expand when settled */
+      white-space: nowrap;
+    }
+    .inquiry-btn:hover { box-shadow: 0 12px 26px rgba(0,0,0,.3), inset 0 0 22px rgba(255,255,255,.35); }
+    .inquiry-btn:active { cursor: grabbing; }
+    .inquiry-btn.dragging { transform: scale(0.96); opacity: 0.95; }
+
+    /* Hidden label until settle */
+    .inquiry-label {
+      display: none;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .inquiry-btn.settled {
+      width: auto;
+      border-radius: 9999px; /* pill */
+      padding: 0 18px;
+      height: 54px;
+    }
+    .inquiry-btn.settled .inquiry-label { display: inline; }
+
+    @keyframes inquiry-float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    /* Blink animations triggered after settle */
+    @keyframes inquiry-blink {
+      0% { opacity: 1; box-shadow: 0 10px 20px rgba(0,0,0,.25), inset 0 0 18px rgba(255,255,255,.25); }
+      20% { opacity: .35; transform: scale(0.98); box-shadow: 0 12px 28px rgba(0,0,0,.35), 0 0 12px rgba(255,214,102,.45) inset; }
+      40% { opacity: 1; transform: scale(1.03); box-shadow: 0 14px 32px rgba(0,0,0,.35), 0 0 18px rgba(239,71,111,.45) inset; }
+      60% { opacity: .35; transform: scale(0.99); box-shadow: 0 12px 28px rgba(0,0,0,.35), 0 0 12px rgba(17,138,178,.4) inset; }
+      100% { opacity: 1; transform: scale(1); box-shadow: 0 10px 20px rgba(0,0,0,.25), inset 0 0 18px rgba(255,255,255,.25); }
+    }
+    @keyframes inquiry-label-blink {
+      0% { opacity: 1; }
+      25% { opacity: .25; }
+      50% { opacity: 1; }
+      75% { opacity: .25; }
+      100% { opacity: 1; }
+    }
+    .inquiry-btn.blinking { animation: inquiry-blink 1.2s ease-in-out 1; }
+    .inquiry-btn.blinking .inquiry-label { animation: inquiry-label-blink 1.2s ease-in-out 1; }
+  </style>
+
+  <script>
+    // Intro tour moving around the page smoothly, then settle bottom-right and show label.
+    // After tour, enable drag + snap and click-to-scroll. Then blink once after 3s.
+    (() => {
+      const btn = document.getElementById('inquiry-btn');
+      const label = btn.querySelector('.inquiry-label');
+
+      function lerp(a, b, t) { return a + (b - a) * t; }
+
+      function animateSegment(from, to, duration) {
+        return new Promise(resolve => {
+          const start = performance.now();
+          const rect = btn.getBoundingClientRect();
+          // Switch to left/top anchoring
+          btn.style.right = 'auto';
+          btn.style.bottom = 'auto';
+
+          const tick = (now) => {
+            const t = Math.min(1, (now - start) / duration);
+            const x = lerp(from.x, to.x, t);
+            const y = lerp(from.y, to.y, t);
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+            if (t < 1) requestAnimationFrame(tick); else resolve();
+          };
+          requestAnimationFrame(tick);
+        });
+      }
+
+      async function introTourThenSettle() {
+        // Start from off-canvas then tour corners/edges, end bottom-right
+        const margin = 16;
+        const size = 60; // initial button size for coords
+        const vw = () => window.innerWidth;
+        const vh = () => window.innerHeight;
+
+        // Ensure initial absolute anchors
+        btn.style.right = 'auto';
+        btn.style.bottom = 'auto';
+        btn.style.left = (vw() - margin - size) + 'px';
+        btn.style.top = (vh() - margin - size) + 'px';
+
+        const path = [
+          { x: margin, y: margin },                                             // TL
+          { x: (vw() - size) / 2, y: margin },                                  // T-center
+          { x: vw() - size - margin, y: margin },                               // TR
+          { x: vw() - size - margin, y: (vh() - size) / 2 },                    // R-center
+          { x: vw() - size - margin, y: vh() - size - margin },                 // BR
+          { x: (vw() - size) / 2, y: vh() - size - margin },                    // B-center
+          { x: margin, y: vh() - size - margin },                               // BL
+          { x: margin, y: (vh() - size) / 2 },                                  // L-center
+          { x: vw() - size - margin, y: vh() - size - margin }                  // settle BR
+        ];
+
+        // Slightly faster for segments, a bit slower on last settle
+        let current = { x: parseFloat(btn.style.left)|| (vw()-size-margin), y: parseFloat(btn.style.top)|| (vh()-size-margin) };
+        for (let i = 0; i < path.length; i++) {
+          const dur = i === path.length - 1 ? 700 : 450;
+          await animateSegment(current, path[i], dur);
+          current = path[i];
+        }
+
+        // Settle state: grow to pill and show text
+        btn.classList.add('settled');
+        // Blink once after 3 seconds
+        setTimeout(() => {
+          btn.classList.add('blinking');
+          // Remove class after animation completes to allow future triggers if needed
+          setTimeout(() => btn.classList.remove('blinking'), 1300);
+        }, 3000);
+      }
+
+      function enableDragAndSnap() {
+        let isDragging = false;
+        let moved = false;
+        let startX = 0, startY = 0;
+        let btnStartLeft = 0, btnStartTop = 0;
+
+        const onDown = (e) => {
+          isDragging = true;
+          moved = false;
+          btn.classList.add('dragging');
+          const rect = btn.getBoundingClientRect();
+          const pointX = e.touches ? e.touches[0].clientX : e.clientX;
+          const pointY = e.touches ? e.touches[0].clientY : e.clientY;
+          startX = pointX;
+          startY = pointY;
+          btnStartLeft = rect.left;
+          btnStartTop = rect.top;
+          btn.style.right = 'auto';
+          btn.style.bottom = 'auto';
+          document.addEventListener('mousemove', onMove);
+          document.addEventListener('mouseup', onUp);
+          document.addEventListener('touchmove', onMove, { passive: false });
+          document.addEventListener('touchend', onUp);
+        };
+
+        const onMove = (e) => {
+          if (!isDragging) return;
+          e.preventDefault();
+          const pointX = e.touches ? e.touches[0].clientX : e.clientX;
+          const pointY = e.touches ? e.touches[0].clientY : e.clientY;
+          const dx = pointX - startX;
+          const dy = pointY - startY;
+          if (Math.abs(dx) > 3 || Math.abs(dy) > 3) moved = true;
+          const vw = window.innerWidth;
+          const vh = window.innerHeight;
+          const rect = btn.getBoundingClientRect();
+          let newLeft = btnStartLeft + dx;
+          let newTop = btnStartTop + dy;
+          newLeft = Math.max(0, Math.min(newLeft, vw - rect.width));
+          newTop = Math.max(0, Math.min(newTop, vh - rect.height));
+          btn.style.left = newLeft + 'px';
+          btn.style.top = newTop + 'px';
+        };
+
+        const snapToEdgesAndCorners = () => {
+          const margin = 16;
+          const rect = btn.getBoundingClientRect();
+          const vw = window.innerWidth;
+          const vh = window.innerHeight;
+          const targets = [
+            { x: margin, y: margin },
+            { x: (vw - rect.width) / 2, y: margin },
+            { x: vw - rect.width - margin, y: margin },
+            { x: vw - rect.width - margin, y: (vh - rect.height) / 2 },
+            { x: vw - rect.width - margin, y: vh - rect.height - margin },
+            { x: (vw - rect.width) / 2, y: vh - rect.height - margin },
+            { x: margin, y: vh - rect.height - margin },
+            { x: margin, y: (vh - rect.height) / 2 },
+          ];
+          const centerX = rect.left + rect.width / 2;
+          const centerY = rect.top + rect.height / 2;
+          let best = targets[0], bestD = Infinity;
+          for (const t of targets) {
+            const dx = centerX - (t.x + rect.width / 2);
+            const dy = centerY - (t.y + rect.height / 2);
+            const d = dx * dx + dy * dy;
+            if (d < bestD) { bestD = d; best = t; }
+          }
+          btn.style.left = best.x + 'px';
+          btn.style.top = best.y + 'px';
+        };
+
+        const onUp = () => {
+          if (!isDragging) return;
+          isDragging = false;
+          btn.classList.remove('dragging');
+          document.removeEventListener('mousemove', onMove);
+          document.removeEventListener('mouseup', onUp);
+          document.removeEventListener('touchmove', onMove);
+          document.removeEventListener('touchend', onUp);
+          snapToEdgesAndCorners();
+        };
+
+        btn.addEventListener('mousedown', onDown);
+        btn.addEventListener('touchstart', onDown, { passive: true });
+
+        btn.addEventListener('click', (e) => {
+          if (moved) { e.preventDefault(); return; }
+          const contact = document.querySelector('#contact');
+          if (contact) contact.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        window.addEventListener('resize', () => {
+          if (!btn.classList.contains('dragging')) snapToEdgesAndCorners();
+        });
+      }
+
+      // Kick off intro, then enable full behavior
+      window.addEventListener('load', async () => {
+        try {
+          await introTourThenSettle();
+        } catch (e) {}
+        enableDragAndSnap();
+      });
+    })();
+  </script>
 
 </body>
 </html>
