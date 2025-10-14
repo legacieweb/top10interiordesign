@@ -4,27 +4,90 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Premium Brick Installation & Design | Top Home Designer</title>
-  <meta name="description" content="Expert brick installation services. Exposed brick walls, brick facades, fireplaces, and outdoor features. Professional masonry with timeless appeal.">
-  <meta name="keywords" content="brick installation, exposed brick walls, brick facades, brick fireplace, masonry services, brick design, decorative bricks">
-  <link rel="canonical" href="https://www.tophomedesigner.com/bricks/">
+  <title>Gypsum Ceiling Installation Services | False Ceiling Contractor | Top Home Designer</title>
+  <meta name="description" content="Professional gypsum ceiling installation services. Expert contractor specializing in false ceilings, gypsum board work, and decorative ceiling designs.">
+  <meta name="keywords" content="gypsum ceiling installation, false ceiling contractor, gypsum board services, ceiling installation work, decorative ceiling, professional ceiling work, gypsum contractor">
+  <link rel="canonical" href="https://www.tophomedesigner.com/gypsum/">
 
-  <meta property="og:title" content="Premium Brick Installation & Design | Top Home Designer">
-  <meta property="og:description" content="Transform your space with expert brick installation. Exposed walls, facades, fireplaces & more.">
-  <meta property="og:url" content="https://www.tophomedesigner.com/bricks/">
+  <meta property="og:title" content="Gypsum Ceiling Installation Services | Professional Contractor">
+  <meta property="og:description" content="Expert gypsum ceiling installation. Professional false ceiling and decorative ceiling work.">
+  <meta property="og:url" content="https://www.tophomedesigner.com/gypsum/">
   <meta property="og:type" content="website">
 
   <script src="https://cdn.tailwindcss.com"></script>
+<script defer>
+  const contactForm = document.getElementById('contact-form');
+  const successMessage = document.getElementById('success-message');
+
+  if (contactForm) {
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonContent = submitButton ? submitButton.innerHTML : '';
+
+    const toggleSubmittingState = (isSubmitting) => {
+      if (!submitButton) return;
+      submitButton.disabled = isSubmitting;
+      submitButton.classList.toggle('opacity-60', isSubmitting);
+      submitButton.classList.toggle('cursor-not-allowed', isSubmitting);
+      submitButton.innerHTML = isSubmitting
+        ? '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...'
+        : (originalButtonContent || '<i class="fas fa-paper-plane mr-2"></i>Send Message');
+    };
+
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const messageInput = document.getElementById('message');
+
+      const formPayload = {
+        name: nameInput ? nameInput.value.trim() : '',
+        email: emailInput ? emailInput.value.trim() : '',
+        message: messageInput ? messageInput.value.trim() : '',
+      };
+
+      toggleSubmittingState(true);
+
+      try {
+        const response = await fetch('https://top10interiordesign.onrender.com/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formPayload),
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          if (successMessage) {
+            successMessage.classList.remove('hidden');
+          }
+          contactForm.reset();
+          setTimeout(() => {
+            if (successMessage) {
+              successMessage.classList.add('hidden');
+            }
+          }, 5000);
+        } else {
+          alert(data.message || 'Error: Unable to send message.');
+        }
+      } catch (error) {
+        console.error('Error sending message:', error);
+        alert('An unexpected error occurred. Please try again later.');
+      } finally {
+        toggleSubmittingState(false);
+      }
+    });
+  }
+</script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --primary: #1a1a2e;
-      --secondary: #16213e;
-      --accent: #0f3460;
       --gold: #d4af37;
-      --light-gold: #f4e4c1;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -36,7 +99,6 @@
       background: linear-gradient(135deg, var(--gold), #c9a961);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      background-clip: text;
     }
 
     .btn-primary {
@@ -50,10 +112,7 @@
       box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
     }
 
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
-    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4); }
 
     .btn-secondary {
       background: transparent;
@@ -66,10 +125,7 @@
       display: inline-block;
     }
 
-    .btn-secondary:hover {
-      background: white;
-      color: var(--primary);
-    }
+    .btn-secondary:hover { background: white; color: var(--primary); }
 
     .service-card {
       background: white;
@@ -94,10 +150,7 @@
     }
 
     .service-card:hover::before { transform: scaleX(1); }
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-    }
+    .service-card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1); }
 
     .section-divider {
       width: 80px;
@@ -179,15 +232,15 @@
   </div>
 </header>
 
-<section class="relative min-h-screen flex items-center justify-center text-white" style="background: linear-gradient(135deg, rgba(26, 26, 46, 0.95), rgba(15, 52, 96, 0.95)), url('img/7e2b90e1-063f-4af8-ac24-07c11b9fde0a.jpeg') center/cover;">
+<section class="relative min-h-screen flex items-center justify-center text-white" style="background: linear-gradient(135deg, rgba(26, 26, 46, 0.95), rgba(15, 52, 96, 0.95)), url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1920') center/cover;">
   <div class="container mx-auto px-6 text-center relative z-10 pt-20">
     <div class="max-w-4xl mx-auto animate-fade-in-up">
       <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-        Professional <span class="gradient-text">Brick Installation</span><br>
-        & Masonry Services
+        Professional <span class="gradient-text">Gypsum Ceiling</span><br>
+        Installation Services
       </h1>
       <p class="text-xl md:text-2xl mb-8 text-gray-200 font-light">
-        Expert brick installation for exposed walls, elegant facades, stunning fireplaces, and outdoor features. Professional craftsmanship guaranteed.
+        Expert installation of false ceilings, gypsum board work, and decorative ceiling designs for homes and offices
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
         <a href="#contact" class="btn-primary text-lg">Request Free Quote</a>
@@ -206,102 +259,90 @@
 <section id="services" class="py-24 bg-white">
   <div class="container mx-auto px-6">
     <div class="text-center mb-16">
-      <h2 class="text-5xl font-bold mb-6 text-primary">Brick Installation Services</h2>
+      <h2 class="text-5xl font-bold mb-6 text-primary">Gypsum Ceiling Services</h2>
       <div class="section-divider"></div>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Professional brick work from classic exposed walls to modern architectural features
+        Professional installation of all types of gypsum ceiling work
       </p>
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       
       <div class="service-card">
-        <div class="text-5xl mb-6 text-gold">
-          <i class="fas fa-border-all"></i>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-primary">Exposed Brick Walls</h3>
+        <div class="text-5xl mb-6 text-gold"><i class="fas fa-layer-group"></i></div>
+        <h3 class="text-2xl font-bold mb-4 text-primary">False Ceiling Installation</h3>
         <p class="text-gray-600 leading-relaxed mb-4">
-          Create stunning interior feature walls with exposed brick. Perfect for living rooms, bedrooms, and commercial spaces. Adds character and warmth.
+          Professional installation of suspended false ceilings. Perfect for hiding wiring, pipes, and creating modern aesthetics.
         </p>
         <ul class="text-gray-600 space-y-2">
-          <li><i class="fas fa-check text-gold mr-2"></i>Rustic charm</li>
-          <li><i class="fas fa-check text-gold mr-2"></i>Timeless appeal</li>
-          <li><i class="fas fa-check text-gold mr-2"></i>Low maintenance</li>
+          <li><i class="fas fa-check text-gold mr-2"></i>Clean installation</li>
+          <li><i class="fas fa-check text-gold mr-2"></i>Precise measurements</li>
+          <li><i class="fas fa-check text-gold mr-2"></i>Quality finish</li>
         </ul>
       </div>
 
       <div class="service-card">
-        <div class="text-5xl mb-6 text-gold">
-          <i class="fas fa-building"></i>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-primary">Brick Facades</h3>
+        <div class="text-5xl mb-6 text-gold"><i class="fas fa-th-large"></i></div>
+        <h3 class="text-2xl font-bold mb-4 text-primary">Gypsum Board Work</h3>
         <p class="text-gray-600 leading-relaxed mb-4">
-          Enhance your property's curb appeal with beautiful brick exteriors. Durable, weather-resistant, and adds significant value to your home.
+          Expert gypsum board installation for walls and ceilings. Smooth finish with professional taping and jointing.
         </p>
         <ul class="text-gray-600 space-y-2">
-          <li><i class="fas fa-check text-gold mr-2"></i>Weather resistant</li>
-          <li><i class="fas fa-check text-gold mr-2"></i>Energy efficient</li>
-          <li><i class="fas fa-check text-gold mr-2"></i>Increases value</li>
+          <li><i class="fas fa-check text-gold mr-2"></i>Smooth surfaces</li>
+          <li><i class="fas fa-check text-gold mr-2"></i>Expert taping</li>
+          <li><i class="fas fa-check text-gold mr-2"></i>Paint-ready finish</li>
         </ul>
       </div>
 
       <div class="service-card">
-        <div class="text-5xl mb-6 text-gold">
-          <i class="fas fa-fire"></i>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-primary">Brick Fireplaces</h3>
+        <div class="text-5xl mb-6 text-gold"><i class="fas fa-star"></i></div>
+        <h3 class="text-2xl font-bold mb-4 text-primary">Decorative Ceilings</h3>
         <p class="text-gray-600 leading-relaxed mb-4">
-          Custom brick fireplaces that become the focal point of any room. Traditional or modern designs with expert craftsmanship.
+          Custom decorative ceiling designs with curves, patterns, and lighting integration. Transform your space.
         </p>
         <ul class="text-gray-600 space-y-2">
           <li><i class="fas fa-check text-gold mr-2"></i>Custom designs</li>
-          <li><i class="fas fa-check text-gold mr-2"></i>Heat retention</li>
-          <li><i class="fas fa-check text-gold mr-2"></i>Stunning centerpiece</li>
+          <li><i class="fas fa-check text-gold mr-2"></i>LED integration</li>
+          <li><i class="fas fa-check text-gold mr-2"></i>Unique patterns</li>
         </ul>
       </div>
 
       <div class="service-card">
-        <div class="text-5xl mb-6 text-gold">
-          <i class="fas fa-tree"></i>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-primary">Garden & Outdoor Features</h3>
+        <div class="text-5xl mb-6 text-gold"><i class="fas fa-lightbulb"></i></div>
+        <h3 class="text-2xl font-bold mb-4 text-primary">Ceiling with Lighting</h3>
         <p class="text-gray-600 leading-relaxed mb-4">
-          Brick pathways, retaining walls, planters, and outdoor kitchens. Durable solutions for beautiful outdoor living spaces.
+          Integrated ceiling and lighting solutions. Recessed lights, cove lighting, and modern LED installations.
         </p>
         <ul class="text-gray-600 space-y-2">
-          <li><i class="fas fa-check text-gold mr-2"></i>Outdoor durability</li>
-          <li><i class="fas fa-check text-gold mr-2"></i>Custom designs</li>
-          <li><i class="fas fa-check text-gold mr-2"></i>Long-lasting</li>
+          <li><i class="fas fa-check text-gold mr-2"></i>Recessed lighting</li>
+          <li><i class="fas fa-check text-gold mr-2"></i>Cove lighting</li>
+          <li><i class="fas fa-check text-gold mr-2"></i>LED strips</li>
         </ul>
       </div>
 
       <div class="service-card">
-        <div class="text-5xl mb-6 text-gold">
-          <i class="fas fa-archway"></i>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-primary">Brick Arches & Columns</h3>
+        <div class="text-5xl mb-6 text-gold"><i class="fas fa-building"></i></div>
+        <h3 class="text-2xl font-bold mb-4 text-primary">Office Ceilings</h3>
         <p class="text-gray-600 leading-relaxed mb-4">
-          Architectural brick elements that add elegance and structure. Perfect for entryways, porches, and interior design features.
+          Commercial ceiling installation for offices and businesses. Grid ceilings, acoustic panels, and modern designs.
         </p>
         <ul class="text-gray-600 space-y-2">
-          <li><i class="fas fa-check text-gold mr-2"></i>Architectural beauty</li>
-          <li><i class="fas fa-check text-gold mr-2"></i>Structural support</li>
-          <li><i class="fas fa-check text-gold mr-2"></i>Classic elegance</li>
+          <li><i class="fas fa-check text-gold mr-2"></i>Grid systems</li>
+          <li><i class="fas fa-check text-gold mr-2"></i>Acoustic panels</li>
+          <li><i class="fas fa-check text-gold mr-2"></i>Professional look</li>
         </ul>
       </div>
 
       <div class="service-card">
-        <div class="text-5xl mb-6 text-gold">
-          <i class="fas fa-tools"></i>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-primary">Brick Restoration</h3>
+        <div class="text-5xl mb-6 text-gold"><i class="fas fa-tools"></i></div>
+        <h3 class="text-2xl font-bold mb-4 text-primary">Ceiling Repair</h3>
         <p class="text-gray-600 leading-relaxed mb-4">
-          Restore and preserve historic brickwork. Expert repointing, cleaning, and repair services to maintain structural integrity and beauty.
+          Professional repair and maintenance of existing gypsum ceilings. Fix cracks, water damage, and sagging.
         </p>
         <ul class="text-gray-600 space-y-2">
-          <li><i class="fas fa-check text-gold mr-2"></i>Historic preservation</li>
-          <li><i class="fas fa-check text-gold mr-2"></i>Expert repointing</li>
-          <li><i class="fas fa-check text-gold mr-2"></i>Structural repair</li>
+          <li><i class="fas fa-check text-gold mr-2"></i>Crack repair</li>
+          <li><i class="fas fa-check text-gold mr-2"></i>Water damage fix</li>
+          <li><i class="fas fa-check text-gold mr-2"></i>Reinforcement</li>
         </ul>
       </div>
 
@@ -313,92 +354,23 @@
 <section id="gallery" class="py-24 bg-gray-50">
   <div class="container mx-auto px-6">
     <div class="text-center mb-16">
-      <h2 class="text-5xl font-bold mb-6 text-primary">Project Gallery</h2>
+      <h2 class="text-5xl font-bold mb-6 text-primary">Gypsum Ceiling Gallery</h2>
       <div class="section-divider"></div>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">A selection of brick walls, facades, and fireplaces</p>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">Selection of false ceiling projects, lighting integration, and decorative ceiling work</p>
     </div>
+
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="img-hover-zoom"><img src="img/7e2b90e1-063f-4af8-ac24-07c11b9fde0a.jpeg" alt="Brick Project 1" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
-      <div class="img-hover-zoom"><img src="img/Red Foyer Entryway with Red Brick and Indian Style Inspired Interior (Mangalas Farmhouse).jpeg" alt="Brick Project 2" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
-      <div class="img-hover-zoom"><img src="img/Brick Wall House boasts minimalist style with maximum appeal.jpeg" alt="Brick Project 3" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
-      <div class="img-hover-zoom"><img src="img/Good wood burning fireplaces.jpeg" alt="Brick Project 4" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
-      <div class="img-hover-zoom"><img src="img/Brooklyn Townhouse Opens Up With Three-Story Addition.jpeg" alt="Brick Project 5" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
-      <div class="img-hover-zoom"><img src="img/UCCELLO - Garden edge by FORNACE BALLATORE GIUSEPPE _ ArchiExpo.jpeg" alt="Brick Project 6" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
-    </div>
-  </div>
-</section>
-
-<section id="styles" class="py-24 bg-gray-50">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-5xl font-bold mb-6 text-primary">Brick Styles & Finishes</h2>
-      <div class="section-divider"></div>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Choose from a wide variety of brick types, colors, and textures
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-4 gap-8">
-      <div class="text-center">
-        <div class="w-20 h-20 bg-gold bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
-          <i class="fas fa-palette text-4xl text-gold"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-3 text-primary">Red Clay Bricks</h3>
-        <p class="text-gray-600">Classic traditional look with warm tones</p>
-      </div>
-
-      <div class="text-center">
-        <div class="w-20 h-20 bg-gold bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
-          <i class="fas fa-square text-4xl text-gold"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-3 text-primary">Concrete Bricks</h3>
-        <p class="text-gray-600">Modern, uniform appearance with strength</p>
-      </div>
-
-      <div class="text-center">
-        <div class="w-20 h-20 bg-gold bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
-          <i class="fas fa-gem text-4xl text-gold"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-3 text-primary">Glazed Bricks</h3>
-        <p class="text-gray-600">Glossy finish with vibrant colors</p>
-      </div>
-
-      <div class="text-center">
-        <div class="w-20 h-20 bg-gold bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
-          <i class="fas fa-layer-group text-4xl text-gold"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-3 text-primary">Reclaimed Bricks</h3>
-        <p class="text-gray-600">Vintage character with unique patina</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="py-24 bg-white">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-5xl font-bold mb-6 text-primary">Why Choose Brick?</h2>
-      <div class="section-divider"></div>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="text-center">
-        <div class="text-6xl mb-6 text-gold"><i class="fas fa-infinity"></i></div>
-        <h3 class="text-2xl font-bold mb-4 text-primary">Longevity</h3>
-        <p class="text-gray-600">Brick structures can last for centuries with minimal maintenance. A truly timeless investment.</p>
-      </div>
-
-      <div class="text-center">
-        <div class="text-6xl mb-6 text-gold"><i class="fas fa-temperature-low"></i></div>
-        <h3 class="text-2xl font-bold mb-4 text-primary">Energy Efficiency</h3>
-        <p class="text-gray-600">Excellent thermal mass helps regulate indoor temperatures, reducing energy costs year-round.</p>
-      </div>
-
-      <div class="text-center">
-        <div class="text-6xl mb-6 text-gold"><i class="fas fa-shield-alt"></i></div>
-        <h3 class="text-2xl font-bold mb-4 text-primary">Fire Resistance</h3>
-        <p class="text-gray-600">Non-combustible material provides superior fire protection for your property and peace of mind.</p>
-      </div>
+      <div class="img-hover-zoom"><img src="gypsum1.jpg" alt="Gypsum 1" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.18_2d09769b.jpg" alt="Gypsum 2" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.18_127a4350.jpg" alt="Gypsum 3" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.19_9f5e03f9.jpg" alt="Gypsum 4" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.19_92f0d262.jpg" alt="Gypsum 5" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.19_210c73f0.jpg" alt="Gypsum 6" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.19_978dfa57.jpg" alt="Gypsum 7" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.20_69e8f822.jpg" alt="Gypsum 8" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.20_4699bbb7.jpg" alt="Gypsum 9" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.20_cd417b79.jpg" alt="Gypsum 10" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.20_f78eaba9.jpg" alt="Gypsum 11" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -406,54 +378,41 @@
 <section class="py-24 bg-gray-50">
   <div class="container mx-auto px-6">
     <div class="text-center mb-16">
-      <h2 class="text-5xl font-bold mb-6 text-primary">Client Testimonials</h2>
+      <h2 class="text-5xl font-bold mb-6 text-primary">Why Choose Gypsum Ceilings?</h2>
       <div class="section-divider"></div>
     </div>
 
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-2xl p-8 shadow-lg">
-        <div class="flex items-center mb-6">
-          <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">TH</div>
-          <div>
-            <h4 class="font-bold text-primary">Thomas Harris</h4>
-            <div class="text-gold">★★★★★</div>
-          </div>
-        </div>
-        <p class="text-gray-600 italic">"The exposed brick wall in our loft is absolutely stunning! Transformed the entire space. Excellent craftsmanship!"</p>
+      <div class="text-center">
+        <div class="text-6xl mb-6 text-gold"><i class="fas fa-fire-extinguisher"></i></div>
+        <h3 class="text-2xl font-bold mb-4 text-primary">Fire Resistant</h3>
+        <p class="text-gray-600">Gypsum boards provide excellent fire resistance, adding safety to your space.</p>
       </div>
 
-      <div class="bg-white rounded-2xl p-8 shadow-lg">
-        <div class="flex items-center mb-6">
-          <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">EP</div>
-          <div>
-            <h4 class="font-bold text-primary">Emily Parker</h4>
-            <div class="text-gold">★★★★★</div>
-          </div>
-        </div>
-        <p class="text-gray-600 italic">"Our brick fireplace is the centerpiece of our home. Beautiful work and completed on schedule. Highly recommend!"</p>
+      <div class="text-center">
+        <div class="text-6xl mb-6 text-gold"><i class="fas fa-volume-mute"></i></div>
+        <h3 class="text-2xl font-bold mb-4 text-primary">Sound Insulation</h3>
+        <p class="text-gray-600">Reduces noise transmission between rooms and floors for peaceful living.</p>
       </div>
 
-      <div class="bg-white rounded-2xl p-8 shadow-lg">
-        <div class="flex items-center mb-6">
-          <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">JB</div>
-          <div>
-            <h4 class="font-bold text-primary">James Brown</h4>
-            <div class="text-gold">★★★★★</div>
-          </div>
-        </div>
-        <p class="text-gray-600 italic">"Professional brick facade installation. Increased our home's value and looks amazing. Worth every penny!"</p>
+      <div class="text-center">
+        <div class="text-6xl mb-6 text-gold"><i class="fas fa-clock"></i></div>
+        <h3 class="text-2xl font-bold mb-4 text-primary">Quick Installation</h3>
+        <p class="text-gray-600">Faster installation compared to traditional plastering methods.</p>
       </div>
     </div>
   </div>
 </section>
 
+
+<!-- Contact Section -->
 <section id="contact" class="py-24 bg-gray-50">
   <div class="container mx-auto px-6">
     <div class="text-center mb-16">
-      <h2 class="text-5xl font-bold mb-6 text-primary">Start Your Brick Project</h2>
+      <h2 class="text-5xl font-bold mb-6 text-primary">Let's Create Together</h2>
       <div class="section-divider"></div>
       <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-        Contact us for expert brick masonry services and free consultation
+        Ready to transform your space? Get in touch with us today
       </p>
     </div>
 
@@ -533,7 +492,6 @@
     </div>
   </div>
 </section>
-
 <!-- Footer -->
 <footer class="bg-gradient-to-br from-primary via-secondary to-accent text-orange-400 py-16">
   <div class="container mx-auto px-6">
@@ -568,6 +526,7 @@
           <li><a href="../tiles" class="text-black hover:text-gold transition">Tile Installation</a></li>
           <li><a href="../eurocone" class="text-black hover:text-gold transition">Eurocone</a></li>
           <li><a href="../marble" class="text-black hover:text-gold transition">Marble Work</a></li>
+          <li><a href="../bricks" class="text-black hover:text-gold transition">Brick Cladding</a></li>
           <li><a href="../artstones" class="text-black hover:text-gold transition">Artstone</a></li>
           <li><a href="../Mazerous" class="text-black hover:text-gold transition">Mazerous</a></li>
         </ul>
@@ -603,78 +562,6 @@
   </div>
 </footer>
 
-<script>
-  // Mobile menu toggle (basic)
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-  }
 
-  const contactForm = document.getElementById('contact-form');
-  const successMessage = document.getElementById('success-message');
-
-  if (contactForm) {
-    const submitButton = contactForm.querySelector('button[type="submit"]');
-    const originalButtonContent = submitButton ? submitButton.innerHTML : '';
-
-    const toggleSubmittingState = (isSubmitting) => {
-      if (!submitButton) return;
-      submitButton.disabled = isSubmitting;
-      submitButton.classList.toggle('opacity-60', isSubmitting);
-      submitButton.classList.toggle('cursor-not-allowed', isSubmitting);
-      submitButton.innerHTML = isSubmitting
-        ? '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...'
-        : (originalButtonContent || '<i class="fas fa-paper-plane mr-2"></i>Send Message');
-    };
-
-    contactForm.addEventListener('submit', async (event) => {
-      event.preventDefault();
-
-      const nameInput = document.getElementById('name');
-      const emailInput = document.getElementById('email');
-      const messageInput = document.getElementById('message');
-
-      const formPayload = {
-        name: nameInput ? nameInput.value.trim() : '',
-        email: emailInput ? emailInput.value.trim() : '',
-        message: messageInput ? messageInput.value.trim() : '',
-      };
-
-      toggleSubmittingState(true);
-
-      try {
-        const response = await fetch('https://top10interiordesign.onrender.com/send-email', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formPayload),
-        });
-
-        const data = await response.json();
-
-        if (data.success) {
-          if (successMessage) {
-            successMessage.classList.remove('hidden');
-          }
-          contactForm.reset();
-          setTimeout(() => {
-            if (successMessage) {
-              successMessage.classList.add('hidden');
-            }
-          }, 5000);
-        } else {
-          alert(data.message || 'Error: Unable to send message.');
-        }
-      } catch (error) {
-        console.error('Error sending message:', error);
-        alert('An unexpected error occurred. Please try again later.');
-      } finally {
-        toggleSubmittingState(false);
-      }
-    });
-  }
-</script>
 </body>
 </html>

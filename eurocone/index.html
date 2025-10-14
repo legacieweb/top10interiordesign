@@ -3,741 +3,1460 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eurocon Tile Installation Expert</title>
+  
+  <!-- SEO Optimized Title -->
+  <title>Eurocone Tiles Installation | Premium European Tiles | Top Home Designer</title>
+
+  <!-- Meta Description -->
+  <meta name="description" content="Premium Eurocone tiles installation. European quality tiles with modern designs. Expert installation for floors, walls, and outdoor spaces.">
+
+  <!-- Keywords -->
+  <meta name="keywords" content="eurocone tiles, european tiles, premium tiles, outdoor tiles, frost resistant tiles, eurocone installation, luxury tiles">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.tophomedesigner.com/eurocone/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Eurocone Tiles Installation | Premium European Tiles">
+  <meta property="og:description" content="Transform your space with premium Eurocone tiles. European quality with expert installation.">
+  <meta property="og:image" content="https://www.tophomedesigner.com/images/eurocone-showcase.jpg">
+  <meta property="og:url" content="https://www.tophomedesigner.com/eurocone/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Eurocone Tiles Installation | Premium European Tiles">
+  <meta name="twitter:description" content="Premium Eurocone tiles with expert installation services.">
+  <meta name="twitter:image" content="https://www.tophomedesigner.com/images/eurocone-showcase.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Eurocone Tiles Installation Services",
+    "provider": {
+      "@type": "Organization",
+      "name": "Top Home Designer"
+    },
+    "description": "Premium Eurocone tiles installation for residential and commercial spaces. European quality tiles with expert installation.",
+    "areaServed": "United States",
+    "serviceType": "Eurocone Tile Installation"
+  }
+  </script>
+
+  <!-- Robots Meta Tag -->
+  <meta name="robots" content="index, follow">
+
+  <!-- External Stylesheets -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    /* Custom Styling */
-    .modal {
-      position: fixed;
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --gold: #d4af37;
+      --light-gold: #f4e4c1;
+      --text-dark: #1a1a2e;
+      --text-light: #6b7280;
+      --bg-light: #fafafa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--gold), #c9a961);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), #c9a961);
+      color: white;
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-weight: 600;
+      border: 2px solid white;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn-secondary:hover {
+      background: white;
+      color: var(--primary);
+    }
+
+    .service-card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      display: none;
-      justify-content: center;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), #c9a961);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-divider {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), #c9a961);
+      margin: 0 auto 40px;
+      border-radius: 2px;
+    }
+
+    .img-hover-zoom {
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .img-hover-zoom img {
+      transition: transform 0.5s ease;
+    }
+
+    .img-hover-zoom:hover img {
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .feature-box {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    .gallery-card {
+      background: white;
+      border-radius: 24px;
+      padding: 36px;
+      box-shadow: 0 20px 60px rgba(26, 26, 46, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.12);
+      display: grid;
+      grid-template-columns: minmax(0, 180px) 1fr;
+      gap: 28px;
       align-items: center;
-      z-index: 1000;
-    }
-    .modal-content {
-      background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-      max-width: 800px;
-      width: 90%;
-      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      text-align: left;
+      cursor: pointer;
       position: relative;
+      overflow: hidden;
+      isolation: isolate;
     }
-    .carousel img {
-      max-height: 400px;
+
+    .gallery-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.2), transparent 65%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 0;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 32px 80px rgba(26, 26, 46, 0.15);
+    }
+
+    .gallery-card:hover::after {
+      opacity: 1;
+    }
+
+    .gallery-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .gallery-card-image {
+      border-radius: 20px;
+      overflow: hidden;
+      height: 200px;
+      box-shadow: 0 18px 45px rgba(15, 52, 96, 0.12);
+    }
+
+    .gallery-card-image img {
       width: 100%;
+      height: 100%;
       object-fit: cover;
-      border-radius: 8px;
+      transition: transform 0.4s ease;
     }
-    .carousel-button {
+
+    .gallery-card:hover .gallery-card-image img {
+      transform: scale(1.08);
+    }
+
+    .gallery-card-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--gold);
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+
+    .gallery-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 16, 32, 0.78);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      z-index: 9999;
+    }
+
+    .gallery-overlay.active {
+      display: flex;
+    }
+
+    .gallery-content {
+      background: white;
+      border-radius: 28px;
+      max-width: 1024px;
+      width: 100%;
+      padding: 48px;
+      position: relative;
+      box-shadow: 0 35px 90px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .gallery-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(15, 52, 96, 0.12);
+      color: var(--primary);
+      font-size: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery-close:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .gallery-category-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .gallery-category-button {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(15, 52, 96, 0.2);
+      background: white;
+      color: var(--primary);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .gallery-category-button:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .gallery-category-button.active {
+      background: linear-gradient(135deg, var(--gold), #c9a961);
+      color: white;
+      border-color: transparent;
+      box-shadow: 0 18px 45px rgba(212, 175, 55, 0.35);
+    }
+
+    .gallery-image-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery-image-wrapper img {
+      width: 100%;
+      max-height: 520px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: 0 25px 65px rgba(15, 52, 96, 0.2);
+    }
+
+    .gallery-nav {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.6);
-      color: white;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
       border: none;
-      padding: 10px;
+      background: rgba(15, 52, 96, 0.18);
+      color: white;
+      font-size: 20px;
       cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 20px 45px rgba(15, 52, 96, 0.25);
     }
-    .carousel-button.left {
-      left: 10px;
-    }
-    .carousel-button.right {
-      right: 10px;
-    }
-    /* Shaking Logo Animation */
-.shaking-logo {
-    animation: shake 1s infinite ease-in-out;
-}
 
-@keyframes shake {
-    0%, 100% { transform: rotate(0deg); }
-    10%, 30%, 50%, 70%, 90% { transform: rotate(-2deg); }
-    20%, 40%, 60%, 80% { transform: rotate(2deg); }
-}
-.glitter-text {
-    background: linear-gradient(45deg, #ffcc00, #ff66ff, #00ccff, #ffcc00);
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: glitter 4s infinite;
-}
+    .gallery-nav:hover {
+      background: linear-gradient(135deg, var(--gold), #c9a961);
+      box-shadow: 0 25px 60px rgba(212, 175, 55, 0.35);
+    }
 
-@keyframes glitter {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
+    .gallery-nav.prev {
+      left: -28px;
+    }
+
+    .gallery-nav.next {
+      right: -28px;
+    }
+
+    .gallery-counter {
+      font-weight: 600;
+      color: var(--text-light);
+    }
+
+    .gallery-thumbnails {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+    }
+
+    .gallery-thumbnail {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      height: 120px;
+      position: relative;
+    }
+
+    .gallery-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-thumbnail::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 52, 96, 0.18);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-thumbnail:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 38px rgba(15, 52, 96, 0.18);
+    }
+
+    .gallery-thumbnail:hover::after {
+      opacity: 0.2;
+    }
+
+    .gallery-thumbnail.active {
+      border-color: var(--gold);
+      box-shadow: 0 22px 56px rgba(212, 175, 55, 0.35);
+    }
+
+    .gallery-thumbnail.active::after {
+      opacity: 0;
+    }
+
+    @media (max-width: 1024px) {
+      .gallery-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .gallery-card-image {
+        width: 100%;
+        height: 220px;
+      }
+
+      .gallery-card:hover {
+        transform: translateY(-6px);
+      }
+
+      .gallery-content {
+        padding: 36px;
+      }
+
+      .gallery-nav.prev {
+        left: 12px;
+      }
+
+      .gallery-nav.next {
+        right: 12px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .gallery-overlay {
+        padding: 24px;
+      }
+
+      .gallery-content {
+        padding: 28px;
+      }
+
+      .gallery-card {
+        padding: 24px;
+      }
+
+      .gallery-card-image {
+        height: 180px;
+      }
+
+      .gallery-thumbnail {
+        height: 90px;
+      }
+
+      .gallery-nav {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .gallery-content {
+        gap: 20px;
+      }
+
+      .gallery-category-controls {
+        flex-direction: column;
+      }
+
+      .gallery-nav.prev {
+        left: 4px;
+      }
+
+      .gallery-nav.next {
+        right: 4px;
+      }
+    }
   </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-white text-gray-900">
 
 <!-- Header -->
-<header id="header" class="bg-gradient-to-r text-white sticky top-0 z-50 shadow-lg transition-all duration-300">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center relative">
-    
-    <!-- Logo (Rounded on Small Screens) -->
-    <a href="https://tophomedesigner.com/">
-      <img src="img/logo.jpg" alt="Site Logo" class="h-10 md:h-12 rounded-full sm:rounded-lg">
-    </a>
-
-    <!-- Navigation for Large Screens -->
-    <nav class="hidden md:flex space-x-6 relative">
-      <a href="#categories" class="text-white hover:text-yellow-300">Tile Categories</a>
-      <a href="#features" class="text-white hover:text-yellow-300">Features</a>
-      <a href="#testimonials" class="text-white hover:text-yellow-300">Testimonials</a>
-      <a href="#contact" class="text -white hover:text-yellow-300">Contact Us</a>
-    </nav>
-
-    <!-- Home Button (Visible on Large Screens) -->
-    <a href="https://tophomedesigner.com/" class="hidden md:inline-block bg-blue-400 text-black px-2 py-1 rounded-full text-lg hover:bg-yellow-500">🏠 Home</a>
-
-    <!-- Mobile Menu Button -->
-    <button id="menu-toggle" class="md:hidden text-black bg-yellow-400 px-3 py-2 rounded-md">
-      ☰ Menu
-    </button>
-
-    <!-- Cool Moving Arrow (Large Screens) -->
-    <div id="scroll-arrow" class="hidden md:block absolute top-1/2 left-0 transform -translate-y-1/2 text-xl text-yellow-300 transition-all">
-      ➝
+<header id="header" class="fixed w-full top-0 z-50 transition-all duration-300" style="background: rgba(26, 26, 46, 0.98);">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+      <a href="../index.html" class="text-2xl font-bold text-white">Top Home Designer</a>
+      <nav class="hidden md:flex space-x-8">
+        <a href="../index.html" class="text-gray-300 hover:text-gold transition">Home</a>
+        <a href="#features" class="text-gray-300 hover:text-gold transition">Features</a>
+        <a href="#applications" class="text-gray-300 hover:text-gold transition">Applications</a>
+        <a href="#specifications" class="text-gray-300 hover:text-gold transition">Specifications</a>
+        <a href="#contact" class="text-gray-300 hover:text-gold transition">Contact</a>
+      </nav>
+      <a href="#contact" class="hidden md:block btn-primary text-sm">Get Quote</a>
     </div>
-
-  </div>
-
-  <!-- Dropdown Menu for Small Screens -->
-  <div id="mobile-menu" class="hidden md:hidden p-4 transition-all duration-300">
-    <a href="#categories" class="block text-white hover:text-yellow-300 mb-2">Tile Categories</a>
-    <a href="#features" class="block text-white hover:text-yellow-300 mb-2">Features</a>
-    <a href="#testimonials" class="block text-white hover:text-yellow-300 mb-2">Testimonials</a>
-    <a href="#contact" class="block text-white hover:text-yellow-300 mb-2">Contact Us</a>
-    <a href="https://tophomedesigner.com/" class="block text-black bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded-full mt-4">🏠 Home</a>
   </div>
 </header>
 
-<!-- JavaScript for Dropdown and Effects -->
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const header = document.getElementById('header');
-  const scrollArrow = document.getElementById('scroll-arrow');
-
-  let lastScroll = 0;
-
-  // Toggle Mobile Menu
-  menuToggle.addEventListener('click', function () {
-    mobileMenu.classList.toggle('hidden');
-  });
-
-  // Move Arrow on Scroll
-  window.addEventListener('scroll', function () {
-    let currentScroll = window.scrollY;
-    
-    // Move arrow on large screens
-    if (window.innerWidth >= 768) {
-      let arrowPosition = Math.min(currentScroll / 2, window.innerWidth); // Limits movement
-      scrollArrow.style.left = arrowPosition + 'px';
-      scrollArrow.style.opacity = 1 - currentScroll / 500; // Fade out effect
-    }
-  });
-
-  // Background Animation (CSS Below)
-</script>
-
-<style>
-  /* 🔥 Cool Animated Dark Gradient Background */
-  @keyframes gradientAnimation {
-    0% { background: linear-gradient(to right, black, #1a1a1a, #333); }
-    50% { background: linear-gradient(to right, #111, #222, #444); }
-    100% { background: linear-gradient(to right, black, #1a1a1a, #333); }
-  }
-
-  #header, #mobile-menu {
-    animation: gradientAnimation 6s infinite alternate;
-  }
-
-  /* 🔥 Smooth Transition for Arrow */
-  #scroll-arrow {
-    transition: left 0.3s ease-out, opacity 30s ease-out;
-  }
-</style>
-
 <!-- Hero Section -->
-<section class="relative bg-cover bg-center h-80 text-white flex items-center justify-center" style="background-image: url('img/bukoto 1.jpg');">
-  <div class="absolute inset-0 bg-black opacity-50"></div>
-  <div class="relative container text-center z-10">
-    <h1 class="text-5xl">Expert Eurocone Tile Installation</h1>
-    <p class="text-lg mt-2">Expertly crafted Eurocone tiles for a perfect blend of style and durability</p>
+<section class="relative min-h-screen flex items-center justify-center text-white" style="background: linear-gradient(135deg, rgba(26, 26, 46, 0.95), rgba(15, 52, 96, 0.95)), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920') center/cover;">
+  <div class="container mx-auto px-6 text-center relative z-10 pt-20">
+    <div class="max-w-4xl mx-auto animate-fade-in-up">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        Professional <span class="gradient-text">Eurocone Installation</span><br>
+        Services
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 text-gray-200 font-light">
+        Expert installation of premium Eurocone tiles. Frost-resistant, durable European tiles professionally installed for indoor and outdoor applications.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="#contact" class="btn-primary text-lg">
+          Request Free Quote
+        </a>
+        <a href="#features" class="btn-secondary text-lg">
+          View Services
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 float-animation">
+    <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+      <div class="w-1 h-3 bg-white rounded-full mt-2"></div>
+    </div>
   </div>
 </section>
 
-  <!-- Tile Categories Section -->
-  <section id="categories" class="py-16">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12">Eurocone Categories</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Floor Eurocone -->
-        <div class="category-card bg-white p-6 rounded-lg shadow-lg cursor-pointer" onclick="openModal('Floor Eurocone', 'Perfect for residential and commercial spaces. Offers a sleek and durable finish.', ['img/floor 4.jpg', 'img/floor 1.jpg', 'img/floor 2.jpg', 'img/floor 3.jpg'])">
-          <img src="img/floor 4.jpg" alt="Floor Eurocone" class="rounded mb-4 object-cover w-full h-48">
-          <h3 class="text-2xl font-semibold mb-2">Floor Eurocone</h3>
+<!-- Eurocone Gallery CTA -->
+<section class="py-24 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold mb-6 text-primary">Eurocone Signature Galleries</h2>
+      <div class="section-divider"></div>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Immerse yourself in curated installations across Floor, Bukoto, and Monalisa collections.
+      </p>
+    </div>
+    <div class="grid lg:grid-cols-3 gap-12 items-stretch">
+      <button type="button" class="gallery-card group" data-gallery-open data-gallery-category="floor">
+        <div class="gallery-card-image">
+          <img src="img/floor 1.jpg" alt="Floor Eurocone Collection" loading="lazy">
         </div>
-        <!-- Bukoto Eurocone -->
-        <div class="category-card bg-white p-6 rounded-lg shadow-lg cursor-pointer" onclick="openModal('Bukoto Eurocone', 'A versatile option, ideal for walkways and patios. Durable in all weather conditions.', ['img/bukoto 1.jpg', 'img/bukoto 2.jpg', 'img/bukoto 3.jpg', 'img/bukoto 4.jpg', 'img/bukoto 5.jpg',])">
-          <img src="img/bukoto 1.jpg" alt="Bukoto Eurocone" class="rounded mb-4 object-cover w-full h-48">
-          <h3 class="text-2xl font-semibold mb-2">Bukoto Eurocone<div></div>(wall cladding)</h3>
+        <div>
+          <span class="gallery-card-label">Signature Collection</span>
+          <h3 class="text-3xl font-bold text-primary mb-3">Floor Eurocone</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Elevated flooring solutions with European craftsmanship. Designed for luxury residences and resilient commercial walkways.
+          </p>
+          <div class="flex items-center text-gold font-semibold">
+            <span>View Curated Gallery</span>
+            <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+          </div>
         </div>
-        <!-- Monalisa Eurocone -->
-        <div class="category-card bg-white p-6 rounded-lg shadow-lg cursor-pointer" onclick="openModal('Monalisa Eurocone', 'Designed for elegant interiors and outdoor spaces. Adds a touch of sophistication.', ['img/monalisa2.jpg', 'img/mona 1.jpg', 'img/mona 2.jpg', 'img/monalisa1.jpg', 'img/mona 3.jpg', 'img/mona 4.jpg'])">
-          <img src="img/monalisa1.jpg" alt="Monalisa Eurocone" class="rounded mb-4 object-cover w-full h-48">
-          <h3 class="text-2xl font-semibold mb-2">Monalisa Eurocone<div></div>(wall cladding)</h3>
+      </button>
+
+      <button type="button" class="gallery-card group" data-gallery-open data-gallery-category="bukoto">
+        <div class="gallery-card-image">
+          <img src="img/bukoto 1.jpg" alt="Bukoto Eurocone Collection" loading="lazy">
         </div>
-      </div>
-    </div>
-  </section>
-<!-- Features Section -->
-<section id="features" class="py-20 bg-gray-200 fade-in">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-4xl font-extrabold text-blue-700 mb-8">Why People Love Eurocone Tiles</h2>
-    <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-12">
-      Eurocone tiles are not just about looks — they’re made to last, easy to install, and built for the Kenyan climate.  
-      From homes to businesses, they bring both class and confidence to any surface.
-    </p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-        <h3 class="text-2xl font-bold text-blue-600 mb-2">🔧 Easy Installation</h3>
-        <p class="text-gray-700">
-          You don’t need special cement or machines – just good tile adhesive, and we’re good to go. Less mess, less cost.
-        </p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-        <h3 class="text-2xl font-bold text-blue-600 mb-2">🌍 Eco Friendly</h3>
-        <p class="text-gray-700">
-          Made from natural, recyclable materials. Safe for your home, and better for the planet too.
-        </p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-        <h3 class="text-2xl font-bold text-blue-600 mb-2">🎨 Stylish Designs</h3>
-        <p class="text-gray-700">
-          From earthy tones to sleek patterns, Eurocone tiles blend perfectly into both modern and classic interiors.
-        </p>
-      </div>
+        <div>
+          <span class="gallery-card-label">Outdoor Mastery</span>
+          <h3 class="text-3xl font-bold text-primary mb-3">Bukoto Eurocone</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Signature Bukoto patterns engineered to inspire patios, courtyards, and hospitality environments with stunning texture and depth.
+          </p>
+          <div class="flex items-center text-gold font-semibold">
+            <span>View Curated Gallery</span>
+            <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+          </div>
+        </div>
+      </button>
+
+      <button type="button" class="gallery-card group" data-gallery-open data-gallery-category="monalisa">
+        <div class="gallery-card-image">
+          <img src="img/mona 1.jpg" alt="Monalisa Eurocone Wall Cladding" loading="lazy">
+        </div>
+        <div>
+          <span class="gallery-card-label">Wall Cladding</span>
+          <h3 class="text-3xl font-bold text-primary mb-3">Monalisa Eurocone</h3>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Sculptural wall cladding with luminous finishes. Define interiors and exteriors with expressive European artistry.
+          </p>
+          <div class="flex items-center text-gold font-semibold">
+            <span>View Curated Gallery</span>
+            <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+          </div>
+        </div>
+      </button>
     </div>
   </div>
 </section>
 
-<!-- About the Fundi -->
-<section id="about" class="py-20 bg-white fade-in">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-4xl font-extrabold text-blue-700 mb-6">Your Go-To Eurocone Tile Fundi</h2>
-    <p class="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-      I’m Clinton, a fundi with hands-on experience in fitting Eurocone tiles — and I mean real experience.  
-      I’ve installed them in apartments, showrooms, patios, and luxury bathrooms across Nairobi and beyond.
-    </p>
-    <p class="text-lg text-gray-700 max-w-3xl mx-auto mt-6 leading-relaxed">
-      I focus on <strong>clean cuts, tight joints, level finishes, and lasting strength</strong>.  
-      Whether it’s a floor, wall, or outdoor space — I handle it like it’s my own home. You bring the idea, I bring the tools and skills.
-    </p>
-  </div>
-</section>
+<div class="gallery-overlay" id="galleryOverlay" aria-hidden="true">
+  <div class="gallery-content" role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
+    <button type="button" class="gallery-close" data-gallery-close aria-label="Close gallery">
+      <i class="fas fa-xmark"></i>
+    </button>
 
-<!-- Services Section -->
-<section id="services" class="py-20 bg-gray-100 fade-in">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-4xl font-extrabold text-blue-700 mb-6">Services I Offer</h2>
-    <p class="text-gray-700 max-w-2xl mx-auto text-lg mb-10">
-      Here’s how I turn Eurocone tiles into serious upgrades for your space:
-    </p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-        <h3 class="text-2xl font-bold text-blue-600 mb-2">Floor Tiling</h3>
-        <p class="text-gray-700">
-          From open-plan living rooms to tight staircases – I lay Eurocone floor tiles strong, level, and with clean symmetry.
-        </p>
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+      <div>
+        <p class="gallery-card-label mb-3" id="galleryCategoryLabel">Featured Collection</p>
+        <h2 class="text-4xl font-bold text-primary" id="galleryTitle">Eurocone Experience</h2>
       </div>
-      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-        <h3 class="text-2xl font-bold text-blue-600 mb-2">Wall Cladding</h3>
-        <p class="text-gray-700">
-          Want a bold feature wall or a tiled kitchen backsplash? I’ll make it stand out — clean lines, good grip, and no tile popping.
-        </p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300">
-        <h3 class="text-2xl font-bold text-blue-600 mb-2">Outdoor Paving</h3>
-        <p class="text-gray-700">
-          Balconies, paths, patios — I pave using weather-resistant Eurocone tiles that stay solid during rain and sun.
-        </p>
+      <div class="gallery-category-controls" role="tablist" aria-label="Eurocone Collections">
+        <button type="button" class="gallery-category-button active" data-gallery-category="floor" role="tab">Floor Eurocone</button>
+        <button type="button" class="gallery-category-button" data-gallery-category="bukoto" role="tab">Bukoto Eurocone</button>
+        <button type="button" class="gallery-category-button" data-gallery-category="monalisa" role="tab">Monalisa Eurocone</button>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Testimonials Section -->
-<section id="testimonials" class="py-20 bg-gray-100 fade-in">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-4xl font-extrabold text-blue-700 mb-6">What Clients Are Saying</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
-      <div class="bg-white p-6 rounded-xl shadow-lg">
-        <p class="text-gray-700 italic leading-relaxed">
-          "The finish was sharp, smooth, and exactly what I had in mind. Clinton is the real deal with tiles!"
-        </p>
-        <h3 class="text-lg font-semibold mt-4 text-blue-700">– Mark R., Interior Designer</h3>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-lg">
-        <p class="text-gray-700 italic leading-relaxed">
-          "Clean job from start to finish. My outdoor area looks like a resort. Highly recommend Eurocone tiles and Clinton!"
-        </p>
-        <h3 class="text-lg font-semibold mt-4 text-blue-700">– Jane M., Homeowner</h3>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-lg">
-        <p class="text-gray-700 italic leading-relaxed">
-          "We needed wall cladding done quickly for a client handover – he came through and delivered quality under pressure."
-        </p>
-        <h3 class="text-lg font-semibold mt-4 text-blue-700">– David L., Contractor</h3>
-      </div>
+    <div class="gallery-image-wrapper">
+      <button type="button" class="gallery-nav prev" data-gallery-prev aria-label="View previous image">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <img src="" alt="Eurocone showcase" id="galleryMainImage">
+      <button type="button" class="gallery-nav next" data-gallery-next aria-label="View next image">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
-  </div>
-</section>
 
-  <!-- Modal for Tile Images -->
-  <div id="tile-modal" class="modal flex">
-  <div class="modal-content">
-    <button class="close-button absolute top-2 right-2 text-gray-600 hover:text-gray-900" onclick="closeModal()">✖</button>
-    <h3 class="text-3xl font-bold mb-4" id="modal-title">Tile Title</h3>
-    <p id="modal-description" class="text-lg text-gray-600 mb-6">Brief description of the tile.</p>
-    <div class="carousel relative">
-      <button class="carousel-button left" onclick="prevImage()">❮</button>
-      <img id="carousel-image" src="" alt="Tile Image" class="rounded shadow">
-      <button class="carousel-button right" onclick="nextImage()">❯</button>
+    <div class="flex items-center justify-between">
+      <p class="text-gray-600" id="galleryDescription">Explore curated Eurocone craftsmanship across luxury installations.</p>
+      <span class="gallery-counter" id="galleryCounter">1 / 5</span>
     </div>
-    <a href="#contact" onclick="closeModal()" class="bg-blue-500 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-600 mt-6 inline-block">Consult About This Design</a>
+
+    <div class="gallery-thumbnails" id="galleryThumbnails"></div>
   </div>
 </div>
 
-<style>
-  .close-button {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-</style>
+<!-- About Eurocone -->
+<section class="py-24 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="grid lg:grid-cols-[1.1fr_1fr] gap-16 items-center">
+      <div class="img-hover-zoom">
+        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1200" alt="Eurocone Tiles" class="rounded-2xl shadow-2xl w-full h-[520px] object-cover">
+      </div>
+
+      <div>
+        <h2 class="text-5xl font-bold mb-6 text-primary">
+          Professional <span class="gradient-text">Eurocone Installation</span>
+        </h2>
+        <div class="section-divider mx-0"></div>
+        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+          I provide expert installation of Eurocone tiles - premium European tile technology engineered with advanced materials and precision craftsmanship. These tiles offer unmatched durability, weather resistance, and aesthetic appeal.
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+          Perfect for both residential and commercial applications, I install Eurocone tiles designed to withstand extreme weather conditions while maintaining their beauty for decades. From patios to driveways, from pool decks to commercial plazas, I deliver professional Eurocone installation services.
+        </p>
+        
+        <div class="grid grid-cols-2 gap-6 mb-8">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-gold mb-2">50+</div>
+            <p class="text-gray-600 font-medium">Years Lifespan</p>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-gold mb-2">-40°C</div>
+            <p class="text-gray-600 font-medium">Frost Resistant</p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <a href="#contact" class="btn-primary text-center">
+            Get Started
+          </a>
+          <button type="button" class="btn-secondary text-center" data-gallery-open data-gallery-category="floor">
+            Explore Eurocone Gallery
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Features -->
+<section id="features" class="py-24 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold mb-6 text-primary">Why Choose Eurocone Tiles?</h2>
+      <div class="section-divider"></div>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Advanced European technology meets superior performance
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <div class="service-card">
+        <div class="text-5xl mb-6 text-gold">
+          <i class="fas fa-snowflake"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-primary">Frost Resistant</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Engineered to withstand extreme cold temperatures down to -40°C. Perfect for outdoor applications in all climates without cracking or damage.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="text-5xl mb-6 text-gold">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-primary">Ultra Durable</h3>
+        <p class="text-gray-600 leading-relaxed">
+          High-density composition ensures exceptional strength and resistance to wear, impact, and heavy traffic. Built to last for generations.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="text-5xl mb-6 text-gold">
+          <i class="fas fa-tint-slash"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-primary">Water Resistant</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Low water absorption rate prevents moisture damage, staining, and mold growth. Ideal for pool areas, bathrooms, and outdoor spaces.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="text-5xl mb-6 text-gold">
+          <i class="fas fa-sun"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-primary">UV Resistant</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Colors remain vibrant and fade-resistant even under intense sunlight. Maintains aesthetic appeal year after year.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="text-5xl mb-6 text-gold">
+          <i class="fas fa-broom"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-primary">Easy Maintenance</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Non-porous surface resists dirt and stains. Simple cleaning with water keeps tiles looking new with minimal effort.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="text-5xl mb-6 text-gold">
+          <i class="fas fa-leaf"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-primary">Eco-Friendly</h3>
+        <p class="text-gray-600 leading-relaxed">
+          Manufactured using sustainable processes with recyclable materials. Safe for the environment and your family.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Applications -->
+<section id="applications" class="py-24 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold mb-6 text-primary">Perfect For Every Space</h2>
+      <div class="section-divider"></div>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Versatile applications for residential and commercial projects
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <div class="feature-box text-center">
+        <div class="w-20 h-20 bg-gold bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-home text-4xl text-gold"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-primary">Patios & Terraces</h3>
+        <p class="text-gray-600">Create stunning outdoor living spaces that withstand all weather conditions</p>
+      </div>
+
+      <div class="feature-box text-center">
+        <div class="w-20 h-20 bg-gold bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-car text-4xl text-gold"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-primary">Driveways</h3>
+        <p class="text-gray-600">Heavy-duty tiles that handle vehicle traffic while looking elegant</p>
+      </div>
+
+      <div class="feature-box text-center">
+        <div class="w-20 h-20 bg-gold bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-swimming-pool text-4xl text-gold"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-primary">Pool Decks</h3>
+        <p class="text-gray-600">Non-slip, water-resistant tiles perfect for pool surroundings</p>
+      </div>
+
+      <div class="feature-box text-center">
+        <div class="w-20 h-20 bg-gold bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-building text-4xl text-gold"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-primary">Commercial Spaces</h3>
+        <p class="text-gray-600">Durable solutions for plazas, walkways, and public areas</p>
+      </div>
+
+      <div class="feature-box text-center">
+        <div class="w-20 h-20 bg-gold bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-tree text-4xl text-gold"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-primary">Garden Paths</h3>
+        <p class="text-gray-600">Beautiful walkways that blend with natural landscapes</p>
+      </div>
+
+      <div class="feature-box text-center">
+        <div class="w-20 h-20 bg-gold bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-door-open text-4xl text-gold"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-primary">Entryways</h3>
+        <p class="text-gray-600">Make a lasting first impression with elegant entrance tiles</p>
+      </div>
+
+      <div class="feature-box text-center">
+        <div class="w-20 h-20 bg-gold bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-store text-4xl text-gold"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-primary">Retail Spaces</h3>
+        <p class="text-gray-600">High-traffic commercial flooring that stays beautiful</p>
+      </div>
+
+      <div class="feature-box text-center">
+        <div class="w-20 h-20 bg-gold bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-6">
+          <i class="fas fa-umbrella-beach text-4xl text-gold"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-primary">Outdoor Kitchens</h3>
+        <p class="text-gray-600">Weather-resistant tiles for outdoor cooking and dining areas</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Technical Specifications -->
+<section id="specifications" class="py-24 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold mb-6 text-primary">Technical Specifications</h2>
+      <div class="section-divider"></div>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        European quality standards and certifications
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto bg-white rounded-3xl p-8 shadow-xl">
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <div class="space-y-6">
+          <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+            <span class="font-semibold text-primary">Thickness</span>
+            <span class="text-gray-600">20mm - 60mm</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+            <span class="font-semibold text-primary">Water Absorption</span>
+            <span class="text-gray-600">&lt; 3%</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+            <span class="font-semibold text-primary">Frost Resistance</span>
+            <span class="text-gray-600">-40°C to +60°C</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+            <span class="font-semibold text-primary">Slip Resistance</span>
+            <span class="text-gray-600">R11-R13</span>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+            <span class="font-semibold text-primary">Breaking Strength</span>
+            <span class="text-gray-600">&gt; 3000N</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+            <span class="font-semibold text-primary">Abrasion Resistance</span>
+            <span class="text-gray-600">Class 4-5</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+            <span class="font-semibold text-primary">Color Fastness</span>
+            <span class="text-gray-600">UV Stable</span>
+          </div>
+          <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+            <span class="font-semibold text-primary">Warranty</span>
+            <span class="text-gray-600">25 Years</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-8 pt-8 border-t border-gray-200">
+        <h3 class="text-xl font-bold mb-4 text-primary">Certifications</h3>
+        <div class="flex flex-wrap gap-4">
+          <span class="bg-gold bg-opacity-10 text-gold px-4 py-2 rounded-full font-semibold">CE Certified</span>
+          <span class="bg-gold bg-opacity-10 text-gold px-4 py-2 rounded-full font-semibold">ISO 9001</span>
+          <span class="bg-gold bg-opacity-10 text-gold px-4 py-2 rounded-full font-semibold">EN 1344</span>
+          <span class="bg-gold bg-opacity-10 text-gold px-4 py-2 rounded-full font-semibold">ASTM C902</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Installation Process -->
+<section class="py-24 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold mb-6 text-primary">Professional Installation</h2>
+      <div class="section-divider"></div>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Expert installation ensures optimal performance and longevity
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="text-center">
+        <div class="w-20 h-20 bg-gold rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-4">1</div>
+        <h3 class="text-xl font-bold mb-3 text-primary">Site Assessment</h3>
+        <p class="text-gray-600">Evaluate ground conditions and drainage requirements</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-20 h-20 bg-gold rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-4">2</div>
+        <h3 class="text-xl font-bold mb-3 text-primary">Base Preparation</h3>
+        <p class="text-gray-600">Create stable foundation with proper compaction</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-20 h-20 bg-gold rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-4">3</div>
+        <h3 class="text-xl font-bold mb-3 text-primary">Tile Installation</h3>
+        <p class="text-gray-600">Precision laying with proper spacing and alignment</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-20 h-20 bg-gold rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-4">4</div>
+        <h3 class="text-xl font-bold mb-3 text-primary">Finishing</h3>
+        <p class="text-gray-600">Joint filling, sealing, and quality inspection</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-24 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold mb-6 text-primary">Client Success Stories</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+        <div class="flex items-center mb-6">
+          <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">MR</div>
+          <div>
+            <h4 class="font-bold text-primary">Michael Roberts</h4>
+            <div class="text-gold">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 italic">"Installed Eurocone tiles on our patio 5 years ago. They still look brand new despite harsh winters. Best investment we made!"</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+        <div class="flex items-center mb-6">
+          <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">LC</div>
+          <div>
+            <h4 class="font-bold text-primary">Lisa Chen</h4>
+            <div class="text-gold">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 italic">"Used Eurocone for our commercial plaza. Handles heavy foot traffic beautifully. Clients always compliment the elegant look."</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-8 shadow-lg">
+        <div class="flex items-center mb-6">
+          <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">DW</div>
+          <div>
+            <h4 class="font-bold text-primary">David Wilson</h4>
+            <div class="text-gold">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-600 italic">"Perfect for our pool deck! Non-slip surface is safe for kids, and the tiles don't fade in the sun. Highly recommend!"</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Contact Section -->
-<section id="contact" class="py-16 text-white fade-in" style="background: linear-gradient(45deg, rgb(93, 152, 192), #4caee7, #3ebbe0, rgb(63, 145, 221), rgb(43, 203, 231)); background-size: 400% 400%; animation: gradientAnimation 15s ease infinite;">
+<section id="contact" class="py-24 bg-gray-50">
   <div class="container mx-auto px-6">
-    <h2 class="text-4xl font-bold text-center mb-6 text-blue-500">Get in Touch</h2>
-    <p class="text-center text-lg mb-8">Let’s create something amazing together! Contact us today.</p>
-
-    <!-- Contact Form -->
-<div class="bg-gradient-to-r from-blue-300 to-blue-600 p-6 rounded-lg shadow-lg max-w-lg mx-auto">
-  <h3 class="text-xl font-semibold text-black mb-4 text-center">Send a Message</h3>
-  <form id="contact-form">
-    <div class="mb-4">
-      <input type="text" id="name" placeholder="Your Name" required 
-             class="w-full p-3 border rounded-lg text-white bg-gray-700 placeholder-white focus:ring-2 focus:ring-yellow-400">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold mb-6 text-primary">Let's Create Together</h2>
+      <div class="section-divider"></div>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+        Ready to transform your space? Get in touch with us today
+      </p>
     </div>
-    <div class="mb-4">
-      <input type="email" id="email" placeholder="Your Email" required 
-             class="w-full p-3 border rounded-lg text-white bg-gray-700 placeholder-white focus:ring-2 focus:ring-yellow-400">
-    </div>
-    <div class="mb-4">
-      <textarea id="message" rows="4" placeholder="Your Message" required 
-                class="w-full p-3 border rounded-lg text-white bg-gray-700 placeholder-white focus:ring-2 focus:ring-yellow-400"></textarea>
-    </div>
-    <button type="submit" class="bg-yellow-500 text-black px-6 py-3 rounded-full text-lg hover:bg-yellow-600 w-full transition-all shadow-md">
-      Send Message
-    </button>
-    <p id="success-message" class="hidden text-black mt-4">Message sent successfully! ✅</p>
-  </form>
-</div>
 
+    <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      
+      <!-- Contact Form -->
+      <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+        <h3 class="text-2xl font-bold mb-6 text-primary">Send Us a Message</h3>
+        <form id="contact-form" class="space-y-6">
+          <div>
+            <input type="text" id="name" placeholder="Your Name" required 
+                   class="w-full px-6 py-4 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all">
+          </div>
+          <div>
+            <input type="email" id="email" placeholder="Your Email" required 
+                   class="w-full px-6 py-4 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all">
+          </div>
+          <div>
+            <textarea id="message" rows="5" placeholder="Your Message" required 
+                      class="w-full px-6 py-4 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all resize-none"></textarea>
+          </div>
+          <button type="submit" class="btn-primary w-full text-lg py-4">
+            <i class="fas fa-paper-plane mr-2"></i>Send Message
+          </button>
+          <p id="success-message" class="hidden text-gold text-center font-semibold">
+            <i class="fas fa-check-circle mr-2"></i>Message sent successfully!
+          </p>
+        </form>
+      </div>
 
-    <!-- Social Media Links -->
-    <div class="mt-12 text-center">
-      <h3 class="text-xl font-semibold text-yellow-400 mb-4">Connect with Us</h3>
-      <div class="flex flex-wrap justify-center gap-4 mt-6">
-        <a href="https://wa.me/254114522514" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
-          <i class="fab fa-whatsapp text-2xl mr-2"></i> WhatsApp
-        </a>
-        <a href="https://www.tiktok.com/@top10interiordesi?_t=ZM-8tgrml8DECk&_r=1" target="_blank" class="bg-black hover:bg-pink-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
-          <i class="fab fa-tiktok text-2xl mr-2"></i> Tiktok
-        </a>
-        <a href="https://www.instagram.com/top10interior_design_?igsh=cnFyY2J2aGd1YXN5" target="_blank" class="bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
-          <i class="fab fa-instagram text-2xl mr-2"></i> Instagram
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61573585947119" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
-          <i class="fab fa-facebook-f text-2xl mr-2"></i> Facebook
-        </a>
-        <a href="https://x.com/TophryT?t=GzNlH1_sVOBW_4pv1RAJ6A&s=09" target="_blank" class="bg-blue-400 hover:bg-blue-500 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
-          <i class="fab fa-twitter text-2xl mr-2"></i> Twitter
-        </a>
-            <a href="https://youtube.com/@topohomedesigner?si=O-z8t2C4fQ6pfcPL" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
-      <i class="fab fa-youtube text-2xl mr-2"></i> YouTube
-    </a>
-        <a href="sms:+254114522514" class="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
-          <i class="fas fa-sms text-2xl mr-2"></i> Send SMS
-        </a>
-        <a href="tel:+254114522514" class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full text-lg flex items-center transition-all shadow-md">
-          <i class="fas fa-phone-alt text-2xl mr-2"></i> Call Now
-        </a>
+      <!-- Contact Info & Social -->
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-6 text-primary">Connect With Us</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <a href="https://wa.me/254114522514" target="_blank" class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-2 border border-gray-100 text-gray-900 hover:text-gold">
+              <i class="fab fa-whatsapp text-2xl"></i>
+              <span class="font-medium">WhatsApp</span>
+            </a>
+            <a href="https://www.instagram.com/top10interior_design_?igsh=cnFyY2J2aGd1YXN5" target="_blank" class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-2 border border-gray-100 text-gray-900 hover:text-gold">
+              <i class="fab fa-instagram text-2xl"></i>
+              <span class="font-medium">Instagram</span>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61573585947119" target="_blank" class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-2 border border-gray-100 text-gray-900 hover:text-gold">
+              <i class="fab fa-facebook-f text-2xl"></i>
+              <span class="font-medium">Facebook</span>
+            </a>
+            <a href="https://www.tiktok.com/@top10interiordesi?_t=ZM-8tgrml8DECk&_r=1" target="_blank" class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-2 border border-gray-100 text-gray-900 hover:text-gold">
+              <i class="fab fa-tiktok text-2xl"></i>
+              <span class="font-medium">TikTok</span>
+            </a>
+            <a href="https://x.com/TophryT?t=GzNlH1_sVOBW_4pv1RAJ6A&s=09" target="_blank" class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-2 border border-gray-100 text-gray-900 hover:text-gold">
+              <i class="fab fa-twitter text-2xl"></i>
+              <span class="font-medium">Twitter</span>
+            </a>
+            <a href="https://youtube.com/@topohomedesigner?si=O-z8t2C4fQ6pfcPL" target="_blank" class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-2 border border-gray-100 text-gray-900 hover:text-gold">
+              <i class="fab fa-youtube text-2xl"></i>
+              <span class="font-medium">YouTube</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-xl border border-gray-100">
+          <h4 class="text-xl font-bold mb-4 text-primary">Direct Contact</h4>
+          <div class="space-y-4">
+            <a href="tel:+254114522514" class="flex items-center space-x-3 text-gray-900 hover:text-gold transition-colors">
+              <i class="fas fa-phone-alt text-xl"></i>
+              <span>+254 114 522 514</span>
+            </a>
+            <a href="sms:+254114522514" class="flex items-center space-x-3 text-gray-900 hover:text-gold transition-colors">
+              <i class="fas fa-sms text-xl"></i>
+              <span>Send SMS</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-
-
- 
- <!-- Footer -->
- <footer class="bg-gray-900 text-white text-center py-3 fade-in">
-  <div class="container mx-auto flex flex-col items-center px-6">
-
-      <!-- Copyright -->
-      <p class="text-gray-500 text-sm mt-2">© 2025 Top home designer. All Rights Reserved.</p>
-
-           <!-- Powered by Legacie with Shaking Logo -->
-           <div class="flex items-center space-x-2 mt-3">
-            <a href="https://iyonicorp.com">
-              <img src="download-removebg-preview.png" alt="Legacie Web Logo" class="h-10 md:h-12 shaking-logo">
-            </a>
-            <a href="https://iyonicorp.com/" class="footer-link"> <span class="glitter-text">Designed by iyonicorp</span></a>          </div>
-          </div>
-
+<!-- Footer -->
+<footer class="bg-gradient-to-br from-primary via-secondary to-accent text-orange-400 py-16">
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h3 class="text-2xl font-bold mb-4 gradient-text">Top Home Designer</h3>
+        <p class="text-black mb-4">Professional renovation contractor specializing in tile installation, marble work, wall cladding, and complete home renovations.</p>
+        <div class="flex space-x-4">
+          <a href="https://wa.me/254114522514" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-primary transition-all">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://www.instagram.com/top10interior_design_?igsh=cnFyY2J2aGd1YXN5" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-primary transition-all">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61573585947119" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-primary transition-all">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#services" class="text-black hover:text-gold transition">Services</a></li>
+          <li><a href="#portfolio" class="text-black hover:text-gold transition">Portfolio</a></li>
+          <li><a href="#testimonials" class="text-black hover:text-gold transition">Testimonials</a></li>
+          <li><a href="#contact" class="text-black hover:text-gold transition">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Our Services</h4>
+        <ul class="space-y-2">
+          <li><a href="../tiles" class="text-black hover:text-gold transition">Tile Installation</a></li>
+          <li><a href="../eurocone" class="text-black hover:text-gold transition">Eurocone</a></li>
+          <li><a href="../marble" class="text-black hover:text-gold transition">Marble Work</a></li>
+          <li><a href="../bricks" class="text-black hover:text-gold transition">Brick Cladding</a></li>
+          <li><a href="../artstones" class="text-black hover:text-gold transition">Artstone</a></li>
+          <li><a href="../Mazerous" class="text-black hover:text-gold transition">Mazerous</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Contact Info</h4>
+        <ul class="space-y-3 text-black">
+          <li class="flex items-center space-x-2">
+            <i class="fas fa-phone-alt text-gold"></i>
+            <span>+254 114 522 514</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <i class="fas fa-map-marker-alt text-gold"></i>
+            <span>Nairobi, Kenya</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <i class="fas fa-clock text-gold"></i>
+            <span>Mon - Sat: 8AM - 6PM</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/20 pt-8 text-center">
+      <p class="text-black mb-4">© 2025 Top Home Designer. All Rights Reserved.</p>
+      <div class="flex items-center justify-center space-x-2">
+        <span class="text-black">Designed by</span>
+        <a href="https://iyonicorp.com/" target="_blank" class="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+          <img src="download-removebg-preview.png" alt="Iyonicorp Logo" class="h-8">
+          <span class="gradient-text font-bold">Iyonicorp</span>
+        </a>
+      </div>
+    </div>
   </div>
 </footer>
 
   <script>
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+    const contactForm = document.getElementById('contact-form');
+    const successMessage = document.getElementById('success-message');
 
-    // Collect form data
-    const formData = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      message: document.getElementById("message").value,
-    };
+    if (contactForm) {
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const originalButtonContent = submitButton ? submitButton.innerHTML : '';
 
-    // Send form data using fetch()
-    fetch("https://top10interiordesign.onrender.com/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        document.getElementById("success-message").classList.remove("hidden");
-        document.getElementById("contact-form").reset();
-      } else {
-        alert("Error: Unable to send message.");
-      }
-    })
-    .catch(error => console.error("Error:", error));
-  });
-    let currentImages = [];
-    let currentIndex = 0;
+      const toggleSubmittingState = (isSubmitting) => {
+        if (!submitButton) return;
+        submitButton.disabled = isSubmitting;
+        submitButton.classList.toggle('opacity-60', isSubmitting);
+        submitButton.classList.toggle('cursor-not-allowed', isSubmitting);
+        submitButton.innerHTML = isSubmitting
+          ? '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...'
+          : (originalButtonContent || '<i class="fas fa-paper-plane mr-2"></i>Send Message');
+      };
 
-    // Ensure the modal starts hidden
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('tile-modal').style.display = 'none';
-    });
+      contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
 
-    // Open Modal Function
-    function openModal(title, description, images) {
-      document.getElementById('modal-title').textContent = title;
-      document.getElementById('modal-description').textContent = description;
-      currentImages = images;
-      currentIndex = 0;
-      updateCarousel();
-      document.getElementById('tile-modal').style.display = 'flex';
-    }
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
 
-    // Close Modal Function
-    function closeModal() {
-      document.getElementById('tile-modal').style.display = 'none';
-    }
-
-    // Update Carousel Image
-    function updateCarousel() {
-      document.getElementById('carousel-image').src = currentImages[currentIndex];
-    }
-
-    // Navigate to Previous Image
-    function prevImage() {
-      currentIndex = (currentIndex === 0) ? currentImages.length - 1 : currentIndex - 1;
-      updateCarousel();
-    }
-
-    // Navigate to Next Image
-    function nextImage() {
-      currentIndex = (currentIndex + 1) % currentImages.length;
-      updateCarousel();
-    }
-  </script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NJWQSGSHZ7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NJWQSGSHZ7');
-</script>
-  
-  <!-- Floating Inquiry Button -->
-  <button id="inquiry-btn" class="inquiry-btn" aria-label="Inquiry" title="Inquiry">
-    <span class="inquiry-label">Inquire</span>
-  </button>
-
-  <style>
-    /* Floating Inquiry Button Styles */
-    .inquiry-btn {
-      position: fixed;
-      right: 16px; /* final settle position (will switch to left/top on drag) */
-      bottom: 16px;
-      width: 60px;
-      height: 60px;
-      border: none;
-      border-radius: 50%;
-      background: radial-gradient(120% 120% at 30% 30%, #ffd166 0%, #ef476f 45%, #118ab2 100%);
-      color: #fff;
-      box-shadow: 0 10px 20px rgba(0,0,0,.25), inset 0 0 18px rgba(255,255,255,.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: grab;
-      z-index: 9999;
-      transition: transform .25s ease, box-shadow .2s ease, left .35s ease, top .35s ease, right .35s ease, bottom .35s ease, opacity .4s ease, width .35s ease, border-radius .35s ease, padding .35s ease;
-      animation: inquiry-float 4s ease-in-out infinite;
-      padding: 0 0; /* will expand when settled */
-      white-space: nowrap;
-    }
-    .inquiry-btn:hover { box-shadow: 0 12px 26px rgba(0,0,0,.3), inset 0 0 22px rgba(255,255,255,.35); }
-    .inquiry-btn:active { cursor: grabbing; }
-    .inquiry-btn.dragging { transform: scale(0.96); opacity: 0.95; }
-
-    /* Hidden label until settle */
-    .inquiry-label {
-      display: none;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-    }
-    .inquiry-btn.settled {
-      width: auto;
-      border-radius: 9999px; /* pill */
-      padding: 0 18px;
-      height: 54px;
-    }
-    .inquiry-btn.settled .inquiry-label { display: inline; }
-
-    @keyframes inquiry-float {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(-4px); }
-    }
-
-    /* Blink animations triggered after settle */
-    @keyframes inquiry-blink {
-      0% { opacity: 1; box-shadow: 0 10px 20px rgba(0,0,0,.25), inset 0 0 18px rgba(255,255,255,.25); }
-      20% { opacity: .35; transform: scale(0.98); box-shadow: 0 12px 28px rgba(0,0,0,.35), 0 0 12px rgba(255,214,102,.45) inset; }
-      40% { opacity: 1; transform: scale(1.03); box-shadow: 0 14px 32px rgba(0,0,0,.35), 0 0 18px rgba(239,71,111,.45) inset; }
-      60% { opacity: .35; transform: scale(0.99); box-shadow: 0 12px 28px rgba(0,0,0,.35), 0 0 12px rgba(17,138,178,.4) inset; }
-      100% { opacity: 1; transform: scale(1); box-shadow: 0 10px 20px rgba(0,0,0,.25), inset 0 0 18px rgba(255,255,255,.25); }
-    }
-    @keyframes inquiry-label-blink {
-      0% { opacity: 1; }
-      25% { opacity: .25; }
-      50% { opacity: 1; }
-      75% { opacity: .25; }
-      100% { opacity: 1; }
-    }
-    .inquiry-btn.blinking { animation: inquiry-blink 1.2s ease-in-out 1; }
-    .inquiry-btn.blinking .inquiry-label { animation: inquiry-label-blink 1.2s ease-in-out 1; }
-  </style>
-
-  <script>
-    // Intro tour moving around the page smoothly, then settle bottom-right and show label.
-    // After tour, enable drag + snap and click-to-scroll. Then blink once after 3s.
-    (() => {
-      const btn = document.getElementById('inquiry-btn');
-      const label = btn.querySelector('.inquiry-label');
-
-      function lerp(a, b, t) { return a + (b - a) * t; }
-
-      function animateSegment(from, to, duration) {
-        return new Promise(resolve => {
-          const start = performance.now();
-          const rect = btn.getBoundingClientRect();
-          // Switch to left/top anchoring
-          btn.style.right = 'auto';
-          btn.style.bottom = 'auto';
-
-          const tick = (now) => {
-            const t = Math.min(1, (now - start) / duration);
-            const x = lerp(from.x, to.x, t);
-            const y = lerp(from.y, to.y, t);
-            btn.style.left = x + 'px';
-            btn.style.top = y + 'px';
-            if (t < 1) requestAnimationFrame(tick); else resolve();
-          };
-          requestAnimationFrame(tick);
-        });
-      }
-
-      async function introTourThenSettle() {
-        // Start from off-canvas then tour corners/edges, end bottom-right
-        const margin = 16;
-        const size = 60; // initial button size for coords
-        const vw = () => window.innerWidth;
-        const vh = () => window.innerHeight;
-
-        // Ensure initial absolute anchors
-        btn.style.right = 'auto';
-        btn.style.bottom = 'auto';
-        btn.style.left = (vw() - margin - size) + 'px';
-        btn.style.top = (vh() - margin - size) + 'px';
-
-        const path = [
-          { x: margin, y: margin },                                             // TL
-          { x: (vw() - size) / 2, y: margin },                                  // T-center
-          { x: vw() - size - margin, y: margin },                               // TR
-          { x: vw() - size - margin, y: (vh() - size) / 2 },                    // R-center
-          { x: vw() - size - margin, y: vh() - size - margin },                 // BR
-          { x: (vw() - size) / 2, y: vh() - size - margin },                    // B-center
-          { x: margin, y: vh() - size - margin },                               // BL
-          { x: margin, y: (vh() - size) / 2 },                                  // L-center
-          { x: vw() - size - margin, y: vh() - size - margin }                  // settle BR
-        ];
-
-        // Slightly faster for segments, a bit slower on last settle
-        let current = { x: parseFloat(btn.style.left)|| (vw()-size-margin), y: parseFloat(btn.style.top)|| (vh()-size-margin) };
-        for (let i = 0; i < path.length; i++) {
-          const dur = i === path.length - 1 ? 700 : 450;
-          await animateSegment(current, path[i], dur);
-          current = path[i];
-        }
-
-        // Settle state: grow to pill and show text
-        btn.classList.add('settled');
-        // Blink once after 3 seconds
-        setTimeout(() => {
-          btn.classList.add('blinking');
-          // Remove class after animation completes to allow future triggers if needed
-          setTimeout(() => btn.classList.remove('blinking'), 1300);
-        }, 3000);
-      }
-
-      function enableDragAndSnap() {
-        let isDragging = false;
-        let moved = false;
-        let startX = 0, startY = 0;
-        let btnStartLeft = 0, btnStartTop = 0;
-
-        const onDown = (e) => {
-          isDragging = true;
-          moved = false;
-          btn.classList.add('dragging');
-          const rect = btn.getBoundingClientRect();
-          const pointX = e.touches ? e.touches[0].clientX : e.clientX;
-          const pointY = e.touches ? e.touches[0].clientY : e.clientY;
-          startX = pointX;
-          startY = pointY;
-          btnStartLeft = rect.left;
-          btnStartTop = rect.top;
-          btn.style.right = 'auto';
-          btn.style.bottom = 'auto';
-          document.addEventListener('mousemove', onMove);
-          document.addEventListener('mouseup', onUp);
-          document.addEventListener('touchmove', onMove, { passive: false });
-          document.addEventListener('touchend', onUp);
+        const formPayload = {
+          name: nameInput ? nameInput.value.trim() : '',
+          email: emailInput ? emailInput.value.trim() : '',
+          message: messageInput ? messageInput.value.trim() : '',
         };
 
-        const onMove = (e) => {
-          if (!isDragging) return;
-          e.preventDefault();
-          const pointX = e.touches ? e.touches[0].clientX : e.clientX;
-          const pointY = e.touches ? e.touches[0].clientY : e.clientY;
-          const dx = pointX - startX;
-          const dy = pointY - startY;
-          if (Math.abs(dx) > 3 || Math.abs(dy) > 3) moved = true;
-          const vw = window.innerWidth;
-          const vh = window.innerHeight;
-          const rect = btn.getBoundingClientRect();
-          let newLeft = btnStartLeft + dx;
-          let newTop = btnStartTop + dy;
-          newLeft = Math.max(0, Math.min(newLeft, vw - rect.width));
-          newTop = Math.max(0, Math.min(newTop, vh - rect.height));
-          btn.style.left = newLeft + 'px';
-          btn.style.top = newTop + 'px';
-        };
+        toggleSubmittingState(true);
 
-        const snapToEdgesAndCorners = () => {
-          const margin = 16;
-          const rect = btn.getBoundingClientRect();
-          const vw = window.innerWidth;
-          const vh = window.innerHeight;
-          const targets = [
-            { x: margin, y: margin },
-            { x: (vw - rect.width) / 2, y: margin },
-            { x: vw - rect.width - margin, y: margin },
-            { x: vw - rect.width - margin, y: (vh - rect.height) / 2 },
-            { x: vw - rect.width - margin, y: vh - rect.height - margin },
-            { x: (vw - rect.width) / 2, y: vh - rect.height - margin },
-            { x: margin, y: vh - rect.height - margin },
-            { x: margin, y: (vh - rect.height) / 2 },
-          ];
-          const centerX = rect.left + rect.width / 2;
-          const centerY = rect.top + rect.height / 2;
-          let best = targets[0], bestD = Infinity;
-          for (const t of targets) {
-            const dx = centerX - (t.x + rect.width / 2);
-            const dy = centerY - (t.y + rect.height / 2);
-            const d = dx * dx + dy * dy;
-            if (d < bestD) { bestD = d; best = t; }
-          }
-          btn.style.left = best.x + 'px';
-          btn.style.top = best.y + 'px';
-        };
-
-        const onUp = () => {
-          if (!isDragging) return;
-          isDragging = false;
-          btn.classList.remove('dragging');
-          document.removeEventListener('mousemove', onMove);
-          document.removeEventListener('mouseup', onUp);
-          document.removeEventListener('touchmove', onMove);
-          document.removeEventListener('touchend', onUp);
-          snapToEdgesAndCorners();
-        };
-
-        btn.addEventListener('mousedown', onDown);
-        btn.addEventListener('touchstart', onDown, { passive: true });
-
-        btn.addEventListener('click', (e) => {
-          if (moved) { e.preventDefault(); return; }
-          const contact = document.querySelector('#contact');
-          if (contact) contact.scrollIntoView({ behavior: 'smooth' });
-        });
-
-        window.addEventListener('resize', () => {
-          if (!btn.classList.contains('dragging')) snapToEdgesAndCorners();
-        });
-      }
-
-      // Kick off intro, then enable full behavior
-      window.addEventListener('load', async () => {
         try {
-          await introTourThenSettle();
-        } catch (e) {}
-        enableDragAndSnap();
-      });
-    })();
-  </script>
+          const response = await fetch('https://top10interiordesign.onrender.com/send-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formPayload),
+          });
 
+          const data = await response.json();
+
+          if (data.success) {
+            if (successMessage) {
+              successMessage.classList.remove('hidden');
+            }
+            contactForm.reset();
+            setTimeout(() => {
+              if (successMessage) {
+                successMessage.classList.add('hidden');
+              }
+            }, 5000);
+          } else {
+            alert(data.message || 'Error: Unable to send message.');
+          }
+        } catch (error) {
+          console.error('Error sending message:', error);
+          alert('An unexpected error occurred. Please try again later.');
+        } finally {
+          toggleSubmittingState(false);
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const body = document.body;
+      const overlay = document.getElementById('galleryOverlay');
+      const mainImage = document.getElementById('galleryMainImage');
+      const description = document.getElementById('galleryDescription');
+      const counter = document.getElementById('galleryCounter');
+      const thumbnailsWrapper = document.getElementById('galleryThumbnails');
+      const categoryLabel = document.getElementById('galleryCategoryLabel');
+      const categoryButtons = Array.from(document.querySelectorAll('[data-gallery-category]'));
+      const openers = Array.from(document.querySelectorAll('[data-gallery-open]'));
+      const closeButton = document.querySelector('[data-gallery-close]');
+      const prevButton = document.querySelector('[data-gallery-prev]');
+      const nextButton = document.querySelector('[data-gallery-next]');
+
+      const galleryData = {
+        floor: {
+          label: 'Signature Collection',
+          title: 'Floor Eurocone Showcase',
+          description: 'Premium floor installations highlighting durable textures and timeless European finishes.',
+          items: [
+            { src: 'img/floor 1.jpg', alt: 'Floor Eurocone installation 1' },
+            { src: 'img/floor 2.jpg', alt: 'Floor Eurocone installation 2' },
+            { src: 'img/floor 3.jpg', alt: 'Floor Eurocone installation 3' },
+            { src: 'img/floor 4.jpg', alt: 'Floor Eurocone installation 4' }
+          ]
+        },
+        bukoto: {
+          label: 'Outdoor Mastery',
+          title: 'Bukoto Eurocone Experience',
+          description: 'Outdoor ready Eurocone patterns tailored for patios, hospitality, and architectural landscapes.',
+          items: [
+            { src: 'img/bukoto 1.jpg', alt: 'Bukoto Eurocone installation 1' },
+            { src: 'img/bukoto 2.jpg', alt: 'Bukoto Eurocone installation 2' },
+            { src: 'img/bukoto 3.jpg', alt: 'Bukoto Eurocone installation 3' },
+            { src: 'img/bukoto 4.jpg', alt: 'Bukoto Eurocone installation 4' },
+            { src: 'img/bukoto 5.jpg', alt: 'Bukoto Eurocone installation 5' }
+          ]
+        },
+        monalisa: {
+          label: 'Wall Cladding',
+          title: 'Monalisa Eurocone Wall Stories',
+          description: 'Elegant wall cladding compositions sculpted for elevated interiors and statement facades.',
+          items: [
+            { src: 'img/mona 1.jpg', alt: 'Monalisa Eurocone installation 1' },
+            { src: 'img/mona 2.jpg', alt: 'Monalisa Eurocone installation 2' },
+            { src: 'img/mona 3.jpg', alt: 'Monalisa Eurocone installation 3' },
+            { src: 'img/mona 4.jpg', alt: 'Monalisa Eurocone installation 4' }
+          ]
+        }
+      };
+
+      let activeCategory = 'floor';
+      let activeIndex = 0;
+
+      const renderThumbnails = () => {
+        thumbnailsWrapper.innerHTML = '';
+        const { items } = galleryData[activeCategory];
+
+        items.forEach((item, index) => {
+          const thumbnailButton = document.createElement('button');
+          thumbnailButton.className = `gallery-thumbnail${index === activeIndex ? ' active' : ''}`;
+          thumbnailButton.type = 'button';
+          thumbnailButton.setAttribute('aria-label', `View image ${index + 1}`);
+          thumbnailButton.innerHTML = `<img src="${item.src}" alt="${item.alt}">`;
+          thumbnailButton.addEventListener('click', () => {
+            activeIndex = index;
+            updateMainDisplay();
+            renderThumbnails();
+          });
+          thumbnailsWrapper.appendChild(thumbnailButton);
+        });
+      };
+
+      const updateCategoryButtons = () => {
+        categoryButtons.forEach((button) => {
+          const isActive = button.dataset.galleryCategory === activeCategory;
+          button.classList.toggle('active', isActive);
+          button.setAttribute('aria-selected', String(isActive));
+        });
+      };
+
+      const updateMainDisplay = () => {
+        const { items, label, title, description: categoryDescription } = galleryData[activeCategory];
+        const currentItem = items[activeIndex];
+
+        mainImage.src = currentItem.src;
+        mainImage.alt = currentItem.alt;
+        categoryLabel.textContent = label;
+        description.textContent = categoryDescription;
+        document.getElementById('galleryTitle').textContent = title;
+        counter.textContent = `${activeIndex + 1} / ${items.length}`;
+      };
+
+      const openGallery = (category = 'floor') => {
+        activeCategory = category;
+        activeIndex = 0;
+        updateCategoryButtons();
+        updateMainDisplay();
+        renderThumbnails();
+        overlay.classList.add('active');
+        body.classList.add('modal-open');
+        closeButton.focus();
+      };
+
+      const closeGallery = () => {
+        overlay.classList.remove('active');
+        body.classList.remove('modal-open');
+        openers[0].focus();
+      };
+
+      const showNext = () => {
+        const { items } = galleryData[activeCategory];
+        activeIndex = (activeIndex + 1) % items.length;
+        updateMainDisplay();
+        renderThumbnails();
+      };
+
+      const showPrevious = () => {
+        const { items } = galleryData[activeCategory];
+        activeIndex = (activeIndex - 1 + items.length) % items.length;
+        updateMainDisplay();
+        renderThumbnails();
+      };
+
+      openers.forEach((opener) => {
+        opener.addEventListener('click', () => {
+          const category = opener.dataset.galleryCategory || 'floor';
+          openGallery(category);
+        });
+      });
+
+      categoryButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          const category = button.dataset.galleryCategory;
+          if (category && category !== activeCategory) {
+            activeCategory = category;
+            activeIndex = 0;
+            updateCategoryButtons();
+            updateMainDisplay();
+            renderThumbnails();
+          }
+        });
+      });
+
+      closeButton.addEventListener('click', closeGallery);
+      overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+          closeGallery();
+        }
+      });
+
+      nextButton.addEventListener('click', showNext);
+      prevButton.addEventListener('click', showPrevious);
+
+      document.addEventListener('keydown', (event) => {
+        if (!overlay.classList.contains('active')) return;
+        if (event.key === 'Escape') {
+          closeGallery();
+        } else if (event.key === 'ArrowRight') {
+          showNext();
+        } else if (event.key === 'ArrowLeft') {
+          showPrevious();
+        }
+      });
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Custom Wardrobe Installation | Built-in & Walk-in Closets | Top Home Designer</title>
+  <meta name="description" content="Professional wardrobe installation services. Walk-in closets, built-in wardrobes, sliding and hinged doors, modular systems, lighting & accessories.">
+  <link rel="canonical" href="https://www.tophomedesigner.com/wardrobe/">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --gold: #d4af37;
+      --light-gold: #f4e4c1;
+      --text-dark: #1a1a2e;
+      --text-light: #6b7280;
+      --bg-light: #fafafa;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+    html { scroll-behavior: smooth; }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--gold) 0%, #f4e4c1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), #c9a961);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      letter-spacing: .3px;
+      transition: all .3s ease;
+      display: inline-block;
+      box-shadow: 0 10px 25px rgba(212,175,55,.25);
+    }
+    .btn-primary:hover { transform: translateY(-2px); }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      padding: 14px 32px;
+      border: 2px solid white;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all .3s ease;
+      display: inline-block;
+    }
+    .btn-secondary:hover { background: white; color: var(--primary); }
+
+    .section-divider {
+      width: 80px; height: 4px; margin: 0 auto 40px;
+      background: linear-gradient(90deg, var(--gold), #c9a961);
+      border-radius: 2px;
+    }
+
+    .img-hover-zoom { overflow: hidden; border-radius: 20px; }
+    .img-hover-zoom img { transition: transform .5s ease; }
+    .img-hover-zoom:hover img { transform: scale(1.08); }
+
+    /* Force black body copy */
+    .text-gray-600, .text-gray-700, .text-gray-500, .text-gray-400, .text-gray-300 { color: #000 !important; }
+
+    /* Clean Tabs (for Gallery) */
+    .tab-bar {
+      display: flex;
+      gap: 10px;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 9999px;
+      padding: 6px;
+      position: relative;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
+    }
+    .tab-bar::-webkit-scrollbar { display: none; }
+
+    .tab-button {
+      appearance: none;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: var(--text-dark);
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: 9999px;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: color .2s ease, background .2s ease, box-shadow .2s ease, transform .2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tab-button:hover { transform: translateY(-1px); }
+    .tab-button[aria-selected="true"] {
+      background: linear-gradient(135deg, var(--gold), #c9a961);
+      color: white;
+      box-shadow: 0 10px 22px rgba(212,175,55,.35);
+    }
+
+    .tab-indicator {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 0;
+      background: var(--gold);
+      border-radius: 2px;
+      transition: transform .25s ease, width .25s ease;
+    }
+
+    .tab-panel[hidden] { display: none; }
+
+    @keyframes fadeInUp { from { opacity:0; transform: translateY(20px);} to { opacity:1; transform: translateY(0);} }
+    .tab-panel { animation: fadeInUp .45s ease both; }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+<!-- Header -->
+<header id="header" class="fixed w-full top-0 z-50 transition-all duration-300" style="background: rgba(26, 26, 46, 0.98);">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+      <a href="../index.html" class="flex items-center space-x-3">
+        <img src="img/logo.jpg" alt="Top Home Designer Logo" class="h-12 w-12 rounded-full object-cover ring-2 ring-gold/30">
+        <span class="text-white font-bold text-xl hidden md:block">Top Home Designer</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center space-x-8">
+        <a href="../tiles/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Tiles</a>
+        <a href="../eurocone/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Eurocone</a>
+        <a href="../bricks/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Bricks</a>
+        <a href="../artstones/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Artstones</a>
+        <a href="../marble/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Marble</a>
+        <a href="../Mazerous/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Mazerous</a>
+        <a href="../gypsum/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Gypsum</a>
+        <a href="../painting/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Painting</a>
+        <a href="../wardrobe/" class="text-gold font-medium">Wardrobe</a>
+      </nav>
+
+      <a href="#contact" class="hidden lg:inline-block btn-primary">
+        <i class="fas fa-phone-alt mr-2"></i>Contact Us
+      </a>
+
+      <button id="menu-toggle" class="lg:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4">
+      <div class="flex flex-col space-y-3">
+        <a href="../tiles/" class="text-white hover:text-gold transition-colors duration-300 py-2">Tiles</a>
+        <a href="../eurocone/" class="text-white hover:text-gold transition-colors duration-300 py-2">Eurocone</a>
+        <a href="../bricks/" class="text-white hover:text-gold transition-colors duration-300 py-2">Bricks</a>
+        <a href="../artstones/" class="text-white hover:text-gold transition-colors duration-300 py-2">Artstones</a>
+        <a href="../marble/" class="text-white hover:text-gold transition-colors duration-300 py-2">Marble</a>
+        <a href="../Mazerous/" class="text-white hover:text-gold transition-colors duration-300 py-2">Mazerous</a>
+        <a href="../gypsum/" class="text-white hover:text-gold transition-colors duration-300 py-2">Gypsum</a>
+        <a href="../painting/" class="text-white hover:text-gold transition-colors duration-300 py-2">Painting</a>
+        <a href="../wardrobe/" class="text-gold py-2">Wardrobe</a>
+        <a href="#contact" class="btn-primary text-center mt-4">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="relative min-h-[80vh] flex items-center justify-center text-white" style="background: linear-gradient(rgba(26,26,46,.88), rgba(26,26,46,.6)), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920') center/cover no-repeat;">
+  <div class="container mx-auto px-6 text-center pt-24">
+    <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+      Custom <span class="gradient-text">Wardrobe Installation</span>
+    </h1>
+    <p class="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
+      Built-in closets, walk-in wardrobes, sliding and hinged door systems, and smart storage solutions crafted to fit your space perfectly
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="#contact" class="btn-primary text-lg">Get Free Quote</a>
+      <a href="#gallery" class="btn-secondary text-lg">View Gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- Wardrobe Gallery (Clean, with Tabs) -->
+<section id="gallery" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-14">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary">Wardrobe Gallery</h2>
+      <div class="section-divider"></div>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">Browse real-world inspiration by category</p>
+    </div>
+
+    <!-- Tab Bar -->
+    <div role="tablist" aria-label="Wardrobe gallery categories" id="wardrobe-gallery-tabs" class="tab-bar mb-10">
+      <button role="tab" id="gtab-kitchen" class="tab-button" aria-selected="true" aria-controls="gallery-panel-kitchen" tabindex="0" data-target="gallery-panel-kitchen">
+        <i class="fas fa-utensils"></i><span>Kitchen Wardrobes</span>
+      </button>
+      <button role="tab" id="gtab-bedroom" class="tab-button" aria-selected="false" aria-controls="gallery-panel-bedroom" tabindex="-1" data-target="gallery-panel-bedroom">
+        <i class="fas fa-bed"></i><span>Bedroom Wardrobes</span>
+      </button>
+      <span class="tab-indicator" id="gallery-tab-indicator"></span>
+    </div>
+
+    <!-- Kitchen Panel: use images from wardrobe folder root -->
+    <div id="gallery-panel-kitchen" class="tab-panel" role="tabpanel" aria-labelledby="gtab-kitchen">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 09.32.07_3910530d.jpg" alt="Kitchen Wardrobe 1" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+        <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 09.32.08_25a93f5f.jpg" alt="Kitchen Wardrobe 2" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+        <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 09.32.08_644914aa.jpg" alt="Kitchen Wardrobe 3" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+        <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 09.32.08_abc4c97f.jpg" alt="Kitchen Wardrobe 4" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      </div>
+    </div>
+
+    <!-- Bedroom Panel: use images from wardrobe/img folder -->
+    <div id="gallery-panel-bedroom" class="tab-panel" role="tabpanel" aria-labelledby="gtab-bedroom" hidden>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="img-hover-zoom"><img src="img/WhatsApp Image 2025-10-06 at 09.32.08_88b9f4f5.jpg" alt="Bedroom Wardrobe 1" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+        <div class="img-hover-zoom"><img src="img/WhatsApp Image 2025-10-06 at 09.32.09_4ea55515.jpg" alt="Bedroom Wardrobe 2" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+        <div class="img-hover-zoom"><img src="img/WhatsApp Image 2025-10-06 at 09.32.09_c8f49d1d.jpg" alt="Bedroom Wardrobe 3" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+        <div class="img-hover-zoom"><img src="img/WhatsApp Image 2025-10-06 at 09.32.09_d6adb552.jpg" alt="Bedroom Wardrobe 4" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+        <div class="img-hover-zoom"><img src="img/WhatsApp Image 2025-10-06 at 09.32.09_eb950e2e.jpg" alt="Bedroom Wardrobe 5" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+        <div class="img-hover-zoom"><img src="img/WhatsApp Image 2025-10-06 at 09.32.10_7c739d3f.jpg" alt="Bedroom Wardrobe 6" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+        <div class="img-hover-zoom"><img src="img/WhatsApp Image 2025-10-06 at 09.32.10_9ed5cad7.jpg" alt="Bedroom Wardrobe 7" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+        <div class="img-hover-zoom"><img src="img/WhatsApp Image 2025-10-06 at 09.32.10_8285d8f6.jpg" alt="Bedroom Wardrobe 8" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+        <div class="img-hover-zoom"><img src="img/WhatsApp Image 2025-10-06 at 09.32.11_cb95cfe7.jpg" alt="Bedroom Wardrobe 9" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-24 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold mb-6 text-primary">Start Your Wardrobe Project</h2>
+      <div class="section-divider"></div>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto">Get a free consultation and tailored quote for your custom wardrobe</p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+        <h3 class="text-2xl font-bold mb-6 text-primary">Send Us a Message</h3>
+        <form id="contact-form" class="space-y-6">
+          <input type="text" id="name" placeholder="Your Name" required 
+                 class="w-full px-6 py-4 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all">
+          <input type="email" id="email" placeholder="Your Email" required 
+                 class="w-full px-6 py-4 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all">
+          <textarea id="message" rows="5" placeholder="Your Message" required 
+                    class="w-full px-6 py-4 rounded-xl bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all resize-none"></textarea>
+          <button type="submit" class="btn-primary w-full text-lg py-4">
+            <i class="fas fa-paper-plane mr-2"></i>Send Message
+          </button>
+          <p id="success-message" class="hidden text-gold text-center font-semibold">
+            <i class="fas fa-check-circle mr-2"></i>Message sent successfully!
+          </p>
+        </form>
+      </div>
+
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-6 text-primary">Connect With Us</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <a href="https://wa.me/254114522514" target="_blank" class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-2 border border-gray-100 text-gray-900 hover:text-gold">
+              <i class="fab fa-whatsapp text-2xl"></i>
+              <span class="font-medium">WhatsApp</span>
+            </a>
+            <a href="https://www.instagram.com/top10interior_design_?igsh=cnFyY2J2aGd1YXN5" target="_blank" class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-2 border border-gray-100 text-gray-900 hover:text-gold">
+              <i class="fab fa-instagram text-2xl"></i>
+              <span class="font-medium">Instagram</span>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61573585947119" target="_blank" class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-2 border border-gray-100 text-gray-900 hover:text-gold">
+              <i class="fab fa-facebook-f text-2xl"></i>
+              <span class="font-medium">Facebook</span>
+            </a>
+            <a href="https://www.tiktok.com/@top10interiordesi?_t=ZM-8tgrml8DECk&_r=1" target="_blank" class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-2 border border-gray-100 text-gray-900 hover:text-gold">
+              <i class="fab fa-tiktok text-2xl"></i>
+              <span class="font-medium">TikTok</span>
+            </a>
+            <a href="https://x.com/TophryT?t=GzNlH1_sVOBW_4pv1RAJ6A&s=09" target="_blank" class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-2 border border-gray-100 text-gray-900 hover:text-gold">
+              <i class="fab fa-twitter text-2xl"></i>
+              <span class="font-medium">Twitter</span>
+            </a>
+            <a href="https://youtube.com/@topohomedesigner?si=O-z8t2C4fQ6pfcPL" target="_blank" class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-2 border border-gray-100 text-gray-900 hover:text-gold">
+              <i class="fab fa-youtube text-2xl"></i>
+              <span class="font-medium">YouTube</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-xl border border-gray-100">
+          <h4 class="text-xl font-bold mb-4 text-primary">Direct Contact</h4>
+          <div class="space-y-4">
+            <a href="tel:+254114522514" class="flex items-center space-x-3 text-gray-900 hover:text-gold transition-colors">
+              <i class="fas fa-phone-alt text-xl"></i>
+              <span>+254 114 522 514</span>
+            </a>
+            <a href="sms:+254114522514" class="flex items-center space-x-3 text-gray-900 hover:text-gold transition-colors">
+              <i class="fas fa-sms text-xl"></i>
+              <span>Send SMS</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gradient-to-br from-primary via-secondary to-accent text-orange-400 py-16">
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h3 class="text-2xl font-bold mb-4 gradient-text">Top Home Designer</h3>
+        <p class="text-black mb-4">Professional renovation contractor specializing in tile installation, marble work, wall cladding, and complete home renovations.</p>
+        <div class="flex space-x-4">
+          <a href="https://wa.me/254114522514" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-primary transition-all">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://www.instagram.com/top10interior_design_?igsh=cnFyY2J2aGd1YXN5" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-primary transition-all">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61573585947119" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-primary transition-all">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#gallery" class="text-black hover:text-gold transition">Gallery</a></li>
+          <li><a href="#contact" class="text-black hover:text-gold transition">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Our Services</h4>
+        <ul class="space-y-2">
+          <li><a href="../tiles/" class="text-black hover:text-gold transition">Tile Installation</a></li>
+          <li><a href="../eurocone/" class="text-black hover:text-gold transition">Eurocone</a></li>
+          <li><a href="../marble/" class="text-black hover:text-gold transition">Marble Work</a></li>
+          <li><a href="../bricks/" class="text-black hover:text-gold transition">Brick Cladding</a></li>
+          <li><a href="../artstones/" class="text-black hover:text-gold transition">Artstone</a></li>
+          <li><a href="../Mazerous/" class="text-black hover:text-gold transition">Mazerous</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Contact Info</h4>
+        <ul class="space-y-3 text-black">
+          <li class="flex items-center space-x-2">
+            <i class="fas fa-phone-alt text-gold"></i>
+            <span>+254 114 522 514</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <i class="fas fa-map-marker-alt text-gold"></i>
+            <span>Nairobi, Kenya</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <i class="fas fa-clock text-gold"></i>
+            <span>Mon - Sat: 8AM - 6PM</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/20 pt-8 text-center">
+      <p class="text-black mb-4">© 2025 Top Home Designer. All Rights Reserved.</p>
+      <div class="flex items-center justify-center space-x-2">
+        <span class="text-black">Designed by</span>
+        <a href="https://iyonicorp.com/" target="_blank" class="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+          <img src="download-removebg-preview.png" alt="Iyonicorp Logo" class="h-8">
+          <span class="gradient-text font-bold">Iyonicorp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+  // Mobile Menu Toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  // Contact Form (mock submit)
+  const contactForm = document.getElementById('contact-form');
+  const successMessage = document.getElementById('success-message');
+  if (contactForm) {
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonContent = submitButton ? submitButton.innerHTML : '';
+
+    const toggleSubmittingState = (isSubmitting) => {
+      if (!submitButton) return;
+      submitButton.disabled = isSubmitting;
+      submitButton.classList.toggle('opacity-60', isSubmitting);
+      submitButton.classList.toggle('cursor-not-allowed', isSubmitting);
+      submitButton.innerHTML = isSubmitting
+        ? '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...'
+        : (originalButtonContent || '<i class="fas fa-paper-plane mr-2"></i>Send Message');
+    };
+
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const messageInput = document.getElementById('message');
+
+      const formPayload = {
+        name: nameInput ? nameInput.value.trim() : '',
+        email: emailInput ? emailInput.value.trim() : '',
+        message: messageInput ? messageInput.value.trim() : '',
+      };
+
+      toggleSubmittingState(true);
+
+      try {
+        const response = await fetch('https://top10interiordesign.onrender.com/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formPayload),
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+          if (successMessage) {
+            successMessage.classList.remove('hidden');
+          }
+          contactForm.reset();
+          setTimeout(() => {
+            if (successMessage) {
+              successMessage.classList.add('hidden');
+            }
+          }, 5000);
+        } else {
+          alert(data.message || 'Error: Unable to send message.');
+        }
+      } catch (error) {
+        console.error('Error sending message:', error);
+        alert('An unexpected error occurred. Please try again later.');
+      } finally {
+        toggleSubmittingState(false);
+      }
+    });
+  }
+
+  // Wardrobe Gallery Tabs (accessible with keyboard + indicator)
+  (function() {
+    const tabBar = document.getElementById('wardrobe-gallery-tabs');
+    if (!tabBar) return;
+    const tabs = Array.from(tabBar.querySelectorAll('[role="tab"]'));
+    const indicator = document.getElementById('gallery-tab-indicator');
+
+    function setActiveTab(next) {
+      tabs.forEach((t) => {
+        const selected = t === next;
+        t.setAttribute('aria-selected', selected ? 'true' : 'false');
+        t.tabIndex = selected ? 0 : -1;
+        const panelId = t.getAttribute('data-target');
+        const panel = document.getElementById(panelId);
+        if (panel) {
+          if (selected) panel.removeAttribute('hidden'); else panel.setAttribute('hidden', '');
+        }
+      });
+      moveIndicator(next);
+      // Ensure active tab visible
+      const tbRect = tabBar.getBoundingClientRect();
+      const tRect = next.getBoundingClientRect();
+      if (tRect.left < tbRect.left || tRect.right > tbRect.right) {
+        tabBar.scrollBy({ left: (tRect.left - tbRect.left) - 24, behavior: 'smooth' });
+      }
+    }
+
+    function moveIndicator(active) {
+      if (!indicator) return;
+      const left = active.offsetLeft - tabBar.scrollLeft;
+      indicator.style.transform = `translateX(${left}px)`;
+      indicator.style.width = `${active.offsetWidth}px`;
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => setActiveTab(tab));
+      tab.addEventListener('keydown', (e) => {
+        const i = tabs.indexOf(tab);
+        let nextIndex = i;
+        if (e.key === 'ArrowRight') nextIndex = (i + 1) % tabs.length;
+        else if (e.key === 'ArrowLeft') nextIndex = (i - 1 + tabs.length) % tabs.length;
+        else if (e.key === 'Home') nextIndex = 0;
+        else if (e.key === 'End') nextIndex = tabs.length - 1;
+        else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setActiveTab(tab); return; }
+        else return;
+        e.preventDefault();
+        setActiveTab(tabs[nextIndex]);
+      });
+    });
+
+    const initiallyActive = tabs.find(t => t.getAttribute('aria-selected') === 'true') || tabs[0];
+    setActiveTab(initiallyActive);
+
+    window.addEventListener('resize', () => moveIndicator(document.querySelector('#wardrobe-gallery-tabs [aria-selected="true"]')));
+    tabBar.addEventListener('scroll', () => moveIndicator(document.querySelector('#wardrobe-gallery-tabs [aria-selected="true"]')));
+  })();
+</script>
+
+</body>
+</html>
