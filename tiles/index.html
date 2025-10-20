@@ -100,11 +100,32 @@
       transition: all 0.3s ease;
       display: inline-block;
       box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .btn-primary:hover::before {
+      left: 100%;
     }
 
     .btn-primary:hover {
-      transform: translateY(-3px);
+      transform: translateY(-3px) scale(1.05);
       box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+    }
+
+    .btn-primary:active {
+      transform: translateY(-1px) scale(1.02);
     }
 
     .btn-secondary {
@@ -221,6 +242,137 @@
     .price-card.featured {
       border-color: var(--gold);
       background: linear-gradient(135deg, #fafafa, #fff);
+    }
+
+    /* Calculator Styles */
+    .calculator-input {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 16px 24px;
+      font-size: 16px;
+      color: #111827;
+      transition: all 0.3s ease;
+      transform: scale(1);
+    }
+
+    .calculator-input:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+      background: white;
+      transform: scale(1.02);
+    }
+
+    .calculator-input:hover {
+      border-color: var(--gold);
+      transform: scale(1.01);
+    }
+
+    .calculator-radio {
+      accent-color: var(--gold);
+    }
+
+    .quote-result {
+      background: linear-gradient(135deg, #f8fafc, #ffffff);
+      border-radius: 16px;
+      padding: 24px;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s ease;
+    }
+
+    .quote-result.calculating {
+      background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
+      transform: scale(1.02);
+    }
+
+    .quote-breakdown {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideInUp 0.5s ease forwards;
+    }
+
+    .quote-breakdown:nth-child(1) { animation-delay: 0.1s; }
+    .quote-breakdown:nth-child(2) { animation-delay: 0.2s; }
+    .quote-breakdown:nth-child(3) { animation-delay: 0.3s; }
+    .quote-breakdown:nth-child(4) { animation-delay: 0.4s; }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .quote-total {
+      background: linear-gradient(135deg, var(--gold), #c9a961);
+      color: white;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+      animation: bounceIn 0.6s ease;
+    }
+
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+      70% {
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .quote-breakdown {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .quote-total {
+      background: linear-gradient(135deg, var(--gold), #c9a961);
+      color: white;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    }
+
+    .quote-total .amount {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .quote-total .label {
+      font-size: 1.1rem;
+      opacity: 0.9;
     }
   /* Force black body copy */
     .text-gray-600, .text-gray-700, .text-gray-500, .text-gray-400, .text-gray-300 { color: #000 !important; }
@@ -610,6 +762,104 @@
   </div>
 </section>
 
+<!-- Pricing Calculator Section -->
+<section id="pricing-calculator" class="py-24 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold mb-6 text-primary">Tile Pricing Calculator</h2>
+      <div class="section-divider"></div>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Get an instant quote for your tile installation project. Choose your options below to calculate costs.
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Calculator Form -->
+          <div class="space-y-6">
+            <div>
+              <label class="block text-lg font-semibold mb-3 text-primary">Service Type</label>
+              <div class="space-y-2">
+                <label class="flex items-center">
+                  <input type="radio" name="service-type" value="installation-only" class="mr-3 text-gold focus:ring-gold" checked>
+                  <span class="text-gray-700">I have my own tiles (Installation Only)</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="service-type" value="complete-package" class="mr-3 text-gold focus:ring-gold">
+                  <span class="text-gray-700">I need tiles purchased (Complete Package)</span>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <label for="tile-type" class="block text-lg font-semibold mb-3 text-primary">Tile Type</label>
+              <select id="tile-type" class="calculator-input w-full">
+                <option value="ceramic">Ceramic Tiles</option>
+                <option value="porcelain">Porcelain Tiles</option>
+                <option value="granite">Granite Tiles</option>
+                <option value="mosaic">Mosaic Tiles</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="area" class="block text-lg font-semibold mb-3 text-primary">Area (Square Meters)</label>
+              <input type="number" id="area" placeholder="Enter area in m²" min="1" step="0.1"
+                     class="calculator-input w-full">
+            </div>
+
+            <div>
+              <label for="location" class="block text-lg font-semibold mb-3 text-primary">Location</label>
+              <select id="location" class="calculator-input w-full">
+                <option value="nairobi">Nairobi</option>
+                <option value="kiambu">Kiambu</option>
+                <option value="machakos">Machakos</option>
+                <option value="kajiado">Kajiado</option>
+                <option value="nakuru">Nakuru</option>
+                <option value="kisumu">Kisumu</option>
+                <option value="mombasa">Mombasa</option>
+                <option value="eldoret">Eldoret</option>
+                <option value="thika">Thika</option>
+                <option value="other">Other Counties</option>
+              </select>
+            </div>
+
+            <div id="price-ranges" class="mt-6 p-4 bg-gray-50 rounded-lg">
+              <h4 class="font-semibold text-primary mb-3">Tile Price Ranges (per m²)</h4>
+              <div class="space-y-2 text-sm">
+                <div id="ceramic-range">Ceramic: Loading...</div>
+                <div id="porcelain-range">Porcelain: Loading...</div>
+                <div id="granite-range">Granite: Loading...</div>
+                <div id="mosaic-range">Mosaic: Loading...</div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center space-x-4">
+              <button id="calculate-btn" class="btn-primary text-lg py-4 px-8">
+                <i class="fas fa-calculator mr-2"></i>Calculate Quote
+              </button>
+              <button id="reset-btn" class="btn-secondary text-lg py-4 px-8">
+                <i class="fas fa-undo mr-2"></i>Reset
+              </button>
+            </div>
+          </div>
+
+          <!-- Results Display -->
+          <div class="quote-result">
+            <div id="quote-result">
+              <div class="text-center">
+                <i class="fas fa-calculator text-4xl text-gold mb-4"></i>
+                <h3 class="text-xl font-bold text-primary mb-2">Ready to Calculate</h3>
+                <p class="text-gray-600">Enter your details and click calculate to see your quote</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Contact Section -->
 <section id="contact" class="py-24 bg-gray-50">
   <div class="container mx-auto px-6">
@@ -774,6 +1024,227 @@
   if (menuToggle && mobileMenu) {
     menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
   }
+
+  // Pricing Calculator
+  const calculateBtn = document.getElementById('calculate-btn');
+  const quoteResult = document.getElementById('quote-result');
+  const tileTypeSelect = document.getElementById('tile-type');
+  const areaInput = document.getElementById('area');
+  const locationSelect = document.getElementById('location');
+  const serviceTypeRadios = document.querySelectorAll('input[name="service-type"]');
+
+  // Pricing data
+  const pricing = {
+    ceramic: { min: 500, max: 1000 },
+    porcelain: { min: 1000, max: 2500 },
+    granite: { min: 2000, max: 3000 },
+    mosaic: { min: 1200, max: 2800 }
+  };
+
+  // Installation cost per square meter by tile type (Ksh)
+  const installationCosts = {
+    ceramic: 600,
+    porcelain: 800,
+    granite: 1000,
+    mosaic: 900
+  };
+
+  // Transport cost per square meter for non-Nairobi areas
+  const transportCost = 500;
+
+  function formatCurrency(amount) {
+    return new Intl.NumberFormat('en-KE', {
+      style: 'currency',
+      currency: 'KES',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(amount);
+  }
+
+  function calculateQuote() {
+    const area = parseFloat(areaInput.value);
+    const tileType = tileTypeSelect.value;
+    const serviceType = document.querySelector('input[name="service-type"]:checked').value;
+    const location = locationSelect.value;
+
+    // Add calculating animation
+    quoteResult.classList.add('calculating');
+
+    if (!area || area <= 0) {
+      setTimeout(() => {
+        quoteResult.classList.remove('calculating');
+        quoteResult.innerHTML = `
+          <div class="text-center">
+            <i class="fas fa-exclamation-triangle text-4xl text-red-500 mb-4"></i>
+            <h3 class="text-lg font-bold text-red-600 mb-2">Invalid Input</h3>
+            <p class="text-red-600">Please enter a valid area in square meters</p>
+          </div>
+        `;
+      }, 500);
+      return;
+    }
+
+    let totalCost = 0;
+    let breakdown = [];
+
+    const currentInstallCost = installationCosts[tileType];
+
+    if (serviceType === 'installation-only') {
+      // Only installation cost
+      totalCost = area * currentInstallCost;
+      breakdown.push({
+        item: 'Installation Cost',
+        cost: totalCost,
+        details: `${formatCurrency(currentInstallCost)} per m² × ${area} m² (${tileType.charAt(0).toUpperCase() + tileType.slice(1)})`
+      });
+    } else {
+      // Complete package: tiles + installation
+      const tilePriceRange = pricing[tileType];
+      const avgTilePrice = (tilePriceRange.min + tilePriceRange.max) / 2;
+      const tileCost = area * avgTilePrice;
+      const installCost = area * currentInstallCost;
+      totalCost = tileCost + installCost;
+
+      breakdown.push({
+        item: 'Tile Cost',
+        cost: tileCost,
+        details: `${formatCurrency(avgTilePrice)} per m² × ${area} m² (${tileType.charAt(0).toUpperCase() + tileType.slice(1)})`
+      });
+      breakdown.push({
+        item: 'Installation Cost',
+        cost: installCost,
+        details: `${formatCurrency(currentInstallCost)} per m² × ${area} m² (${tileType.charAt(0).toUpperCase() + tileType.slice(1)})`
+      });
+    }
+
+    // Add transport cost for non-Nairobi locations
+    if (location !== 'nairobi') {
+      const transportTotal = area * transportCost;
+      totalCost += transportTotal;
+      const locationName = location === 'other' ? 'Other Counties' : location.charAt(0).toUpperCase() + location.slice(1);
+      breakdown.push({
+        item: 'Transport Cost',
+        cost: transportTotal,
+        details: `${formatCurrency(transportCost)} per m² × ${area} m² (${locationName})`
+      });
+    }
+
+    // Display results
+    let resultHTML = `
+      <div class="quote-total">
+        <div class="amount">${formatCurrency(totalCost)}</div>
+        <div class="label">Total Estimated Cost</div>
+      </div>
+    `;
+
+    breakdown.forEach(item => {
+      resultHTML += `
+        <div class="quote-breakdown">
+          <div class="flex justify-between items-start">
+            <div>
+              <div class="font-semibold text-primary text-lg">${item.item}</div>
+              <div class="text-sm text-gray-600 mt-1">${item.details}</div>
+            </div>
+            <div class="font-bold text-gold text-lg">${formatCurrency(item.cost)}</div>
+          </div>
+        </div>
+      `;
+    });
+
+    resultHTML += `
+      <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4">
+        <div class="flex items-start">
+          <i class="fas fa-info-circle text-blue-500 mt-1 mr-3"></i>
+          <div>
+            <p class="text-sm text-blue-800 font-medium">Important Note</p>
+            <p class="text-sm text-blue-700 mt-1">
+              This is an estimate. Final pricing may vary based on specific tile selection, site conditions, and additional requirements. Contact us for a detailed quote.
+            </p>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Add delay for animation effect
+    setTimeout(() => {
+      quoteResult.classList.remove('calculating');
+      quoteResult.innerHTML = resultHTML;
+    }, 800);
+  }
+
+  // Function to update price ranges display
+  function updatePriceRanges() {
+    const ceramicRange = document.getElementById('ceramic-range');
+    const porcelainRange = document.getElementById('porcelain-range');
+    const graniteRange = document.getElementById('granite-range');
+    const mosaicRange = document.getElementById('mosaic-range');
+
+    if (ceramicRange) ceramicRange.textContent = `Ceramic: ${formatCurrency(pricing.ceramic.min)} - ${formatCurrency(pricing.ceramic.max)} per m²`;
+    if (porcelainRange) porcelainRange.textContent = `Porcelain: ${formatCurrency(pricing.porcelain.min)} - ${formatCurrency(pricing.porcelain.max)} per m²`;
+    if (graniteRange) graniteRange.textContent = `Granite: ${formatCurrency(pricing.granite.min)} - ${formatCurrency(pricing.granite.max)} per m²`;
+    if (mosaicRange) mosaicRange.textContent = `Mosaic: ${formatCurrency(pricing.mosaic.min)} - ${formatCurrency(pricing.mosaic.max)} per m²`;
+  }
+
+  // Auto-calculate on input changes
+  function autoCalculate() {
+    const area = parseFloat(areaInput.value);
+    if (area && area > 0) {
+      calculateQuote();
+    }
+  }
+
+  // Reset function
+  function resetCalculator() {
+    if (areaInput) areaInput.value = '';
+    if (tileTypeSelect) tileTypeSelect.selectedIndex = 0;
+    if (locationSelect) locationSelect.selectedIndex = 0;
+    const installationRadio = document.querySelector('input[name="service-type"][value="installation-only"]');
+    if (installationRadio) installationRadio.checked = true;
+
+    quoteResult.innerHTML = `
+      <div class="text-center">
+        <i class="fas fa-calculator text-4xl text-gold mb-4"></i>
+        <h3 class="text-xl font-bold text-primary mb-2">Ready to Calculate</h3>
+        <p class="text-gray-600">Enter your details and click calculate to see your quote</p>
+      </div>
+    `;
+  }
+
+  // Event listeners
+  if (calculateBtn) {
+    calculateBtn.addEventListener('click', calculateQuote);
+  }
+
+  const resetBtn = document.getElementById('reset-btn');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', resetCalculator);
+  }
+
+  // Auto-calculate on changes
+  if (tileTypeSelect) {
+    tileTypeSelect.addEventListener('change', autoCalculate);
+  }
+  if (areaInput) {
+    areaInput.addEventListener('input', autoCalculate);
+  }
+  if (locationSelect) {
+    locationSelect.addEventListener('change', autoCalculate);
+  }
+  serviceTypeRadios.forEach(radio => {
+    radio.addEventListener('change', autoCalculate);
+  });
+
+  // Allow Enter key to calculate
+  if (areaInput) {
+    areaInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        calculateQuote();
+      }
+    });
+  }
+
+  // Initialize price ranges on page load
+  updatePriceRanges();
 
   const contactForm = document.getElementById('contact-form');
   const successMessage = document.getElementById('success-message');
