@@ -803,7 +803,7 @@
       <!-- Portfolio Item 7 - Gypsum -->
       <a href="gypsum/" class="portfolio-card hover-lift">
         <div class="relative h-80 overflow-hidden">
-          <img src="gypsum/WhatsApp Image 2025-10-06 at 08.33.20_cd417b79.jpg" alt="Gypsum Ceilings" class="w-full h-full object-cover">
+          <img src="gypsum/WhatsApp Image 2025-10-06 at 08.33.20_cd417b79.jpg" alt="Gypsum Ceilings" class="w-full h-full object-cover tile-image" data-images='["https://tophomedesigner.com/gypsum/WhatsApp%20Image%202025-10-06%20at%2008.33.20_69e8f822.jpg"]'>
           <div class="absolute top-4 left-4 bg-gold text-white px-4 py-2 rounded-full text-sm font-semibold z-10">
             Gypsum
           </div>
@@ -817,7 +817,7 @@
       <!-- Portfolio Item 8 - Painting -->
       <a href="painting/" class="portfolio-card hover-lift">
         <div class="relative h-80 overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800" alt="Professional Painting" class="w-full h-full object-cover">
+          <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800" alt="Professional Painting" class="w-full h-full object-cover tile-image" data-images='["https://tophomedesigner.com/painting/WhatsApp%20Image%202025-10-06%20at%2008.39.24_f2c87195.jpg"]'>
           <div class="absolute top-4 left-4 bg-gold text-white px-4 py-2 rounded-full text-sm font-semibold z-10">
             Painting
           </div>
@@ -831,7 +831,7 @@
       <!-- Portfolio Item 9 - Kitchen -->
       <a href="kitchen/" class="portfolio-card hover-lift">
         <div class="relative h-80 overflow-hidden">
-          <img src="kitchen/img/kitchen1.jpg" alt="Kitchen Cabinets" class="w-full h-full object-cover">
+          <img src="https://tophomedesigner.com/kitchen/WhatsApp%20Image%202025-10-06%20at%2009.32.07_3910530d.jpg" alt="Kitchen Cabinets" class="w-full h-full object-cover tile-image" data-images='["https://tophomedesigner.com/kitchen/WhatsApp%20Image%202025-10-06%20at%2009.32.08_644914aa.jpg"]'>
           <div class="absolute top-4 left-4 bg-gold text-white px-4 py-2 rounded-full text-sm font-semibold z-10">
             Kitchen
           </div>
@@ -845,7 +845,7 @@
       <!-- Portfolio Item 10 - Wardrobe -->
       <a href="wardrobe/" class="portfolio-card hover-lift">
         <div class="relative h-80 overflow-hidden">
-          <img src="wardrobe/img/WhatsApp Image 2025-10-06 at 09.32.08_88b9f4f5.jpg" alt="Custom Wardrobes" class="w-full h-full object-cover">
+          <img src="https://tophomedesigner.com/wardrobe/img/WhatsApp%20Image%202025-10-06%20at%2009.32.10_7c739d3f.jpg" alt="Custom Wardrobes" class="w-full h-full object-cover tile-image" data-images='["https://tophomedesigner.com/wardrobe/img/WhatsApp%20Image%202025-10-06%20at%2009.32.08_88b9f4f5.jpg"]'>
           <div class="absolute top-4 left-4 bg-gold text-white px-4 py-2 rounded-full text-sm font-semibold z-10">
             Wardrobe
           </div>
@@ -1253,9 +1253,20 @@
           body: JSON.stringify(formPayload),
         });
 
-        const data = await response.json();
+        let data = null;
+        try {
+          data = await response.json();
+        } catch (parseError) {
+          console.warn('Failed to parse response payload', parseError);
+        }
 
-        if (data.success) {
+        if (!response.ok) {
+          const errorMessage = (data && (data.message || data.error)) || 'Email service is currently unavailable. Please try again later.';
+          alert(errorMessage);
+          return;
+        }
+
+        if (data && data.success) {
           if (successMessage) {
             successMessage.classList.remove('hidden');
           }
@@ -1266,7 +1277,7 @@
             }
           }, 5000);
         } else {
-          alert(data.message || 'Error: Unable to send message.');
+          alert((data && data.message) || 'Error: Unable to send message.');
         }
       } catch (error) {
         console.error('Error sending message:', error);

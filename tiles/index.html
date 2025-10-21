@@ -1287,9 +1287,20 @@
           body: JSON.stringify(formPayload),
         });
 
-        const data = await response.json();
+        let data = null;
+        try {
+          data = await response.json();
+        } catch (parseError) {
+          console.warn('Failed to parse response payload', parseError);
+        }
 
-        if (data.success) {
+        if (!response.ok) {
+          const errorMessage = (data && (data.message || data.error)) || 'Email service is currently unavailable. Please try again later.';
+          alert(errorMessage);
+          return;
+        }
+
+        if (data && data.success) {
           if (successMessage) {
             successMessage.classList.remove('hidden');
           }
@@ -1300,7 +1311,7 @@
             }
           }, 5000);
         } else {
-          alert(data.message || 'Error: Unable to send message.');
+          alert((data && data.message) || 'Error: Unable to send message.');
         }
       } catch (error) {
         console.error('Error sending message:', error);

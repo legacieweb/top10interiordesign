@@ -18,17 +18,39 @@ app.use(cors({
 app.use(bodyParser.json());
 
 // ✅ Nodemailer Transporter (Email Configuration)
-const transporter = nodemailer.createTransport({
-  service: "gmail", // You can use SMTP, Outlook, Yahoo, etc.
-  auth: {
-    user: process.env.EMAIL_USER, // Your Gmail (or SMTP) email
-    pass: process.env.EMAIL_PASS, // Your App Password (if using Gmail)
-  },
-});
+const requiredEnvVars = ["EMAIL_USER", "EMAIL_PASS"];
+const missingEnvVars = requiredEnvVars.filter((key) => !process.env[key]);
+
+let transporter = null;
+let emailConfigReady = missingEnvVars.length === 0;
+
+if (!emailConfigReady) {
+  console.warn(`⚠️ Email service not fully configured. Missing: ${missingEnvVars.join(", ")}`);
+} else {
+  transporter = nodemailer.createTransport({
+    service: "gmail", // You can use SMTP, Outlook, Yahoo, etc.
+    auth: {
+      user: process.env.EMAIL_USER, // Your Gmail (or SMTP) email
+      pass: process.env.EMAIL_PASS, // Your App Password (if using Gmail)
+    },
+  });
+
+  transporter.verify()
+    .then(() => console.log("✅ Email transporter verified and ready"))
+    .catch((error) => {
+      emailConfigReady = false;
+      console.error("❌ Email transporter verification failed:", error);
+    });
+}
 
 // ✅ API Route for Sending Emails
 app.post("/send-email", async (req, res) => {
   try {
+    if (!emailConfigReady || !transporter) {
+      console.warn("❌ Email request rejected: transporter not ready or misconfigured.");
+      return res.status(503).json({ success: false, message: "Email service is currently unavailable. Please try again later." });
+    }
+
     const { name, email, message } = req.body;
 
     if (!name || !email || !message) {
