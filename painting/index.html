@@ -68,23 +68,8 @@
   </div>
 </section>
 
-<section id="services" class="py-20 bg-white">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-14">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary">Our Painting Services</h2>
-      <div class="section-divider"></div>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">Complete painting solutions for homes, apartments, offices, and commercial spaces</p>
-    </div>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="card"><div class="text-5xl mb-4 text-gold"><i class="fas fa-brush"></i></div><h3 class="text-2xl font-bold mb-2 text-primary">Interior Painting</h3><p class="text-gray-600">Walls, ceilings, trims, doors. Smooth finishes with low-VOC, washable paints.</p></div>
-      <div class="card"><div class="text-5xl mb-4 text-gold"><i class="fas fa-city"></i></div><h3 class="text-2xl font-bold mb-2 text-primary">Exterior Painting</h3><p class="text-gray-600">Weather-resistant coatings, crack filling, sealants, and façade refresh.</p></div>
-      <div class="card"><div class="text-5xl mb-4 text-gold"><i class="fas fa-fill-drip"></i></div><h3 class="text-2xl font-bold mb-2 text-primary">Surface Preparation</h3><p class="text-gray-600">Sanding, patching, priming, damp-treatment to ensure durable results.</p></div>
-      <div class="card"><div class="text-5xl mb-4 text-gold"><i class="fas fa-swatchbook"></i></div><h3 class="text-2xl font-bold mb-2 text-primary">Color Consulting</h3><p class="text-gray-600">Palette selection, sample boards, and finish recommendations.</p></div>
-      <div class="card"><div class="text-5xl mb-4 text-gold"><i class="fas fa-water"></i></div><h3 class="text-2xl font-bold mb-2 text-primary">Waterproofing</h3><p class="text-gray-600">Bathroom, kitchen, balcony damp-proofing and protective coatings.</p></div>
-      <div class="card"><div class="text-5xl mb-4 text-gold"><i class="fas fa-paint-roller"></i></div><h3 class="text-2xl font-bold mb-2 text-primary">Decorative Finishes</h3><p class="text-gray-600">Textured paints, feature walls, metallics, and stencils for accent areas.</p></div>
-    </div>
-  </div>
-</section>
+
+
 
 <section class="py-20 bg-gray-50">
   <div class="container mx-auto px-6">
@@ -105,6 +90,63 @@
       <div class="img-hover-zoom"><img class="w-full h-72 object-cover rounded-2xl shadow" src="WhatsApp Image 2025-10-06 at 08.39.26_38b3c0b8.jpg" alt="Painting 10" loading="lazy"/></div>
       <div class="img-hover-zoom"><img class="w-full h-72 object-cover rounded-2xl shadow" src="WhatsApp Image 2025-10-06 at 08.39.26_199593ba.jpg" alt="Painting 11" loading="lazy"/></div>
       <div class="img-hover-zoom"><img class="w-full h-72 object-cover rounded-2xl shadow" src="WhatsApp Image 2025-10-06 at 08.39.26_b0e69d44.jpg" alt="Painting 12" loading="lazy"/></div>
+    </div>
+  </div>
+</section>
+<!-- Pricing Calculator -->
+<section id="calculator" class="py-24 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold mb-6 text-primary">Painting Pricing Calculator</h2>
+      <div class="section-divider"></div>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Calculate the cost of your interior painting project
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-gray-50 rounded-3xl p-8 shadow-xl">
+        <div class="bg-white rounded-2xl p-6 shadow-md">
+          <h3 class="text-2xl font-bold mb-4 text-primary">Interior Painting</h3>
+          <p class="text-gold font-semibold mb-4">KSH 400 per square meter</p>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Length (meters)</label>
+              <input type="number" id="painting-length" step="0.1" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent" placeholder="Enter length">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Width (meters)</label>
+              <input type="number" id="painting-width" step="0.1" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent" placeholder="Enter width">
+            </div>
+            <div class="pt-4 border-t border-gray-200">
+              <div class="flex justify-between items-center">
+                <span class="font-semibold text-primary">Total Cost:</span>
+                <span id="painting-total" class="text-2xl font-bold text-gold">KSH 0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="services" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-14">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 text-primary">Our Painting Services</h2>
+      <div class="section-divider"></div>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">Complete painting solutions for homes, apartments, offices, and commercial spaces</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="card"><div class="text-5xl mb-4 text-gold"><i class="fas fa-brush"></i></div><h3 class="text-2xl font-bold mb-2 text-primary">Interior Painting</h3><p class="text-gray-600">Walls, ceilings, trims, doors. Smooth finishes with low-VOC, washable paints.</p><p class="text-gold font-semibold mt-2">Price: KSH 400 per square meter</p></div>
+      <div class="card"><div class="text-5xl mb-4 text-gold"><i class="fas fa-city"></i></div><h3 class="text-2xl font-bold mb-2 text-primary">Exterior Painting</h3><p class="text-gray-600">Weather-resistant coatings, crack filling, sealants, and façade refresh.</p></div>
+      <div class="card"><div class="text-5xl mb-4 text-gold"><i class="fas fa-fill-drip"></i></div><h3 class="text-2xl font-bold mb-2 text-primary">Surface Preparation</h3><p class="text-gray-600">Sanding, patching, priming, damp-treatment to ensure durable results.</p></div>
+      <div class="card"><div class="text-5xl mb-4 text-gold"><i class="fas fa-swatchbook"></i></div><h3 class="text-2xl font-bold mb-2 text-primary">Color Consulting</h3><p class="text-gray-600">Palette selection, sample boards, and finish recommendations.</p></div>
+      <div class="card"><div class="text-5xl mb-4 text-gold"><i class="fas fa-water"></i></div><h3 class="text-2xl font-bold mb-2 text-primary">Waterproofing</h3><p class="text-gray-600">Bathroom, kitchen, balcony damp-proofing and protective coatings.</p></div>
+      <div class="card"><div class="text-5xl mb-4 text-gold"><i class="fas fa-paint-roller"></i></div><h3 class="text-2xl font-bold mb-2 text-primary">Decorative Finishes</h3><p class="text-gray-600">Textured paints, feature walls, metallics, and stencils for accent areas.</p></div>
     </div>
   </div>
 </section>
@@ -222,6 +264,18 @@
 </footer>
 
 <script>
+  // Painting Calculator Functionality
+  function updatePaintingCalculation() {
+    const length = parseFloat(document.getElementById('painting-length').value) || 0;
+    const width = parseFloat(document.getElementById('painting-width').value) || 0;
+    const area = length * width;
+    const cost = area * 400;
+    document.getElementById('painting-total').textContent = 'KSH ' + cost.toLocaleString();
+  }
+
+  document.getElementById('painting-length').addEventListener('input', updatePaintingCalculation);
+  document.getElementById('painting-width').addEventListener('input', updatePaintingCalculation);
+
   const contactForm = document.getElementById('contact-form');
   const successMessage = document.getElementById('success-message');
 

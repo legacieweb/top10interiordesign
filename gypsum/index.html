@@ -91,6 +91,18 @@
       }
     });
   }
+
+  // Gypsum Calculator Functionality
+  function updateGypsumCalculation() {
+    const length = parseFloat(document.getElementById('gypsum-length').value) || 0;
+    const width = parseFloat(document.getElementById('gypsum-width').value) || 0;
+    const area = length * width;
+    const cost = area * 2000;
+    document.getElementById('gypsum-total').textContent = 'KSH ' + cost.toLocaleString();
+  }
+
+  document.getElementById('gypsum-length').addEventListener('input', updateGypsumCalculation);
+  document.getElementById('gypsum-width').addEventListener('input', updateGypsumCalculation);
 </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -243,6 +255,69 @@
   </div>
 </header>
 
+
+
+<!-- Gallery Section -->
+<section id="gallery" class="py-24 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold mb-6 text-primary">Gypsum Ceiling Gallery</h2>
+      <div class="section-divider"></div>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">Selection of false ceiling projects, lighting integration, and decorative ceiling work</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="img-hover-zoom"><img src="gypsum1.jpg" alt="Gypsum 1" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.18_2d09769b.jpg" alt="Gypsum 2" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.18_127a4350.jpg" alt="Gypsum 3" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.19_9f5e03f9.jpg" alt="Gypsum 4" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.19_92f0d262.jpg" alt="Gypsum 5" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.19_210c73f0.jpg" alt="Gypsum 6" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.19_978dfa57.jpg" alt="Gypsum 7" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.20_69e8f822.jpg" alt="Gypsum 8" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.20_4699bbb7.jpg" alt="Gypsum 9" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.20_cd417b79.jpg" alt="Gypsum 10" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.20_f78eaba9.jpg" alt="Gypsum 11" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+<!-- Pricing Calculator -->
+<section id="calculator" class="py-24 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold mb-6 text-primary">Gypsum Pricing Calculator</h2>
+      <div class="section-divider"></div>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Calculate the cost of your gypsum ceiling installation project
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-gray-50 rounded-3xl p-8 shadow-xl">
+        <div class="bg-white rounded-2xl p-6 shadow-md">
+          <h3 class="text-2xl font-bold mb-4 text-primary">False Ceiling Installation</h3>
+          <p class="text-gold font-semibold mb-4">KSH 2000 per square meter</p>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Length (meters)</label>
+              <input type="number" id="gypsum-length" step="0.1" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent" placeholder="Enter length">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Width (meters)</label>
+              <input type="number" id="gypsum-width" step="0.1" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent" placeholder="Enter width">
+            </div>
+            <div class="pt-4 border-t border-gray-200">
+              <div class="flex justify-between items-center">
+                <span class="font-semibold text-primary">Total Cost:</span>
+                <span id="gypsum-total" class="text-2xl font-bold text-gold">KSH 0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="relative min-h-screen flex items-center justify-center text-white" style="background: linear-gradient(135deg, rgba(26, 26, 46, 0.95), rgba(15, 52, 96, 0.95)), url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=1920') center/cover;">
   <div class="container mx-auto px-6 text-center relative z-10 pt-20">
     <div class="max-w-4xl mx-auto animate-fade-in-up">
@@ -285,6 +360,7 @@
         <p class="text-gray-600 leading-relaxed mb-4">
           Professional installation of suspended false ceilings. Perfect for hiding wiring, pipes, and creating modern aesthetics.
         </p>
+        <p class="text-gold font-semibold mb-2">Price: KSH 2000 per square meter</p>
         <ul class="text-gray-600 space-y-2">
           <li><i class="fas fa-check text-gold mr-2"></i>Clean installation</li>
           <li><i class="fas fa-check text-gold mr-2"></i>Precise measurements</li>
@@ -357,31 +433,6 @@
         </ul>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- Gallery Section -->
-<section id="gallery" class="py-24 bg-gray-50">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-5xl font-bold mb-6 text-primary">Gypsum Ceiling Gallery</h2>
-      <div class="section-divider"></div>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">Selection of false ceiling projects, lighting integration, and decorative ceiling work</p>
-    </div>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="img-hover-zoom"><img src="gypsum1.jpg" alt="Gypsum 1" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
-      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.18_2d09769b.jpg" alt="Gypsum 2" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
-      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.18_127a4350.jpg" alt="Gypsum 3" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
-      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.19_9f5e03f9.jpg" alt="Gypsum 4" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
-      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.19_92f0d262.jpg" alt="Gypsum 5" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
-      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.19_210c73f0.jpg" alt="Gypsum 6" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
-      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.19_978dfa57.jpg" alt="Gypsum 7" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
-      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.20_69e8f822.jpg" alt="Gypsum 8" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
-      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.20_4699bbb7.jpg" alt="Gypsum 9" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
-      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.20_cd417b79.jpg" alt="Gypsum 10" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
-      <div class="img-hover-zoom"><img src="WhatsApp Image 2025-10-06 at 08.33.20_f78eaba9.jpg" alt="Gypsum 11" class="w-full h-72 object-cover rounded-2xl shadow" loading="lazy"></div>
     </div>
   </div>
 </section>

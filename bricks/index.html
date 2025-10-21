@@ -223,6 +223,7 @@
         <p class="text-gray-600 leading-relaxed mb-4">
           Create stunning interior feature walls with exposed brick. Perfect for living rooms, bedrooms, and commercial spaces. Adds character and warmth.
         </p>
+        <p class="text-gold font-semibold mb-2">Price: KSH 1500 per square meter</p>
         <ul class="text-gray-600 space-y-2">
           <li><i class="fas fa-check text-gold mr-2"></i>Rustic charm</li>
           <li><i class="fas fa-check text-gold mr-2"></i>Timeless appeal</li>
@@ -447,6 +448,44 @@
   </div>
 </section>
 
+<!-- Pricing Calculator -->
+<section id="calculator" class="py-24 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold mb-6 text-primary">Brick Pricing Calculator</h2>
+      <div class="section-divider"></div>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Calculate the cost of your brick installation project
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-gray-50 rounded-3xl p-8 shadow-xl">
+        <div class="bg-white rounded-2xl p-6 shadow-md">
+          <h3 class="text-2xl font-bold mb-4 text-primary">Exposed Brick Walls</h3>
+          <p class="text-gold font-semibold mb-4">KSH 1500 per square meter</p>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Length (meters)</label>
+              <input type="number" id="brick-length" step="0.1" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent" placeholder="Enter length">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Width (meters)</label>
+              <input type="number" id="brick-width" step="0.1" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent" placeholder="Enter width">
+            </div>
+            <div class="pt-4 border-t border-gray-200">
+              <div class="flex justify-between items-center">
+                <span class="font-semibold text-primary">Total Cost:</span>
+                <span id="brick-total" class="text-2xl font-bold text-gold">KSH 0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="py-24 bg-gray-50">
   <div class="container mx-auto px-6">
     <div class="text-center mb-16">
@@ -604,6 +643,18 @@
 </footer>
 
 <script>
+  // Brick Calculator Functionality
+  function updateBrickCalculation() {
+    const length = parseFloat(document.getElementById('brick-length').value) || 0;
+    const width = parseFloat(document.getElementById('brick-width').value) || 0;
+    const area = length * width;
+    const cost = area * 1500;
+    document.getElementById('brick-total').textContent = 'KSH ' + cost.toLocaleString();
+  }
+
+  document.getElementById('brick-length').addEventListener('input', updateBrickCalculation);
+  document.getElementById('brick-width').addEventListener('input', updateBrickCalculation);
+
   // Mobile menu toggle (basic)
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');

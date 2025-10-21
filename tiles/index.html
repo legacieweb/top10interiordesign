@@ -608,6 +608,103 @@
     </div>
   </div>
 </section>
+<!-- Pricing Calculator Section -->
+<section id="pricing-calculator" class="py-24 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold mb-6 text-primary">Tile Pricing Calculator</h2>
+      <div class="section-divider"></div>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Get an instant quote for your tile installation project. Choose your options below to calculate costs.
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Calculator Form -->
+          <div class="space-y-6">
+            <div>
+              <label class="block text-lg font-semibold mb-3 text-primary">Service Type</label>
+              <div class="space-y-2">
+                <label class="flex items-center">
+                  <input type="radio" name="service-type" value="installation-only" class="mr-3 text-gold focus:ring-gold" checked>
+                  <span class="text-gray-700">I have my own tiles (Installation Only)</span>
+                </label>
+                <label class="flex items-center">
+                  <input type="radio" name="service-type" value="complete-package" class="mr-3 text-gold focus:ring-gold">
+                  <span class="text-gray-700">I need tiles purchased (Complete Package)</span>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <label for="tile-type" class="block text-lg font-semibold mb-3 text-primary">Tile Type</label>
+              <select id="tile-type" class="calculator-input w-full">
+                <option value="ceramic">Ceramic Tiles</option>
+                <option value="porcelain">Porcelain Tiles</option>
+                <option value="granite">Granite Tiles</option>
+                <option value="mosaic">Mosaic Tiles</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="area" class="block text-lg font-semibold mb-3 text-primary">Area (Square Meters)</label>
+              <input type="number" id="area" placeholder="Enter area in m²" min="1" step="0.1"
+                     class="calculator-input w-full">
+            </div>
+
+            <div>
+              <label for="location" class="block text-lg font-semibold mb-3 text-primary">Location</label>
+              <select id="location" class="calculator-input w-full">
+                <option value="nairobi">Nairobi</option>
+                <option value="kiambu">Kiambu</option>
+                <option value="machakos">Machakos</option>
+                <option value="kajiado">Kajiado</option>
+                <option value="nakuru">Nakuru</option>
+                <option value="kisumu">Kisumu</option>
+                <option value="mombasa">Mombasa</option>
+                <option value="eldoret">Eldoret</option>
+                <option value="thika">Thika</option>
+                <option value="other">Other Counties</option>
+              </select>
+            </div>
+
+            <div id="price-ranges" class="mt-6 p-4 bg-gray-50 rounded-lg">
+              <h4 class="font-semibold text-primary mb-3">Tile Price Ranges (per m²)</h4>
+              <div class="space-y-2 text-sm">
+                <div id="ceramic-range">Ceramic: Loading...</div>
+                <div id="porcelain-range">Porcelain: Loading...</div>
+                <div id="granite-range">Granite: Loading...</div>
+                <div id="mosaic-range">Mosaic: Loading...</div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center space-x-4">
+              <button id="calculate-btn" class="btn-primary text-lg py-4 px-8">
+                <i class="fas fa-calculator mr-2"></i>Calculate Quote
+              </button>
+              <button id="reset-btn" class="btn-secondary text-lg py-4 px-8">
+                <i class="fas fa-undo mr-2"></i>Reset
+              </button>
+            </div>
+          </div>
+
+          <!-- Results Display -->
+          <div class="quote-result">
+            <div id="quote-result">
+              <div class="text-center">
+                <i class="fas fa-calculator text-4xl text-gold mb-4"></i>
+                <h3 class="text-xl font-bold text-primary mb-2">Ready to Calculate</h3>
+                <p class="text-gray-600">Enter your details and click calculate to see your quote</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Installation Process -->
 <section class="py-24 bg-gray-50">
@@ -762,103 +859,6 @@
   </div>
 </section>
 
-<!-- Pricing Calculator Section -->
-<section id="pricing-calculator" class="py-24 bg-white">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <h2 class="text-5xl font-bold mb-6 text-primary">Tile Pricing Calculator</h2>
-      <div class="section-divider"></div>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Get an instant quote for your tile installation project. Choose your options below to calculate costs.
-      </p>
-    </div>
-
-    <div class="max-w-4xl mx-auto">
-      <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- Calculator Form -->
-          <div class="space-y-6">
-            <div>
-              <label class="block text-lg font-semibold mb-3 text-primary">Service Type</label>
-              <div class="space-y-2">
-                <label class="flex items-center">
-                  <input type="radio" name="service-type" value="installation-only" class="mr-3 text-gold focus:ring-gold" checked>
-                  <span class="text-gray-700">I have my own tiles (Installation Only)</span>
-                </label>
-                <label class="flex items-center">
-                  <input type="radio" name="service-type" value="complete-package" class="mr-3 text-gold focus:ring-gold">
-                  <span class="text-gray-700">I need tiles purchased (Complete Package)</span>
-                </label>
-              </div>
-            </div>
-
-            <div>
-              <label for="tile-type" class="block text-lg font-semibold mb-3 text-primary">Tile Type</label>
-              <select id="tile-type" class="calculator-input w-full">
-                <option value="ceramic">Ceramic Tiles</option>
-                <option value="porcelain">Porcelain Tiles</option>
-                <option value="granite">Granite Tiles</option>
-                <option value="mosaic">Mosaic Tiles</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="area" class="block text-lg font-semibold mb-3 text-primary">Area (Square Meters)</label>
-              <input type="number" id="area" placeholder="Enter area in m²" min="1" step="0.1"
-                     class="calculator-input w-full">
-            </div>
-
-            <div>
-              <label for="location" class="block text-lg font-semibold mb-3 text-primary">Location</label>
-              <select id="location" class="calculator-input w-full">
-                <option value="nairobi">Nairobi</option>
-                <option value="kiambu">Kiambu</option>
-                <option value="machakos">Machakos</option>
-                <option value="kajiado">Kajiado</option>
-                <option value="nakuru">Nakuru</option>
-                <option value="kisumu">Kisumu</option>
-                <option value="mombasa">Mombasa</option>
-                <option value="eldoret">Eldoret</option>
-                <option value="thika">Thika</option>
-                <option value="other">Other Counties</option>
-              </select>
-            </div>
-
-            <div id="price-ranges" class="mt-6 p-4 bg-gray-50 rounded-lg">
-              <h4 class="font-semibold text-primary mb-3">Tile Price Ranges (per m²)</h4>
-              <div class="space-y-2 text-sm">
-                <div id="ceramic-range">Ceramic: Loading...</div>
-                <div id="porcelain-range">Porcelain: Loading...</div>
-                <div id="granite-range">Granite: Loading...</div>
-                <div id="mosaic-range">Mosaic: Loading...</div>
-              </div>
-            </div>
-
-            <div class="flex items-center justify-center space-x-4">
-              <button id="calculate-btn" class="btn-primary text-lg py-4 px-8">
-                <i class="fas fa-calculator mr-2"></i>Calculate Quote
-              </button>
-              <button id="reset-btn" class="btn-secondary text-lg py-4 px-8">
-                <i class="fas fa-undo mr-2"></i>Reset
-              </button>
-            </div>
-          </div>
-
-          <!-- Results Display -->
-          <div class="quote-result">
-            <div id="quote-result">
-              <div class="text-center">
-                <i class="fas fa-calculator text-4xl text-gold mb-4"></i>
-                <h3 class="text-xl font-bold text-primary mb-2">Ready to Calculate</h3>
-                <p class="text-gray-600">Enter your details and click calculate to see your quote</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- Contact Section -->
 <section id="contact" class="py-24 bg-gray-50">

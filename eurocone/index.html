@@ -633,6 +633,7 @@
           <p class="text-gray-600 leading-relaxed mb-4">
             Signature Bukoto patterns engineered to inspire patios, courtyards, and hospitality environments with stunning texture and depth.
           </p>
+          <p class="text-gold font-semibold mb-2">Price: KSH 1000 per square meter</p>
           <div class="flex items-center text-gold font-semibold">
             <span>View Curated Gallery</span>
             <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
@@ -650,6 +651,7 @@
           <p class="text-gray-600 leading-relaxed mb-4">
             Sculptural wall cladding with luminous finishes. Define interiors and exteriors with expressive European artistry.
           </p>
+          <p class="text-gold font-semibold mb-2">Price: KSH 1500 per square meter</p>
           <div class="flex items-center text-gold font-semibold">
             <span>View Curated Gallery</span>
             <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
@@ -697,126 +699,76 @@
   </div>
 </div>
 
-<!-- About Eurocone -->
-<section class="py-24 bg-white">
-  <div class="container mx-auto px-6">
-    <div class="grid lg:grid-cols-[1.1fr_1fr] gap-16 items-center">
-      <div class="img-hover-zoom">
-        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=1200" alt="Eurocone Tiles" class="rounded-2xl shadow-2xl w-full h-[520px] object-cover">
-      </div>
-
-      <div>
-        <h2 class="text-5xl font-bold mb-6 text-primary">
-          Professional <span class="gradient-text">Eurocone Installation</span>
-        </h2>
-        <div class="section-divider mx-0"></div>
-        <p class="text-lg text-gray-600 leading-relaxed mb-6">
-          I provide expert installation of Eurocone tiles - premium European tile technology engineered with advanced materials and precision craftsmanship. These tiles offer unmatched durability, weather resistance, and aesthetic appeal.
-        </p>
-        <p class="text-lg text-gray-600 leading-relaxed mb-8">
-          Perfect for both residential and commercial applications, I install Eurocone tiles designed to withstand extreme weather conditions while maintaining their beauty for decades. From patios to driveways, from pool decks to commercial plazas, I deliver professional Eurocone installation services.
-        </p>
-        
-        <div class="grid grid-cols-2 gap-6 mb-8">
-          <div class="text-center">
-            <div class="text-4xl font-bold text-gold mb-2">50+</div>
-            <p class="text-gray-600 font-medium">Years Lifespan</p>
-          </div>
-          <div class="text-center">
-            <div class="text-4xl font-bold text-gold mb-2">-40°C</div>
-            <p class="text-gray-600 font-medium">Frost Resistant</p>
-          </div>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-4">
-          <a href="#contact" class="btn-primary text-center">
-            Get Started
-          </a>
-          <button type="button" class="btn-secondary text-center" data-gallery-open data-gallery-category="floor">
-            Explore Eurocone Gallery
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Key Features -->
-<section id="features" class="py-24 bg-gray-50">
+<!-- Pricing Calculator -->
+<section id="calculator" class="py-24 bg-white">
   <div class="container mx-auto px-6">
     <div class="text-center mb-16">
-      <h2 class="text-5xl font-bold mb-6 text-primary">Why Choose Eurocone Tiles?</h2>
+      <h2 class="text-5xl font-bold mb-6 text-primary">Eurocone Pricing Calculator</h2>
       <div class="section-divider"></div>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Advanced European technology meets superior performance
+        Calculate the cost of your Eurocone installation project
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
-      <div class="service-card">
-        <div class="text-5xl mb-6 text-gold">
-          <i class="fas fa-snowflake"></i>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-primary">Frost Resistant</h3>
-        <p class="text-gray-600 leading-relaxed">
-          Engineered to withstand extreme cold temperatures down to -40°C. Perfect for outdoor applications in all climates without cracking or damage.
-        </p>
-      </div>
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-gray-50 rounded-3xl p-8 shadow-xl">
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <!-- Floor Eurocone Calculator -->
+          <div class="bg-white rounded-2xl p-6 shadow-md">
+            <h3 class="text-2xl font-bold mb-4 text-primary">Monalisa Eurocone</h3>
+            <p class="text-gold font-semibold mb-4">KSH 1500 per square meter</p>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Length (meters)</label>
+                <input type="number" id="floor-length" step="0.1" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent" placeholder="Enter length">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Width (meters)</label>
+                <input type="number" id="floor-width" step="0.1" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent" placeholder="Enter width">
+              </div>
+              <div class="pt-4 border-t border-gray-200">
+                <div class="flex justify-between items-center">
+                  <span class="font-semibold text-primary">Total Cost:</span>
+                  <span id="floor-total" class="text-2xl font-bold text-gold">KSH 0</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <div class="service-card">
-        <div class="text-5xl mb-6 text-gold">
-          <i class="fas fa-shield-alt"></i>
+          <!-- Bukoto Eurocone Calculator -->
+          <div class="bg-white rounded-2xl p-6 shadow-md">
+            <h3 class="text-2xl font-bold mb-4 text-primary">Bukoto Eurocone(wall & floor)</h3>
+            <p class="text-gold font-semibold mb-4">KSH 1000 per square meter</p>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Length (meters)</label>
+                <input type="number" id="bukoto-length" step="0.1" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent" placeholder="Enter length">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Width (meters)</label>
+                <input type="number" id="bukoto-width" step="0.1" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent" placeholder="Enter width">
+              </div>
+              <div class="pt-4 border-t border-gray-200">
+                <div class="flex justify-between items-center">
+                  <span class="font-semibold text-primary">Total Cost:</span>
+                  <span id="bukoto-total" class="text-2xl font-bold text-gold">KSH 0</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <h3 class="text-2xl font-bold mb-4 text-primary">Ultra Durable</h3>
-        <p class="text-gray-600 leading-relaxed">
-          High-density composition ensures exceptional strength and resistance to wear, impact, and heavy traffic. Built to last for generations.
-        </p>
-      </div>
 
-      <div class="service-card">
-        <div class="text-5xl mb-6 text-gold">
-          <i class="fas fa-tint-slash"></i>
+        <!-- Combined Total -->
+        <div class="bg-primary text-white rounded-2xl p-6 text-center">
+          <h3 class="text-2xl font-bold mb-4">Project Total</h3>
+          <div class="text-4xl font-bold text-gold" id="project-total">KSH 0</div>
+          <p class="text-gray-200 mt-2">Includes all Eurocone installations</p>
         </div>
-        <h3 class="text-2xl font-bold mb-4 text-primary">Water Resistant</h3>
-        <p class="text-gray-600 leading-relaxed">
-          Low water absorption rate prevents moisture damage, staining, and mold growth. Ideal for pool areas, bathrooms, and outdoor spaces.
-        </p>
       </div>
-
-      <div class="service-card">
-        <div class="text-5xl mb-6 text-gold">
-          <i class="fas fa-sun"></i>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-primary">UV Resistant</h3>
-        <p class="text-gray-600 leading-relaxed">
-          Colors remain vibrant and fade-resistant even under intense sunlight. Maintains aesthetic appeal year after year.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="text-5xl mb-6 text-gold">
-          <i class="fas fa-broom"></i>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-primary">Easy Maintenance</h3>
-        <p class="text-gray-600 leading-relaxed">
-          Non-porous surface resists dirt and stains. Simple cleaning with water keeps tiles looking new with minimal effort.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="text-5xl mb-6 text-gold">
-          <i class="fas fa-leaf"></i>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-primary">Eco-Friendly</h3>
-        <p class="text-gray-600 leading-relaxed">
-          Manufactured using sustainable processes with recyclable materials. Safe for the environment and your family.
-        </p>
-      </div>
-
     </div>
   </div>
 </section>
+
 
 <!-- Applications -->
 <section id="applications" class="py-24 bg-white">
@@ -1068,6 +1020,7 @@
   </div>
 </section>
 
+
 <!-- Contact Section -->
 <section id="contact" class="py-24 bg-gray-50">
   <div class="container mx-auto px-6">
@@ -1302,6 +1255,33 @@
         }
       });
     }
+
+    // Eurocone Calculator Functionality
+    function updateCalculations() {
+      // Floor Eurocone
+      const floorLength = parseFloat(document.getElementById('floor-length').value) || 0;
+      const floorWidth = parseFloat(document.getElementById('floor-width').value) || 0;
+      const floorArea = floorLength * floorWidth;
+      const floorCost = floorArea * 1500;
+      document.getElementById('floor-total').textContent = 'KSH ' + floorCost.toLocaleString();
+
+      // Bukoto Eurocone
+      const bukotoLength = parseFloat(document.getElementById('bukoto-length').value) || 0;
+      const bukotoWidth = parseFloat(document.getElementById('bukoto-width').value) || 0;
+      const bukotoArea = bukotoLength * bukotoWidth;
+      const bukotoCost = bukotoArea * 1000;
+      document.getElementById('bukoto-total').textContent = 'KSH ' + bukotoCost.toLocaleString();
+
+      // Project Total
+      const projectTotal = floorCost + bukotoCost;
+      document.getElementById('project-total').textContent = 'KSH ' + projectTotal.toLocaleString();
+    }
+
+    // Add event listeners to inputs
+    document.getElementById('floor-length').addEventListener('input', updateCalculations);
+    document.getElementById('floor-width').addEventListener('input', updateCalculations);
+    document.getElementById('bukoto-length').addEventListener('input', updateCalculations);
+    document.getElementById('bukoto-width').addEventListener('input', updateCalculations);
 
     document.addEventListener('DOMContentLoaded', () => {
       const body = document.body;
