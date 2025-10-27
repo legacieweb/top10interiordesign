@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ✅ Optimized Title (Max 60 Characters) -->
+  <title>Terms of Service - Top Home Designer</title>
+
+  <!-- ✅ Meta Description (Max 160 Characters) -->
+  <meta name="description" content="Terms of service for Top Home Designer. Professional renovation contractor services, consultation, and project agreements.">
+
+  <!-- ✅ Keywords (Google ignores but useful for other search engines) -->
+  <meta name="keywords" content="terms of service, renovation terms, contractor agreement, service terms, tophomedesigner">
+
+  <!-- ✅ Canonical URL (Avoids Duplicate Content Issues) -->
+  <link rel="canonical" href="https://www.tophomedesigner.com/terms-of-service.html">
+  <link rel="icon" href="img/logo.jpg" type="image/x-icon">
+
+  <!-- ✅ Open Graph for Social Media (Facebook, LinkedIn) -->
+  <meta property="og:title" content="Terms of Service - Top Home Designer">
+  <meta property="og:description" content="Terms of service for professional renovation and installation services.">
+  <meta property="og:image" content="img/logo.jpg">
+  <meta property="og:url" content="https://www.tophomedesigner.com/terms-of-service.html">
+  <meta property="og:type" content="website">
+
+  <!-- ✅ Twitter Card for Better Visibility on Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Terms of Service - Top Home Designer">
+  <meta name="twitter:description" content="Terms of service for professional renovation and installation services.">
+  <meta name="twitter:image" content="img/logo.jpg">
+
+  <!-- ✅ Structured Data (Schema Markup for Google Rich Snippets) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Terms of Service",
+    "url": "https://www.tophomedesigner.com/terms-of-service.html",
+    "publisher": {
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Top Home Designer"
+    }
+  }
+  </script>
+
+  <!-- ✅ Robots Meta Tag (Ensures Search Engines Index the Page) -->
+  <meta name="robots" content="index, follow">
+
+  <!-- ✅ External Stylesheets -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #0f3460;
+      --gold: #d4af37;
+      --light-gold: #f4e4c1;
+      --text-dark: #1a1a2e;
+      --text-light: #6b7280;
+      --bg-light: #fafafa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Custom Animations */
+    .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Header Scroll Effect */
+    .header-scrolled {
+      background: rgba(26, 26, 46, 0.95) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Custom Button */
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold) 0%, #c9a961 100%);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+    }
+
+    /* Section Divider */
+    .section-divider {
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), #c9a961);
+      margin: 0 auto 40px;
+      border-radius: 2px;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .mobile-menu.active {
+      transform: translateX(0);
+    }
+
+    /* Terms Content */
+    .terms-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .terms-content h2 {
+      color: var(--primary);
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 4rem 0 2rem 0;
+      text-align: center;
+      border-bottom: 4px solid var(--gold);
+      padding-bottom: 1rem;
+      position: relative;
+    }
+
+    .terms-content h2::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), #c9a961);
+      border-radius: 2px;
+    }
+
+    .terms-content h3 {
+      color: var(--primary);
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 2.5rem 0 1.5rem 0;
+      padding-left: 1.5rem;
+      border-left: 5px solid var(--gold);
+      position: relative;
+    }
+
+    .terms-content h3::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 0;
+      bottom: 0;
+      width: 5px;
+      background: linear-gradient(to bottom, var(--gold), #c9a961);
+      border-radius: 0 3px 3px 0;
+    }
+
+    .terms-content p {
+      color: #2d3748;
+      line-height: 1.9;
+      margin-bottom: 1.8rem;
+      font-size: 1.15rem;
+      text-align: justify;
+      font-weight: 400;
+    }
+
+    .terms-content ul {
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .terms-content li {
+      color: #2d3748;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      font-size: 1.15rem;
+      position: relative;
+      padding-left: 2rem;
+      font-weight: 400;
+    }
+
+    .terms-content li::before {
+      content: "▸";
+      color: var(--gold);
+      font-weight: bold;
+      font-size: 1.2rem;
+      position: absolute;
+      left: 0;
+      top: 0.1rem;
+    }
+
+    .terms-content .highlight {
+      background: linear-gradient(135deg, var(--light-gold), #fff8e1);
+      padding: 2rem;
+      border-left: 6px solid var(--gold);
+      margin: 2rem 0;
+      border-radius: 0 15px 15px 0;
+      box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+    }
+
+    .terms-content .highlight p {
+      font-weight: 600;
+      color: var(--primary);
+      margin: 0;
+    }
+
+    /* Enhanced sections matching index.html theme */
+    .about-section {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+
+    .stats-section {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: white;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+    }
+
+    .quote-section {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="50" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="50" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="90" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
+    }
+
+    .quote-content {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+<!-- Header -->
+<header id="header" class="fixed w-full top-0 z-50 transition-all duration-300" style="background: rgba(26, 26, 46, 0.98);">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="img/logo.jpg" alt="Top Home Designer Logo" class="h-12 w-12 rounded-full object-cover ring-2 ring-gold/30">
+        <span class="text-white font-bold text-xl hidden md:block">Top Home Designer</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center space-x-8">
+        <a href="index.html" class="text-white hover:text-gold transition-colors duration-300 font-medium">Home</a>
+        <a href="tiles/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Tiles</a>
+        <a href="eurocone/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Eurocone</a>
+        <a href="bricks/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Bricks</a>
+        <a href="artstones/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Artstones</a>
+        <a href="marble/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Marble</a>
+        <a href="Mazerous/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Mazerous</a>
+        <a href="gypsum/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Gypsum</a>
+        <a href="painting/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Painting</a>
+        <a href="kitchen/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Kitchen</a>
+        <a href="wardrobe/" class="text-white hover:text-gold transition-colors duration-300 font-medium">Wardrobe</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <a href="#contact" class="hidden lg:inline-block btn-primary">
+        <i class="fas fa-phone-alt mr-2"></i>Contact Us
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-toggle" class="lg:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4">
+      <div class="flex flex-col space-y-3">
+        <a href="index.html" class="text-white hover:text-gold transition-colors duration-300 py-2">Home</a>
+        <a href="tiles/" class="text-white hover:text-gold transition-colors duration-300 py-2">Tiles</a>
+        <a href="eurocone/" class="text-white hover:text-gold transition-colors duration-300 py-2">Eurocone</a>
+        <a href="bricks/" class="text-white hover:text-gold transition-colors duration-300 py-2">Bricks</a>
+        <a href="artstones/" class="text-white hover:text-gold transition-colors duration-300 py-2">Artstones</a>
+        <a href="marble/" class="text-white hover:text-gold transition-colors duration-300 py-2">Marble</a>
+        <a href="Mazerous/" class="text-white hover:text-gold transition-colors duration-300 py-2">Mazerous</a>
+        <a href="gypsum/" class="text-white hover:text-gold transition-colors duration-300 py-2">Gypsum</a>
+        <a href="painting/" class="text-white hover:text-gold transition-colors duration-300 py-2">Painting</a>
+        <a href="kitchen/" class="text-white hover:text-gold transition-colors duration-300 py-2">Kitchen</a>
+        <a href="wardrobe/" class="text-white hover:text-gold transition-colors duration-300 py-2">Wardrobe</a>
+        <a href="#contact" class="btn-primary text-center mt-4">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center parallax" style="background-image: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.7)), url('img/f1748eb1-6287-47ca-9eee-81d09fc5683b.jpeg');">
+  <div class="container mx-auto px-6 text-center text-white relative z-10">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        Terms of <span class="gradient-text">Service</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 text-gray-200 font-light">
+        Please read these terms carefully before using our services
+      </p>
+      <a href="#content" class="btn-secondary text-lg">
+        Read Terms
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 float-animation">
+    <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+      <div class="w-1 h-3 bg-white rounded-full mt-2"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Terms Content -->
+<section id="content" class="py-24 bg-white fade-in">
+  <div class="container mx-auto px-6">
+    <div class="terms-content">
+
+      <h2>1. Introduction</h2>
+      <p>Welcome to Top Home Designer. These Terms of Service ("Terms") govern your use of our website and services. By accessing or using our services, you agree to be bound by these Terms.</p>
+
+      <h2>2. Services</h2>
+      <p>Top Home Designer provides professional renovation and installation services including but not limited to:</p>
+      <ul>
+        <li>Tile installation (marble, ceramic, porcelain, Eurocone)</li>
+        <li>Wall cladding (artstone, brick, mazerous)</li>
+        <li>Kitchen and bathroom renovation</li>
+        <li>Marble and granite work</li>
+        <li>Gypsum ceiling installation</li>
+        <li>Painting services</li>
+        <li>Custom cabinet installation</li>
+        <li>Complete home renovation</li>
+        <li>Consultation services</li>
+      </ul>
+
+      <h2>3. Consultation Services</h2>
+      <p>Our consultation services include site assessment, design planning, material recommendations, and project cost analysis. The consultation fee is KSH 7,000 and covers a comprehensive evaluation of your project needs.</p>
+
+      <div class="highlight">
+        <strong>Important:</strong> The consultation fee will be credited towards your total project cost if you proceed with our installation services within 30 days of the consultation.
+      </div>
+
+      <h2>4. Project Agreements</h2>
+      <h3>4.1 Contract Formation</h3>
+      <p>All projects require a written agreement that includes scope of work, timeline, payment terms, and materials specifications. Verbal agreements are not binding.</p>
+
+      <h3>4.2 Payment Terms</h3>
+      <ul>
+        <li>50% deposit required to commence work</li>
+        <li>Progress payments as work milestones are completed</li>
+        <li>Final payment due upon project completion and client approval</li>
+        <li>Late payments may incur additional charges</li>
+      </ul>
+
+      <h3>4.3 Project Timeline</h3>
+      <p>Project timelines are estimates based on standard conditions. Delays due to unforeseen circumstances, material availability, or client changes may extend the timeline.</p>
+
+      <h2>5. Materials and Quality</h2>
+      <h3>5.1 Material Selection</h3>
+      <p>Clients are responsible for material selection and approval. We provide professional recommendations but final choices remain with the client.</p>
+
+      <h3>5.2 Quality Standards</h3>
+      <p>All work is performed to professional standards using appropriate materials and techniques. We guarantee our workmanship for 12 months from completion.</p>
+
+      <h3>5.3 Material Warranties</h3>
+      <p>Material warranties are provided by manufacturers and are separate from our workmanship guarantee. We will assist in warranty claims but are not responsible for manufacturer warranties.</p>
+
+      <h2>6. Client Responsibilities</h2>
+      <ul>
+        <li>Provide clear access to work areas</li>
+        <li>Ensure utilities are available as needed</li>
+        <li>Protect furniture and belongings during work</li>
+        <li>Approve design decisions in a timely manner</li>
+        <li>Make payments according to agreed schedule</li>
+      </ul>
+
+      <h2>7. Changes and Modifications</h2>
+      <p>Any changes to the original scope of work must be documented and may result in additional costs and timeline extensions. Changes requested after work has begun may incur change order fees.</p>
+
+      <h2>8. Cancellation and Termination</h2>
+      <h3>8.1 Client Cancellation</h3>
+      <p>Clients may cancel projects with written notice. Cancellation fees apply based on work completed and materials procured.</p>
+
+      <h3>8.2 Contractor Termination</h3>
+      <p>We reserve the right to terminate services if payments are not received, if unsafe working conditions exist, or if client behavior interferes with project completion.</p>
+
+      <h2>9. Liability and Insurance</h2>
+      <p>We maintain appropriate insurance coverage for our work. Clients are advised to insure their property against damage. Our liability is limited to the value of work performed and does not include consequential damages.</p>
+
+      <h2>10. Dispute Resolution</h2>
+      <p>Any disputes will be resolved through negotiation. If resolution cannot be reached, disputes will be handled through mediation or legal channels in Nairobi, Kenya.</p>
+
+      <h2>11. Privacy Policy</h2>
+      <p>We respect your privacy and protect personal information. Contact details are used only for project communication and are not shared with third parties without permission.</p>
+
+      <h2>12. Governing Law</h2>
+      <p>These Terms are governed by the laws of Kenya. Any legal proceedings will take place in Nairobi courts.</p>
+
+      <h2>13. Contact Information</h2>
+      <p>For questions about these Terms or our services, please contact us:</p>
+      <ul>
+        <li>Phone: +254 114 522 514</li>
+        <li>Email: Contact through our website form</li>
+        <li>Address: Nairobi, Kenya</li>
+      </ul>
+
+      <h2>14. Updates to Terms</h2>
+      <p>These Terms may be updated periodically. Continued use of our services constitutes acceptance of updated terms.</p>
+
+      <div class="highlight">
+        <strong>Last Updated:</strong> October 2025
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gradient-to-br from-primary via-secondary to-accent text-orange-400 py-16">
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h3 class="text-2xl font-bold mb-4 gradient-text">Top Home Designer</h3>
+        <p class="text-black mb-4">Professional renovation contractor specializing in tile installation, marble work, wall cladding, and complete home renovations.</p>
+        <div class="flex space-x-4">
+          <a href="https://wa.me/254114522514" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-primary transition-all">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://www.instagram.com/top10interior_design_?igsh=cnFyY2J2aGd1YXN5" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-primary transition-all">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61573585947119" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-primary transition-all">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="text-black hover:text-gold transition">Home</a></li>
+          <li><a href="#contact" class="text-black hover:text-gold transition">Contact</a></li>
+          <li><a href="../consultation" class="text-black hover:text-gold transition">Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Our Services</h4>
+        <ul class="space-y-2">
+          <li><a href="tiles/" class="text-black hover:text-gold transition">Tile Installation</a></li>
+          <li><a href="kitchen/" class="text-black hover:text-gold transition">Kitchen Cabinets</a></li>
+          <li><a href="marble/" class="text-black hover:text-gold transition">Marble Work</a></li>
+          <li><a href="bricks/" class="text-black hover:text-gold transition">Brick Cladding</a></li>
+          <li><a href="artstones/" class="text-black hover:text-gold transition">Artstone</a></li>
+          <li><a href="Mazerous/" class="text-black hover:text-gold transition">Mazerous</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Contact Info</h4>
+        <ul class="space-y-3 text-black">
+          <li class="flex items-center space-x-2">
+            <i class="fas fa-phone-alt text-gold"></i>
+            <span>+254 114 522 514</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <i class="fas fa-map-marker-alt text-gold"></i>
+            <span>Nairobi, Kenya</span>
+          </li>
+          <li class="flex items-center space-x-2">
+            <i class="fas fa-clock text-gold"></i>
+            <span>Mon - Sat: 8AM - 6PM</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/20 pt-8 text-center">
+      <p class="text-black mb-4">© 2025 Top Home Designer. All Rights Reserved.</p>
+      <div class="flex items-center justify-center space-x-2">
+        <span class="text-black">Designed by</span>
+        <a href="https://iyonicorp.com/" target="_blank" class="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+          <img src="download-removebg-preview.png" alt="Iyonicorp Logo" class="h-8">
+          <span class="gradient-text font-bold">Iyonicorp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+  // Mobile Menu Toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Header Scroll Effect
+  window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    if (window.scrollY > 100) {
+      header.classList.add('header-scrolled');
+    } else {
+      header.classList.remove('header-scrolled');
+    }
+  });
+
+  // Fade In Animation on Scroll - Disabled
+  // const observerOptions = {
+  //   threshold: 0.1,
+  //   rootMargin: '0px 0px -100px 0px'
+  // };
+
+  // const observer = new IntersectionObserver((entries) => {
+  //   entries.forEach(entry => {
+  //     if (entry.isIntersecting) {
+  //       entry.target.classList.add('visible');
+  //     }
+  //   });
+  // }, observerOptions);
+
+  // document.querySelectorAll('.fade-in').forEach(el => {
+  //   observer.observe(el);
+  // });
+</script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NJWQSGSHZ7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-NJWQSGSHZ7');
+</script>
+
+</body>
+</html>
