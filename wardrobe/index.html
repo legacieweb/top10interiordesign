@@ -277,7 +277,7 @@
               <i class="fab fa-facebook-f text-2xl"></i>
               <span class="font-medium">Facebook</span>
             </a>
-            <a href="https://www.tiktok.com/@top10interiordesi?_t=ZM-8tgrml8DECk&_r=1" target="_blank" class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-2 border border-gray-100 text-gray-900 hover:text-gold">
+            <a href="http://www.tiktok.com/@top.home.designer?_r=1&_t=ZM-92GdUjiJOfs" target="_blank" class="bg-white rounded-xl p-4 shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-2 border border-gray-100 text-gray-900 hover:text-gold">
               <i class="fab fa-tiktok text-2xl"></i>
               <span class="font-medium">TikTok</span>
             </a>
@@ -309,7 +309,6 @@
     </div>
   </div>
 </section>
-
 <!-- Footer -->
 <footer class="bg-gradient-to-br from-primary via-secondary to-accent text-orange-400 py-16">
   <div class="container mx-auto px-6">
@@ -327,12 +326,17 @@
           <a href="https://www.facebook.com/profile.php?id=61573585947119" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-primary transition-all">
             <i class="fab fa-facebook-f"></i>
           </a>
+          <a href="http://www.tiktok.com/@top.home.designer?_r=1&_t=ZM-92GdUjiJOfs" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-primary transition-all">
+            <i class="fab fa-tiktok"></i>
+          </a>
         </div>
       </div>
       <div>
         <h4 class="font-bold mb-4">Quick Links</h4>
         <ul class="space-y-2">
-          <li><a href="#gallery" class="text-black hover:text-gold transition">Gallery</a></li>
+          <li><a href="#services" class="text-black hover:text-gold transition">Services</a></li>
+          <li><a href="#portfolio" class="text-black hover:text-gold transition">Portfolio</a></li>
+          <li><a href="#testimonials" class="text-black hover:text-gold transition">Testimonials</a></li>
           <li><a href="#contact" class="text-black hover:text-gold transition">Contact</a></li>
           <li><a href="../consultation" class="text-black hover:text-gold transition">Consultation</a></li>
           <li><a href="../terms" class="text-black hover:text-gold transition">Terms of Service</a></li>
@@ -341,12 +345,11 @@
       <div>
         <h4 class="font-bold mb-4">Our Services</h4>
         <ul class="space-y-2">
-          <li><a href="../tiles/" class="text-black hover:text-gold transition">Tile Installation</a></li>
-          <li><a href="../kitchen/" class="text-black hover:text-gold transition">Kitchen Cabinets</a></li>
-          <li><a href="../marble/" class="text-black hover:text-gold transition">Marble Work</a></li>
-          <li><a href="../bricks/" class="text-black hover:text-gold transition">Brick Cladding</a></li>
-          <li><a href="../artstones/" class="text-black hover:text-gold transition">Artstone</a></li>
-          <li><a href="../Mazerous/" class="text-black hover:text-gold transition">Mazerous</a></li>
+          <li><a href="../tiles" class="text-black hover:text-gold transition">Tile Installation</a></li>
+          <li><a href="../eurocone" class="text-black hover:text-gold transition">Eurocone</a></li>
+          <li><a href="../marble" class="text-black hover:text-gold transition">Marble Work</a></li>
+          <li><a href="../artstones" class="text-black hover:text-gold transition">Artstone</a></li>
+          <li><a href="../Mazerous" class="text-black hover:text-gold transition">Mazerous</a></li>
         </ul>
       </div>
       <div>
@@ -368,7 +371,7 @@
       </div>
     </div>
     <div class="border-t border-white/20 pt-8 text-center">
-      <p class="text-black mb-4">© 2025 Top Home Designer. All Rights Reserved.</p>
+      <p class="text-black mb-4">© 2026 Top Home Designer. All Rights Reserved.</p>
       <div class="flex items-center justify-center space-x-2">
         <span class="text-black">Designed by</span>
         <a href="https://iyonicorp.com/" target="_blank" class="flex items-center space-x-2 hover:opacity-80 transition-opacity">
@@ -424,7 +427,7 @@
       toggleSubmittingState(true);
 
       try {
-        const response = await fetch('https://top10interiordesign.onrender.com/send-email', {
+        const response = await fetch('http://localhost:4000/send-email', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
