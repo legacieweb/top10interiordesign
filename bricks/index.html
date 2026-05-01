@@ -910,41 +910,72 @@
 
 
 <!-- Login Popup -->
-<div id="loginPopup" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-primary/80 backdrop-blur-sm">
-    <div class="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-md w-full transform transition-all relative">
-        <button onclick="toggleLoginPopup()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
-            <i class="fas fa-times text-xl"></i>
+<div id="loginPopup" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-primary/90 backdrop-blur-md">
+    <div class="bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] overflow-hidden max-w-md w-full transform transition-all relative border border-white/20">
+        <!-- Close Button -->
+        <button onclick="toggleLoginPopup()" class="absolute top-6 right-6 text-gray-400 hover:text-primary transition-all duration-300 hover:rotate-90">
+            <i class="fas fa-times text-2xl"></i>
         </button>
-        <div class="bg-primary p-8 text-center border-b-4 border-gold">
-            <h1 class="text-3xl font-bold text-white mb-2">Admin Portal</h1>
-            <p class="text-gray-400 text-sm">Secure Access for Top Home Designers</p>
-        </div>
-        <div class="p-8">
-            <div id="loginErrorMsg" class="hidden mb-6 p-4 bg-red-50 border-l-4 border-red-500 text-red-700 text-sm">
-                Invalid credentials
+        
+        <!-- Header -->
+        <div class="bg-primary p-10 text-center relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full opacity-10">
+                <div class="absolute top-[-50%] left-[-50%] w-[200%] h-[200%] bg-[radial-gradient(circle,var(--gold)_0%,transparent_70%)]"></div>
             </div>
+            <div class="relative z-10">
+                <div class="w-20 h-20 bg-white/10 rounded-2xl backdrop-blur-md border border-white/20 flex items-center justify-center mx-auto mb-6 shadow-xl">
+                    <img src="../img/logo.jpg" alt="Logo" class="w-16 h-16 rounded-xl object-cover">
+                </div>
+                <h1 class="text-3xl font-bold text-white mb-2 tracking-tight">Admin Portal</h1>
+                <p class="text-gold/80 text-sm font-medium uppercase tracking-[0.2em]">Secure Access</p>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <div class="p-10">
+            <div id="loginErrorMsg" class="hidden mb-6 p-4 bg-red-50 border-l-4 border-red-500 text-red-700 text-sm rounded-r-lg">
+                <div class="flex items-center">
+                    <i class="fas fa-exclamation-circle mr-2"></i>
+                    <span>Invalid credentials</span>
+                </div>
+            </div>
+            
             <div class="space-y-6">
                 <div>
-                    <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Username</label>
-                    <div class="relative">
-                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
-                            <i class="fas fa-user"></i>
+                    <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 ml-1">Username</label>
+                    <div class="relative group">
+                        <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400 group-focus-within:text-gold transition-colors">
+                            <i class="fas fa-user-shield"></i>
                         </span>
-                        <input type="text" id="adminUsername" class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all" placeholder="Enter your username">
+                        <input type="text" id="adminUsername" 
+                            class="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-gold/20 focus:border-gold focus:bg-white outline-none transition-all duration-300 text-gray-700 placeholder:text-gray-300" 
+                            placeholder="Your admin username">
                     </div>
                 </div>
+                
                 <div>
-                    <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Password</label>
-                    <div class="relative">
-                        <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
-                            <i class="fas fa-lock"></i>
+                    <label class="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 ml-1">Password</label>
+                    <div class="relative group">
+                        <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400 group-focus-within:text-gold transition-colors">
+                            <i class="fas fa-key"></i>
                         </span>
-                        <input type="password" id="adminPassword" class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all" placeholder="••••••••">
+                        <input type="password" id="adminPassword" 
+                            class="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-gold/20 focus:border-gold focus:bg-white outline-none transition-all duration-300 text-gray-700 placeholder:text-gray-300" 
+                            placeholder="••••••••">
                     </div>
                 </div>
-                <button onclick="adminLogin()" id="adminLoginBtn" class="w-full btn-primary text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-xl transform transition-all active:scale-95 flex items-center justify-center">
-                    SIGN IN
-                </button>
+
+                <div class="pt-2">
+                    <button onclick="adminLogin()" id="adminLoginBtn"
+                        class="w-full bg-gradient-to-r from-primary to-secondary text-white font-bold py-4 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.02] transform transition-all duration-300 active:scale-95 flex items-center justify-center space-x-2 border border-white/10">
+                        <span>Sign In</span>
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <p class="text-gray-400 text-xs italic">Authorized personnel only</p>
             </div>
         </div>
     </div>
@@ -953,21 +984,59 @@
 <script>
   function toggleLoginPopup() {
     const popup = document.getElementById('loginPopup');
-    popup.classList.toggle('hidden');
-    if (!popup.classList.contains('hidden')) {
+    const isHidden = popup.classList.contains('hidden');
+    
+    if (isHidden) {
+      popup.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
       document.getElementById('adminUsername').focus();
+      if (window.location.hash !== '#login') {
+        history.pushState(null, null, '#login');
+      }
+    } else {
+      popup.classList.add('hidden');
+      document.body.style.overflow = '';
+      if (window.location.hash === '#login') {
+        history.pushState(null, null, window.location.pathname + window.location.search);
+      }
     }
   }
+
+  function checkHash() {
+    if (window.location.hash === '#login') {
+      const popup = document.getElementById('loginPopup');
+      if (popup && popup.classList.contains('hidden')) {
+        toggleLoginPopup();
+      }
+    } else {
+      const popup = document.getElementById('loginPopup');
+      if (popup && !popup.classList.contains('hidden')) {
+        toggleLoginPopup();
+      }
+    }
+  }
+
+  window.addEventListener('hashchange', checkHash);
+  window.addEventListener('load', checkHash);
+  document.addEventListener('DOMContentLoaded', checkHash);
+  checkHash();
 
   async function adminLogin() {
     const username = document.getElementById('adminUsername').value;
     const password = document.getElementById('adminPassword').value;
     const errorMsg = document.getElementById('loginErrorMsg');
     const loginBtn = document.getElementById('adminLoginBtn');
+    const originalBtnContent = loginBtn.innerHTML;
     
+    if (!username || !password) {
+      errorMsg.querySelector('span').textContent = 'Please enter username and password';
+      errorMsg.classList.remove('hidden');
+      return;
+    }
+
     errorMsg.classList.add('hidden');
     loginBtn.disabled = true;
-    loginBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Authenticating...';
+    loginBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Signing in...';
 
     try {
       const response = await fetch('https://tophomedesigner.onrender.com/api/admin/login', {
@@ -982,18 +1051,26 @@
         localStorage.setItem('adminAuth', btoa(`${username}:${password}`));
         window.location.href = '../admin/index.html';
       } else {
+        errorMsg.querySelector('span').textContent = data.message || 'Invalid credentials';
         errorMsg.classList.remove('hidden');
         loginBtn.disabled = false;
-        loginBtn.innerHTML = 'SIGN IN';
+        loginBtn.innerHTML = originalBtnContent;
       }
     } catch (error) {
       console.error('Login error:', error);
-      errorMsg.textContent = 'Connection error. Please try again.';
+      errorMsg.querySelector('span').textContent = 'Connection error. Please try again.';
       errorMsg.classList.remove('hidden');
       loginBtn.disabled = false;
-      loginBtn.innerHTML = 'SIGN IN';
+      loginBtn.innerHTML = originalBtnContent;
     }
   }
+
+  // Close popup on backdrop click
+  document.getElementById('loginPopup').addEventListener('click', (e) => {
+    if (e.target.id === 'loginPopup') {
+      toggleLoginPopup();
+    }
+  });
 </script>
 
 </body>

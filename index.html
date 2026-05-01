@@ -1556,29 +1556,25 @@
   }
 
   // Handle Hash for Login
-  window.addEventListener('hashchange', () => {
+  function checkHash() {
     if (window.location.hash === '#login') {
       const popup = document.getElementById('loginPopup');
-      if (popup.classList.contains('hidden')) {
+      if (popup && popup.classList.contains('hidden')) {
         toggleLoginPopup();
       }
     } else {
       const popup = document.getElementById('loginPopup');
-      if (!popup.classList.contains('hidden')) {
+      if (popup && !popup.classList.contains('hidden')) {
         toggleLoginPopup();
       }
     }
-  });
+  }
 
-  // Check hash on load
-  window.addEventListener('load', () => {
-    if (window.location.hash === '#login') {
-      const popup = document.getElementById('loginPopup');
-      if (popup.classList.contains('hidden')) {
-        toggleLoginPopup();
-      }
-    }
-  });
+  window.addEventListener('hashchange', checkHash);
+  window.addEventListener('load', checkHash);
+  document.addEventListener('DOMContentLoaded', checkHash);
+  // Also run immediately
+  checkHash();
 
   async function adminLogin() {
     const username = document.getElementById('adminUsername').value;

@@ -1070,6 +1070,7 @@
     <div class="border-t border-black/10 pt-8 text-center">
       <p class="text-black mb-6">© 2026 Top Home Designer. All Rights Reserved.</p>
       <div class="flex flex-col items-center justify-center space-y-3">
+        <a href="#login" class="text-black/60 hover:text-gold transition-colors text-sm mb-2">Login</a>
         <a href="https://iyonicorp.com/" target="_blank" class="iyonicorp-link">
           <span class="text-gray-700 font-medium">Powered by</span>
           <img src="https://i.imgur.com/6nGQFtj.png" alt="Iyonicorp Logo" class="h-8 iyonicorp-logo">
@@ -1485,39 +1486,47 @@
  
 
 <!-- Login Popup -->
-<div id="loginPopup" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-primary/80 backdrop-blur-sm">
-    <div class="bg-white rounded-2xl shadow-2xl overflow-hidden max-w-md w-full transform transition-all relative">
-        <button onclick="toggleLoginPopup()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors">
+<div id="loginPopup" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-md">
+    <div class="bg-[#1a1a2e] rounded-3xl shadow-2xl overflow-hidden max-w-md w-full transform transition-all relative border border-white/10" onclick="event.stopPropagation()">
+        <button onclick="toggleLoginPopup()" class="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors z-10">
             <i class="fas fa-times text-xl"></i>
         </button>
-        <div class="bg-primary p-8 text-center border-b-4 border-gold">
-            <h1 class="text-3xl font-bold text-white mb-2">Admin Portal</h1>
-            <p class="text-gray-400 text-sm">Secure Access for Top Home Designers</p>
-        </div>
-        <div class="p-8">
-            <div id="loginErrorMsg" class="hidden mb-6 p-4 bg-red-50 border-l-4 border-red-500 text-red-700 text-sm">
+        
+        <div class="p-10">
+            <div class="text-center mb-10">
+                <div class="inline-block p-4 rounded-2xl bg-gradient-to-br from-gold/20 to-transparent mb-4">
+                    <img src="https://i.imgur.com/uW67R6L.png" alt="Logo" class="h-12 w-auto mx-auto">
+                </div>
+                <h1 class="text-3xl font-bold text-white mb-2 tracking-tight">Admin Portal</h1>
+                <p class="text-gray-400 text-sm">Secure Access for Top Home Designer</p>
+            </div>
+
+            <div id="loginErrorMsg" class="hidden mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-400 text-sm text-center">
                 Invalid credentials
             </div>
-            <div class="space-y-6">
-                <div>
-                    <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Username</label>
+
+            <div class="space-y-5">
+                <div class="group">
+                    <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2 ml-1">Username</label>
                     <div class="relative">
-                        <span class="absolute inset-y-0 left-0 pr-3 flex items-center text-gray-400">
+                        <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-500 group-focus-within:text-gold transition-colors">
                             <i class="fas fa-user"></i>
                         </span>
-                        <input type="text" id="adminUsername" class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all" placeholder="Enter your username">
+                        <input type="text" id="adminUsername" class="w-full bg-white/5 border border-white/10 text-white pl-11 pr-4 py-4 rounded-xl focus:ring-2 focus:ring-gold/50 focus:border-gold outline-none transition-all placeholder:text-gray-600" placeholder="Enter username">
                     </div>
                 </div>
-                <div>
-                    <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Password</label>
+
+                <div class="group">
+                    <label class="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2 ml-1">Password</label>
                     <div class="relative">
-                        <span class="absolute inset-y-0 left-0 pr-3 flex items-center text-gray-400">
+                        <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-500 group-focus-within:text-gold transition-colors">
                             <i class="fas fa-lock"></i>
                         </span>
-                        <input type="password" id="adminPassword" class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all" placeholder="••••••••">
+                        <input type="password" id="adminPassword" class="w-full bg-white/5 border border-white/10 text-white pl-11 pr-4 py-4 rounded-xl focus:ring-2 focus:ring-gold/50 focus:border-gold outline-none transition-all placeholder:text-gray-600" placeholder="••••••••">
                     </div>
                 </div>
-                <button onclick="adminLogin()" id="adminLoginBtn" class="w-full btn-primary text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-xl transform transition-all active:scale-95 flex items-center justify-center">
+
+                <button onclick="adminLogin()" id="adminLoginBtn" class="w-full bg-gradient-to-r from-gold to-[#c9a961] text-white font-bold py-4 rounded-xl shadow-lg shadow-gold/20 hover:shadow-gold/40 transform transition-all active:scale-[0.98] flex items-center justify-center mt-8 text-sm tracking-widest">
                     SIGN IN
                 </button>
             </div>
@@ -1528,11 +1537,41 @@
 <script>
   function toggleLoginPopup() {
     const popup = document.getElementById('loginPopup');
-    popup.classList.toggle('hidden');
-    if (!popup.classList.contains('hidden')) {
-      document.getElementById('adminUsername').focus();
+    const isHidden = popup.classList.contains('hidden');
+    
+    if (isHidden) {
+      popup.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      history.pushState(null, '', '#login');
+      setTimeout(() => document.getElementById('adminUsername').focus(), 100);
+    } else {
+      popup.classList.add('hidden');
+      document.body.style.overflow = '';
+      if (window.location.hash === '#login') {
+        history.pushState(null, '', window.location.pathname);
+      }
     }
   }
+
+  // Backdrop click to close
+  document.getElementById('loginPopup').addEventListener('click', function(e) {
+    if (e.target === this) toggleLoginPopup();
+  });
+
+  function checkHash() {
+    if (window.location.hash === '#login') {
+      const popup = document.getElementById('loginPopup');
+      if (popup && popup.classList.contains('hidden')) {
+        toggleLoginPopup();
+      }
+    }
+  }
+
+  window.addEventListener('hashchange', checkHash);
+  window.addEventListener('load', checkHash);
+  document.addEventListener('DOMContentLoaded', checkHash);
+  // Run immediately in case script loads after event
+  checkHash();
 
   async function adminLogin() {
     const username = document.getElementById('adminUsername').value;
@@ -1542,7 +1581,7 @@
     
     errorMsg.classList.add('hidden');
     loginBtn.disabled = true;
-    loginBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Authenticating...';
+    loginBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> AUTHENTICATING...';
 
     try {
       const response = await fetch('https://tophomedesigner.onrender.com/api/admin/login', {
